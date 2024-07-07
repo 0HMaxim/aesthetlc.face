@@ -1,0 +1,81 @@
+#dienstleistungen_header_menu{
+    display: none;
+}
+
+
+
+
+.header_top_row{
+    padding: 1.125vw 0 1vw;
+    transition: 0.3s all
+}
+
+
+.header.fixed .top_row {
+    padding: 0.5vw 0;
+}
+
+
+.header .top_row nav ul li {
+    padding-bottom: 0.75vw;
+    margin-right: 3vw;
+    position: relative;
+}
+
+
+.header_under_row{
+    margin-top: 1vw;
+    transition: 0.3s all
+}
+
+
+.header_under_row .navbar ul li {
+    padding-bottom: 0.75vw;
+    margin-right: 3vw;
+    position: relative;
+}
+
+
+#dienstleistungen_header_menu{
+    display: none;
+    position: absolute; 
+    top: 100%; 
+    left: 0; 
+    background-color: white; 
+    border: 1px solid #ccc; 
+    z-index: 1000; 
+    width: max-content; 
+}
+
+
+.fw{
+    font-weight: 500;
+}
+
+
+
+
+.hide {
+    display: none;
+    z-index: -1;
+    transition: 0.3s all ease;
+}
+
+
+
+.header_under_row .lang_block ul.langs  {
+    padding-bottom: 0.75vw;
+    margin-right: 3vw;
+    position: absolute;
+    text-decoration: none;
+}
+
+.header_under_row #lang_block  {
+    position: relative;
+    margin: 0;
+    padding: 0;
+}
+
+li , ul{
+    list-style: none;
+}
