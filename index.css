@@ -1,51 +1,20 @@
-#dienstleistungen_header_menu{
-    display: none;
-}
-
-
-
-
-.header_top_row{
-    padding: 1.125vw 0 1vw;
-    transition: 0.3s all
-}
-
-
-.header.fixed .top_row {
-    padding: 0.5vw 0;
-}
-
-
-.header .top_row nav ul li {
-    padding-bottom: 0.75vw;
-    margin-right: 3vw;
-    position: relative;
-}
-
-
-.header_under_row{
-    margin-top: 1vw;
-    transition: 0.3s all
-}
-
-
-.header_under_row .navbar ul li {
-    padding-bottom: 0.75vw;
-    margin-right: 3vw;
-    position: relative;
-}
 
 
 #dienstleistungen_header_menu{
     display: none;
-    position: absolute; 
-    top: 100%; 
-    left: 0; 
+    position: absolute;
     background-color: white; 
     border: 1px solid #ccc; 
     z-index: 1000; 
-    width: max-content; 
+
+    transition: opacity 0.3s ease, transform 0.3s ease;
 }
+
+
+
+
+
+
 
 
 .fw{
@@ -76,8 +45,9 @@
     padding: 0;
 }
 
-li , ul{
-    list-style: none;
+li, ul{ 
+    list-style: none !important;
+    padding: 0px  !important;
 }
 
 
@@ -86,6 +56,7 @@ li , ul{
     justify-content: center;
     position: relative;
     
+    margin-left: 0;
 
 }
 
@@ -114,4 +85,91 @@ li , ul{
     position: relative;
     margin-top: 20px; /* Space to push breadcrumbs below the about top page */
     z-index: 1; /* Ensure breadcrumbs are above other elements but not the overlay or video */
+}
+
+
+.fixed{
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.8);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+}
+
+#header_fixed{
+    width: 100%;
+    position: fixed;
+    z-index: 100;
+    margin: 0px;
+    padding: 0px;
+}
+
+
+.header{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 999;
+}
+
+
+/* Header top row animation*/
+
+
+#header_fixed .header .header_top_row {
+    padding: 0.5vw 0;
+}
+
+.header .header_top_row {
+    padding: 1.125vw 0 1vw;
+    transition: 0.3s all ease;
+}
+
+
+header .header_under_row {
+    margin-top: 1vw;
+    transition: 0.3s all ease;
+}
+
+
+
+#header_fixed .show {
+    display: fixed;
+    transform: translateY(0); /* Появление хедера */
+  }
+
+
+
+
+.header_under_row .navbar ul li {
+    margin-left: 0px;
+    margin-right: 3vw;
+    padding-bottom: 0.75vw;
+}
+
+
+
+.header_top_row .logo_block p {
+margin-left: 0.75vw;
+padding-left: 1.063vw;
+font-size: 1.25vw;
+border-left: 1px solid #000;
+letter-spacing: 0.313vw;
+transition: 0.5s all ease;
+}
+
+
+
+.header_top_row{margin: 0;
+padding: 0;
+border: 0;
+font: inherit;
+vertical-align: baseline;
+outline: none;
+font-family: "Montserrat", sans-serif;
+box-sizing: border-box;
+color: #000;
 }
