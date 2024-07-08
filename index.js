@@ -15,8 +15,6 @@ lang_block.addEventListener("mouseover", function(e){
 
 
 
-
-
 lang_block.addEventListener('mouseout', function(e) {
 
     langs[0].style.display = 'none';
