@@ -27,11 +27,10 @@ let header_menuArrDE = [
     "Контакти"
   ];
 
+  let header_menuArr = header_menuArrDE;
 
-
-let header_menuArr = header_menuArrDE;
-
-
+  let newLang = "DE"
+  let oldLang = "UA"
 
 
 function header_refresh(header_menuArr, newLang, oldLang) {
@@ -126,11 +125,11 @@ function header_refresh(header_menuArr, newLang, oldLang) {
                     
                     </div>
                     
-
-
-
                 
                 </div>
+
+
+
 
 
 
@@ -160,7 +159,6 @@ function header_refresh(header_menuArr, newLang, oldLang) {
                             <li>${header_menuArr[7]}</li>
                             <li>${header_menuArr[8]}</li>
                             <li>${header_menuArr[9]}</li>
-                            <li>${header_menuArr[10]}</li>
 
 
                             
@@ -189,9 +187,8 @@ function header_refresh(header_menuArr, newLang, oldLang) {
 
 
         </div>`
-
+        
     ;
-
 
 
     let lang_block = document.getElementById("lang_block");
