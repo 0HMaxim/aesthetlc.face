@@ -1,5 +1,11 @@
 let header = document.getElementsByClassName("header");
 
+console.log(header[0])
+
+
+
+
+
 let header_menuArrDE = [
     "Über die Klinik",
     "Angebot",
@@ -79,7 +85,7 @@ function header_refresh(header_menuArr, newLang, oldLang) {
                             
 
                             <b>
-                                +49 (160) 512 2398
+                                <a href="tel:+491605122398" class="fa-brands" >+49 (160) 512 2398</a>
                             </b>
 
 
@@ -109,7 +115,7 @@ function header_refresh(header_menuArr, newLang, oldLang) {
                     <div class="d-flex">
 
                         <a href="https://web.telegram.org/k/#@beautifulinjections" class="fa-brands fa-telegram fa-4x" ></a>
-                        <div class="fa-brands fa-viber fa-4x" ></div>
+                        <a href="tel:+491605122398" class="fa-brands fa-whatsapp fa-4x" ></a>
                         <a href="https://www.instagram.com/aesthetlc.face/" class="fa-brands fa-instagram fa-4x" ></a>
 
                         
@@ -152,13 +158,13 @@ function header_refresh(header_menuArr, newLang, oldLang) {
                             </li>
 
 
-                            <li>${header_menuArr[3]}</li>
-                            <li>${header_menuArr[4]}</li>
-                            <li>${header_menuArr[5]}</li>
-                            <li>${header_menuArr[6]}</li>
-                            <li>${header_menuArr[7]}</li>
-                            <li>${header_menuArr[8]}</li>
-                            <li>${header_menuArr[9]}</li>
+                            <li><a href="" >${header_menuArr[3]}</a></li>
+                            <li><a href="" >${header_menuArr[4]}</a></li>
+                            <li><a href="" >${header_menuArr[5]}</a></li>
+                            <li><a href="" >${header_menuArr[6]}</a></li>
+                            <li><a href="" >${header_menuArr[7]}</a></li>
+                            <li><a href="" >${header_menuArr[8]}</a></li>
+                            <li><a href="" >${header_menuArr[9]}</a></li>
 
 
                             
@@ -286,7 +292,6 @@ function header_refresh(header_menuArr, newLang, oldLang) {
     dienstleistungen.addEventListener('mouseover', function(e) {
 
         dienstleistungen_header_menu.style.display = 'block';
-
     });
 
 
@@ -306,11 +311,9 @@ header_refresh(header_menuArr, "DE", "UA");
 
 
 window.addEventListener('scroll', () => {
-    if (window.scrollY > 200) {
-        header[0].classList.add('show');
-        header[0].setAttribute('id', 'header_fixed');
+    if (window.scrollY > 300) {
+        header[0].classList.add('header_fixed');
     } else {
-        header[0].classList.remove('show');
-        header[0].removeAttribute('id');
+        header[0].classList.remove('header_fixed');
     }
 });
