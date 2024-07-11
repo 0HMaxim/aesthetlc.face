@@ -39,33 +39,53 @@ let header_menuArrDE = [
   let oldLang = "UA"
 
 
+  let countPoin=""
+
 function header_refresh(header_menuArr, newLang, oldLang) {
 
+    countPoin=""
+    let folder = document.getElementsByClassName("folder");
+    
 
-    console.log("aaa");
+    if(folder.length>0){
+        console.log(folder.length*2);
+
+        for (let i = 0; i < folder.length; i++) {
+            countPoin += "..";
+        }
+        
+        countPoin += "/";
+    }
+  
+
+    console.log(countPoin);
 
 
     header[0].innerHTML=`
 
 
-    <div class="card-header fixed container-fluid p-0 m-0 " style="height: 20vh;">
+    <div class="card-header fixed container-fluid p-0 m-0 px-2 " style="height: 20vh ;">
 
 
-            <div class="px-1"> 
+           
 
                 <div class="header_top_row d-flex justify-content-between align-items-center">
-                   
-                    <a href="index.html" class="d-flex ">
+                
+                    <div class=d-flex align-items-center text-center>
 
-                        <img id="logo" src="logo.jpg" style="width: 150px; height: auto;">
+                        <a href="${countPoin}index.html" class="d-flex header_logo text-center">
 
-                        <p>
-                            AESTHETIC
-                            <br>
-                            FACE
-                        </p>
+                            <img id="logo" src="${countPoin}logo.jpg" style="width: 150px; height: auto;">
 
-                    </a>
+                            <div class="text-center">
+                                AESTHETIC
+                                <br>
+                                FACE
+                            </div>
+
+                        </a>
+                    </div>
+
 
 
                     <div class="d-flex">
@@ -79,8 +99,10 @@ function header_refresh(header_menuArr, newLang, oldLang) {
 
 
                             <p>
-                                Poggendörper Weg 3-9, 24149 Kiel
-                                <a href="https://maps.app.goo.gl/pYLtY2N4UoZVUGzQ9" class="fa-solid fa-location-dot" ></a>
+                                
+                                <a href="https://maps.app.goo.gl/pYLtY2N4UoZVUGzQ9" >Poggendörper Weg 3-9, 24149 Kiel
+
+                                <span class="fa-solid fa-location-dot"></span></a>
                             </p>
                             
 
@@ -143,11 +165,11 @@ function header_refresh(header_menuArr, newLang, oldLang) {
 
                 <div class="header_under_row d-flex justify-content-between m-0">
 
-                    <div class="navbar  d-flex">
+                    <div class="navbar d-flex">
 
                         <ul class="d-flex"> 
-                            <li><a href="about.html">${header_menuArr[0]}</a></li>
-                            <li><a href="">${header_menuArr[1]}</a></li>
+                            <li><a href="${countPoin}about.html">${header_menuArr[0]}</a></li>
+                            <li><a href="${countPoin}index.html">${header_menuArr[1]}</a></li>
                             
                             <li id="dienstleistungen">
                                 <a  href="">${header_menuArr[2]}</a>
@@ -158,7 +180,7 @@ function header_refresh(header_menuArr, newLang, oldLang) {
                             </li>
 
 
-                            <li><a href="" >${header_menuArr[3]}</a></li>
+                            <li><a href="${countPoin}team/index.html" >${header_menuArr[3]}</a></li>
                             <li><a href="" >${header_menuArr[4]}</a></li>
                             <li><a href="" >${header_menuArr[5]}</a></li>
                             <li><a href="" >${header_menuArr[6]}</a></li>
@@ -186,9 +208,7 @@ function header_refresh(header_menuArr, newLang, oldLang) {
 
 
 
-
-
-            </div>
+            
 
 
 
@@ -303,6 +323,36 @@ function header_refresh(header_menuArr, newLang, oldLang) {
 
 
     
+    let breadcrumbs = document.getElementById("breadcrumbs");
+
+
+    breadcrumbs.innerHTML=`
+    
+        <div class="container">
+                <ol class="d-flex">
+                    
+                        <a itemprop="item" href="${countPoin}index.html">
+                            <span>Головна</span>
+                        </a>
+
+
+                     
+                    <li>
+                        <a itemprop="item" href="${countPoin}about.html">
+                            <span>Про клініку</span>
+                        </a>
+                    </li>
+                </ol>
+            
+         </div>
+    
+    
+    
+    `
+
+
+
+
 
 };
 

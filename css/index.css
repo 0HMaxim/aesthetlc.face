@@ -15,12 +15,6 @@
 
 
 
-.fw{
-    font-weight: 400;
-}
-
-
-
 
 .hide {
     display: none;
@@ -39,9 +33,22 @@
 
 .header_under_row #lang_block  {
     position: relative;
+    z-index: 1;
     margin: 0;
     padding: 0;
 }
+
+
+
+
+.header_under_row .navbar ul li::before{
+
+content: none;
+
+}
+
+
+
 
 li, ul{ 
     list-style: none !important;
@@ -77,7 +84,7 @@ li, ul{
 }
 
 
-.breadcrumbs {
+#breadcrumbs > *{
     position: relative;
     margin-top: 20px; /* Space to push breadcrumbs below the about top page */
     z-index: 1; /* Ensure breadcrumbs are above other elements but not the overlay or video */
@@ -96,7 +103,7 @@ li, ul{
 
 .header_fixed{
     width: 100%;
-    position: fixed !important;;
+    position: fixed !important;
     z-index: 10099;
     margin: 0px;
     padding: 0px;
@@ -145,6 +152,7 @@ header .header_under_row {
     margin-left: 0px;
     margin-right: 3vw;
     padding-bottom: 0.75vw;
+    
 }
 
 
@@ -183,21 +191,21 @@ p{
 
 
 
-/* ul li:before {
-    content: "";
-    position: absolute;
-    width: 0.75vw;
-    height: 0.75vw;
-    left: 0;
-    top: 0.4vw;
-    background-image: url(https://besedaclinic.com.ua/img/list_mark.svg);
-    background-size: contain;
-    background-position: left center;
-    background-repeat: no-repeat;
-    padding: 1,25vw;
-} */
+ul.check_list li *
+{
+    position: relative;
+    padding-left: 1.25vw!important; 
+    list-style: none;
+    font-weight: 400;
 
-ul , li{
+    font-size: 1.1vw;
+    line-height: 1.5vw;
+}
+
+
+
+ul , li, a {
+    position: relative;
     list-style: none;
     font-weight: 400;
 
@@ -242,7 +250,7 @@ a{
 }
 
 
-.breadcrumbs ol li:before {
+#breadcrumbs ol li:before {
     content: "-";
     padding-left: 0.3vw;
     font-size: 1vw;
@@ -256,3 +264,153 @@ a{
     position: relative;
     margin: 0;
 }
+
+
+
+/*      галочка перед списком ul               */
+
+ul.check_list li::before {
+    content: "";
+    position: absolute;
+    width: 0.75vw;
+    height: 0.75vw;
+    top: 0.4vw;
+    background-image: url(https://besedaclinic.com.ua/img/list_mark.svg);
+    background-size: contain;
+    background-position: left center;
+    background-repeat: no-repeat;
+}
+
+
+
+
+
+
+
+.team_items {
+    margin-top: 3.75vw;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-column-gap: 4vw;
+    grid-row-gap: 4vw;
+}
+
+.team_items .team_item {
+    position: relative;
+}
+
+
+
+
+/*         класс чтобы повесить картику сзади объекта                 */
+
+.image {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    display: block;
+    height: 100%;
+    width: 100%;
+    transform: translate(-50%, -50%);
+    transition: 0.3s all ease
+}
+
+
+
+
+
+.image {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    display: block;
+    height: 100%;
+    width: 100%;
+    transform: translate(-50%, -50%);
+    transition: 0.3s all ease;
+
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+
+
+
+
+/*         анимация для него ( увеличениек объекта )                 */
+
+
+.team_items .team_item .image_block {
+    display: block;
+    height: 22vw;
+    border: 1px solid #B7B7B7;
+    box-shadow: 0 0 14px 0 rgba(0, 0, 0, 0.25);
+}
+
+
+
+.container {
+    margin: 0 auto !important;
+    width: 86vw!important;
+}
+
+
+
+.image_block{
+
+    display: block;
+    height: 22vw;
+    width: 100%;
+    border: 1px solid #B7B7B7;
+    box-shadow: 0 0 14px 0 rgba(0, 0, 0, 0.25);
+    margin: 0px;
+    padding: 0px;
+}
+
+
+
+.team_items .team_item .name{
+    position: absolute;
+    top: 18.5vw;
+    right: -1.5vw;
+    background-color: #000;
+    color: #fff;
+    height: 2vw;
+    padding: 0 1.063vw;
+    z-index: 2;
+}
+
+
+
+
+.fw700 {
+    font-weight: 700;
+}
+
+
+.section_heading {
+    text-align: center;
+    font-size: 2.5vw;
+    margin-bottom: 2.5vw;
+}
+
+
+
+.name-big-center{
+    font-size: 1.5vw;
+    margin: 1.5vw 0 0.5vw;
+    text-align: center;
+
+}
+
+
+
+.header_logo div {
+    margin-left: 0.75vw;
+    padding-left: 1.063vw;
+    font-size: 1.25vw;
+    border-left: 1px solid #000;
+    letter-spacing: 0.313vw;
+    transition: 0.5s all ease;
+}
+
