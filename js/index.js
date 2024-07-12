@@ -181,7 +181,7 @@ function header_refresh(header_menuArr, newLang, oldLang) {
 
 
                             <li><a href="${countPoin}team/index.html" >${header_menuArr[3]}</a></li>
-                            <li><a href="" >${header_menuArr[4]}</a></li>
+                            <li><a href="${countPoin}price.html" >${header_menuArr[4]}</a></li>
                             <li><a href="" >${header_menuArr[5]}</a></li>
                             <li><a href="" >${header_menuArr[6]}</a></li>
                             <li><a href="" >${header_menuArr[7]}</a></li>
