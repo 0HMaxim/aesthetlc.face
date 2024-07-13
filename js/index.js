@@ -367,3 +367,23 @@ window.addEventListener('scroll', () => {
         header[0].classList.remove('header_fixed');
     }
 });
+
+
+
+
+let buttonShowTable = document.getElementsByClassName("cross");
+
+
+    // Преобразуем HTMLCollection в массив для удобства
+    Array.from(buttonShowTable).forEach(function(button) {
+        button.addEventListener('click', function() {
+            // Находим родительский элемент с классом "price_item"
+            let priceItem = this.closest('.price_item');
+            if (priceItem) {
+                // Добавляем класс "open" к родительскому элементу
+                priceItem.classList.toggle('open');
+            }
+        });
+    });
+    
+    

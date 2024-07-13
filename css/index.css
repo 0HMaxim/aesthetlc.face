@@ -419,6 +419,9 @@ ul.check_list li::before {
 
 
 
+
+/* Open/Close table*/
+
 .cross:after,
 .cross::before {
     content: "";
@@ -437,3 +440,46 @@ ul.check_list li::before {
 .cross:after {
     transform: translate(-50%, -50%) rotate(90deg);
 }
+
+
+.price_item {
+    transition: 0.3s all ease;
+    position: relative;
+    overflow: hidden;
+}
+
+
+
+.price_item.open ,.price_item.open table {
+    height: -moz-max-content;
+    height: max-content;
+    position: relative;
+    opacity: 1;
+    top: 0;
+    z-index: 1;
+}
+
+
+.price_item.open .faq_desc, .price_item.open table {
+    height: -moz-max-content;
+    height: max-content;
+    position: relative;
+    opacity: 1;
+    top: 0;
+    z-index: 1;
+}
+
+
+.price_item table {
+    margin-top: 0.5vw;
+    width: 100%;
+    height: 0;
+    position: absolute;
+    top: 50px;
+    z-index: -2;
+    opacity: 0;
+    transition: 0.5s all ease;
+}
+
+
+
