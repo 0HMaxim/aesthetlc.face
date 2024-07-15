@@ -172,7 +172,7 @@ function header_refresh(header_menuArr, newLang, oldLang) {
                             <li><a href="${countPoin}index.html">${header_menuArr[1]}</a></li>
                             
                             <li id="dienstleistungen">
-                                <a  href="">${header_menuArr[2]}</a>
+                                <a  href="${countPoin}services/index.html">${header_menuArr[2]}</a>
                                 <ul id="dienstleistungen_header_menu">
                                 
                                     
