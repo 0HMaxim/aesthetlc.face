@@ -214,6 +214,15 @@ ul , li, a {
 }
 
 
+a {
+    text-decoration: none;
+    font-size: 1vw;
+    font-weight: 400;
+    transition: 0.3s all ease;
+    color: #000;
+}
+
+
 a{
         text-decoration: none;
         font-size: 1vw;
@@ -311,18 +320,6 @@ ul.check_list li::before {
 
 
 /*         класс чтобы повесить картику сзади объекта                 */
-
-.image {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    display: block;
-    height: 100%;
-    width: 100%;
-    transform: translate(-50%, -50%);
-    transition: 0.3s all ease
-}
-
 
 
 
@@ -521,4 +518,64 @@ ul.check_list li::before {
 
 .subtitle{
     font-size: 1.25vw;
+}
+
+
+
+
+
+
+.service_items {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-column-gap: 1.875vw;
+    grid-row-gap: 1.875vw;
+}
+
+
+.service_items .service {
+    display: block;
+    border: 1px solid #D7D7D7;
+}
+
+
+.service_items .service .img_block {
+    display: block;
+    height: 14.063vw;
+}
+
+
+.service_items .service:before {
+    top: calc(100% - 4px);
+    left: 0;
+    width: 2.688vw;
+    height: 4px;
+    background-color: #000;
+    transition: 0.5s all ease;
+}
+
+.a_linie:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.scale_bg {
+    position: relative;
+    overflow: hidden;
+}
+
+.service:hover.a_linie:before{
+
+    width: 100%;
+}
+
+
+
+.my_container{
+    padding-left: 10vw!important;
+    padding-right: 10vw!important;
 }
