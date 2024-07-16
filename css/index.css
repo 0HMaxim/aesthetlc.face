@@ -190,6 +190,21 @@ p{
 
 
 
+/*      галочка перед списком ul               */
+
+ul.check_list li::before {
+    content: "";
+    position: absolute;
+    width: 0.75vw;
+    height: 0.75vw;
+    top: 0.4vw;
+    background-image: url(https://besedaclinic.com.ua/img/list_mark.svg);
+    background-size: contain;
+    background-position: left center;
+    background-repeat: no-repeat;
+}
+
+
 
 ul.check_list li *
 {
@@ -272,22 +287,6 @@ a{
     justify-content: center;
     position: relative;
     margin: 0;
-}
-
-
-
-/*      галочка перед списком ul               */
-
-ul.check_list li::before {
-    content: "";
-    position: absolute;
-    width: 0.75vw;
-    height: 0.75vw;
-    top: 0.4vw;
-    background-image: url(https://besedaclinic.com.ua/img/list_mark.svg);
-    background-size: contain;
-    background-position: left center;
-    background-repeat: no-repeat;
 }
 
 
@@ -390,6 +389,11 @@ ul.check_list li::before {
 .fw700 {
     font-weight: 700;
 }
+
+.fw600 {
+    font-weight: 600;
+}
+
 
 .fw500 {
     font-weight: 500;
@@ -516,10 +520,15 @@ ul.check_list li::before {
 
 }
 
+.heading_block:first-child{
+    font-weight: 700;
+}
+
+
+
 .subtitle{
     font-size: 1.25vw;
 }
-
 
 
 
@@ -578,4 +587,50 @@ ul.check_list li::before {
 .my_container{
     padding-left: 10vw!important;
     padding-right: 10vw!important;
+}
+
+
+
+
+.contact_item .contact_title{
+    position: relative;
+    font-size: 1.2vw;
+    padding-left: 2vw;
+    margin-bottom: 0.85vw;
+}
+
+
+ .contact_item .contact_title:before{
+    width: 1.2vw;
+    background-color: #000;
+    height: 1px;
+    top: 50%;
+    transform: translateY(-50%);    
+    content: "";
+    position: absolute;
+    left: 0;
+} 
+
+
+
+
+.contact_item{
+    width: 48%;
+    margin-bottom: 2.5vw;
+}
+
+.contact_item .details p {
+    font-size: 0.9vw;
+}
+
+.contact_item .details a {
+    font-size: 1.1vw;
+}
+
+.contact_item svg {
+    width: 1.7vw;
+    height: 1.7vw;
+}
+.contact_item .details {
+    width: 85%;
 }
