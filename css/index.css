@@ -596,7 +596,7 @@ a{
     position: relative;
     font-size: 1.2vw;
     padding-left: 2vw;
-    margin-bottom: 0.85vw;
+    margin-bottom: 0.85vw!important;
 }
 
 
@@ -619,6 +619,12 @@ a{
     margin-bottom: 2.5vw;
 }
 
+
+.contact_item *{
+    margin: 0px!important;
+}
+
+
 .contact_item .details p {
     font-size: 0.9vw;
 }
@@ -633,4 +639,13 @@ a{
 }
 .contact_item .details {
     width: 85%;
+    margin-left: 0.8vw!important;
 }
+
+
+.messengers a{
+    text-decoration: none;
+}
+
+
+   
