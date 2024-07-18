@@ -1,26 +1,60 @@
 
 
 #dienstleistungen_header_menu{
-    display: none;
-    position: absolute;
-    background-color: white; 
-    border: 1px solid #ccc; 
-    z-index: 1000; 
+ 
 
-    transition: opacity 0.3s ease, transform 0.3s ease;
+    top: 100%;
+    position: absolute;
+    left: -1.063vw;
+    width: -moz-max-content;
+    width: max-content;
+    background-color: #fff;
+    border: 1px solid #C7C7C7;
+    box-shadow: 0 4px 13px 0 rgba(0, 0, 0, 0.25);
+    padding: 0.938vw 0 1.25vw 1.063vw;
+
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+
+
 }
 
-
-
-
-
-
-
 .hide {
-    display: none;
+    opacity: 0;
+    visibility: hidden;
     z-index: -1;
     transition: 0.3s all ease;
 }
+
+.show {
+    opacity: 1;
+    visibility: visible;
+    z-index: 22;
+}
+
+
+
+#dienstleistungen_header_menu li, #dienstleistungen_header_menu a{
+    color: #000000 !important;
+}
+
+
+#dienstleistungen_header_menu li{
+    padding: 5px!important;
+    border-bottom: 1px  solid #000!important;
+}
+
+
+#dienstleistungen_header_menu li:hover{
+    background-color: grey;
+
+    transition: 0.3s all ease;
+}
+
+
+
+
+
+
 
 
 
@@ -139,15 +173,6 @@ header .header_under_row {
 }
 
 
-
-.header_fixed .show {
-    display: fixed;
-    transform: translateY(0); /* Появление хедера */
-}
-
-
-
-
 .header_under_row .navbar ul li {
     margin-left: 0px;
     margin-right: 3vw;
@@ -258,11 +283,6 @@ a{
 
 
 .header_fixed p, .header_fixed a, .header_fixed span, .header_fixed b, .header_fixed div {
-    color: #000000 !important;
-}
-
-
-#dienstleistungen_header_menu li, #dienstleistungen_header_menu a{
     color: #000000 !important;
 }
 
@@ -510,6 +530,56 @@ a{
     z-index: -2;
     opacity: 0;
     transition: 0.5s all ease;
+
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+.price_item table td:first-child {
+    width: 15%;
+    border-left: none;
+    font-size: 1.125vw;
+}
+
+.price_item table thead td {
+    font-weight: 700;
+    font-size: 1.25vw;
+}
+
+.price_item table td {
+    padding: 1.3vw;
+}
+
+.price_item table tbody td {
+    border: 1px solid #C4C4C4;
+}
+
+.price_item table tbody td:nth-child(2) {
+    font-size: 1.25vw;
+    font-weight: 600;
+    color: rgba(0, 0, 0, 0.8);
+}
+
+
+.price_item table tbody td:last-child {
+    font-weight: 600;
+    font-size: 1.25vw;
+}
+
+.price_item table td:last-child {
+    width: 20%;
+    border-right: none;
+}
+
+
+.price_item table td {
+    padding: 1.3vw;
+}
+
+table tr:hover {
+    background-color: whitesmoke;
+
+    transition: 0.3s all ease;
 }
 
 
@@ -649,3 +719,28 @@ a{
 
 
    
+
+
+
+
+
+
+.nav_services {
+    position: sticky;
+    top: 8vw;
+    width: 23%;
+    height: -moz-max-content;
+    height: max-content;
+}
+
+
+.content {
+    width: 75%;
+}
+
+.content h1, .content h2, .content h3, .conten h4, .content h5, .content h6 {
+    font-weight: 700;
+    font-size: 2vw;
+    margin-bottom: 1vw;
+    margin-top: 3vw;
+}

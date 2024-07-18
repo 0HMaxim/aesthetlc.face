@@ -173,7 +173,7 @@ function header_refresh(header_menuArr, newLang, oldLang) {
                             
                             <li id="dienstleistungen">
                                 <a  href="${countPoin}services/index.html">${header_menuArr[2]}</a>
-                                <ul id="dienstleistungen_header_menu">
+                                <ul id="dienstleistungen_header_menu" class="hide">
                                 
                                     
                                 </ul>
@@ -233,16 +233,14 @@ function header_refresh(header_menuArr, newLang, oldLang) {
 
     lang_block.addEventListener("mouseover", function(e){
 
-        langs[0].style.display = 'block';
-
+        langs[0].classList.add('show');
     })
 
 
 
     lang_block.addEventListener('mouseout', function(e) {
 
-        langs[0].style.display = 'none';
-
+        langs[0].classList.remove('show');
     });
 
 
@@ -272,7 +270,7 @@ function header_refresh(header_menuArr, newLang, oldLang) {
     dienstleistungen_header_menu.innerHTML=`
 
 
-    <li><a>ВИДАЛЕННЯ НОВОУТВОРЕНЬ</a></li>
+    <li><a href="${countPoin}services/vidalennya-novoutvoren.html" >ВИДАЛЕННЯ НОВОУТВОРЕНЬ</a></li>
 
     <li><a>КОСМЕТОЛОГІЯ ОБЛИЧЧЯ ТА ТІЛА</a></li>
 
@@ -311,14 +309,13 @@ function header_refresh(header_menuArr, newLang, oldLang) {
 
     dienstleistungen.addEventListener('mouseover', function(e) {
 
-        dienstleistungen_header_menu.style.display = 'block';
+        dienstleistungen_header_menu.classList.add('show');
     });
 
 
     dienstleistungen.addEventListener('mouseout', function(e) {
 
-        dienstleistungen_header_menu.style.display = 'none';
-
+        dienstleistungen_header_menu.classList.remove('show');
     });
 
 
