@@ -272,7 +272,8 @@ function header_refresh(header_menuArr, newLang, oldLang) {
 
     <li><a href="${countPoin}services/vidalennya-novoutvoren.html" >ВИДАЛЕННЯ НОВОУТВОРЕНЬ</a></li>
 
-    <li><a>КОСМЕТОЛОГІЯ ОБЛИЧЧЯ ТА ТІЛА</a></li>
+    <li><a href="${countPoin}services/kosmetologiya.html" >КОСМЕТОЛОГІЯ ОБЛИЧЧЯ ТА ТІЛА</a></li>
+
 
     <li><a>ІНТИМНА КОСМЕТОЛОГІЯ</a></li>
 
