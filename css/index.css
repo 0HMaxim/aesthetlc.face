@@ -1,3 +1,18 @@
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+    margin-bottom: 0!important;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font: inherit;
+    vertical-align: baseline;
+    outline: none;
+    font-family: "Montserrat", sans-serif;
+    box-sizing: border-box;
+    color: #000;
+}
+
+
+
 
 
 #dienstleistungen_header_menu{
@@ -129,20 +144,11 @@ li, ul{
     top: 0;
     left: 0;
     width: 100%;
-    background: rgba(255, 255, 255, 0.8);
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
     -webkit-backdrop-filter: blur(10px);
     backdrop-filter: blur(10px);
 }
 
-.header_fixed{
-    width: 100%;
-    position: fixed !important;
-    z-index: 10099;
-    margin: 0px;
-    padding: 0px;
-
-}
 
 
 .header{
@@ -150,6 +156,7 @@ li, ul{
     top: 0;
     left: 0;
     width: 100%;
+    background: none;
     z-index: 999;
 }
 
@@ -157,9 +164,7 @@ li, ul{
 /* Header top row animation*/
 
 
-#header_fixed .header .header_top_row {
-    padding: 0.5vw 0;
-}
+
 
 .header .header_top_row {
     padding: 1.125vw 0 1vw;
@@ -178,30 +183,6 @@ header .header_under_row {
     margin-right: 3vw;
     padding-bottom: 0.75vw;
     
-}
-
-
-
-.header_top_row .logo_block p {
-margin-left: 0.75vw;
-padding-left: 1.063vw;
-font-size: 1.25vw;
-border-left: 1px solid #000;
-letter-spacing: 0.313vw;
-transition: 0.5s all ease;
-}
-
-
-
-.header_top_row{margin: 0;
-padding: 0;
-border: 0;
-font: inherit;
-vertical-align: baseline;
-outline: none;
-font-family: "Montserrat", sans-serif;
-box-sizing: border-box;
-color: #000;
 }
 
 
@@ -274,16 +255,78 @@ a{
 
 
 
+.header_top_row .logo_block p {
+    font-size: 1.25vw;
+    letter-spacing: 0.313vw;
+    transition: 0.5s all ease;
+}
 
-.header p, .header a, .header span, .header b , .header div {
+
+
+.header p, .header a, .header span, .header b , .header div , .header svg{
     color: #fff !important;
     text-decoration: none;
+}
+
+
+.header_fixed{
+    width: 100%;
+    position: fixed !important;
+    z-index: 10099;
+    margin: 0px;
+    padding: 0px;
+    background: rgba(255, 255, 255, 0.8);
+
 
 }
 
 
-.header_fixed p, .header_fixed a, .header_fixed span, .header_fixed b, .header_fixed div {
-    color: #000000 !important;
+.header_fixed.header .header_top_row {
+    padding: 0.5vw 0;
+    
+}
+
+.header_top_row > * {
+    margin: 0;
+    padding: 0;
+}
+
+
+
+  
+
+#logo {                                                        
+    border-right: 1px solid #fff!important;    
+    margin-right: 0.75vw;
+    padding-right: 1.063vw;
+    transition: 0.5s all ease;
+
+}
+
+
+.header_fixed #logo {  
+    border-color: #000!important;    
+                                                           /*        черный цвет бордера когда страница опускается       */
+    transition: 0.5s all ease;
+
+}
+
+
+
+.header_fixed p, .header_fixed a, .header_fixed span, .header_fixed b, .header_fixed div, .header_fixed svg{                /*        черный цвет ввсего когда страница опускается        */
+    color:#000000 !important;
+}
+
+
+
+
+
+.header svg path {
+    fill: white!important;
+}
+
+.header_fixed.header svg path{
+    fill: black!important;
 }
 
 
@@ -350,6 +393,7 @@ a{
     display: block;
     height: 100%;
     width: 100%;
+
     transform: translate(-50%, -50%);
     transition: 0.3s all ease;
 
@@ -371,6 +415,19 @@ a{
     box-shadow: 0 0 14px 0 rgba(0, 0, 0, 0.25);
 }
 
+.scale_bg {
+    position: relative;
+    overflow: hidden;
+}
+
+
+.scale_bg:hover .image{
+
+
+
+    height: 110%!important;
+    width: 110%!important;
+}
 
 
 .container {
@@ -440,18 +497,6 @@ a{
 
 
 
-.header_logo div {
-    margin-left: 0.75vw;
-    padding-left: 1.063vw;
-    font-size: 1.25vw;
-    border-left: 1px solid #000;
-    letter-spacing: 0.313vw;
-    transition: 0.5s all ease;
-}
-
-
-
-
 
 
 
@@ -491,7 +536,7 @@ a{
 }
 
 
-
+/*         стили таблицы        */
 
 .price_item {
     transition: 0.3s all ease;
@@ -511,15 +556,6 @@ a{
 }
 
 
-.price_item.open .faq_desc, .price_item.open table {
-    height: -moz-max-content;
-    height: max-content;
-    position: relative;
-    opacity: 1;
-    top: 0;
-    z-index: 1;
-}
-
 
 .price_item table {
     margin-top: 0.5vw;
@@ -534,6 +570,10 @@ a{
     border-collapse: collapse;
     border-spacing: 0;
 }
+
+
+
+
 
 .price_item table td:first-child {
     width: 15%;
@@ -584,6 +624,10 @@ table tr:hover {
 
 
 
+
+
+
+
 .heading_block {
     font-size: 2.5vw;
     margin-bottom: 2.5vw;
@@ -603,6 +647,8 @@ table tr:hover {
 
 
 
+
+/*            Анимация нижней полосы в Dienstleistungen               */
 
 .service_items {
     display: grid;
@@ -642,10 +688,8 @@ table tr:hover {
     height: 100%;
 }
 
-.scale_bg {
-    position: relative;
-    overflow: hidden;
-}
+
+
 
 .service:hover.a_linie:before{
 
@@ -661,6 +705,9 @@ table tr:hover {
 
 
 
+
+
+/*              стили для стриныцы |    Contact             */
 
 .contact_item .contact_title{
     position: relative;
@@ -686,7 +733,7 @@ table tr:hover {
 
 .contact_item{
     width: 48%;
-    margin-bottom: 2.5vw;
+    margin-bottom: 2.5vw!important;
 }
 
 
@@ -695,22 +742,50 @@ table tr:hover {
 }
 
 
+
+.details p{
+
+    font-size: 1vw;                       /*      размер адреса в хеадере     */
+    margin-bottom: 0.2vw;
+
+
+    transition: 0.5s all ease;
+}
+
+
 .contact_item .details p {
     font-size: 0.9vw;
 }
 
-.contact_item .details a {
-    font-size: 1.1vw;
+
+.details a{
+
+    font-size: 1.1vw;           /*      размер шрифта номер телефона     */
 }
 
-.contact_item svg {
-    width: 1.7vw;
-    height: 1.7vw;
+
+
+.hours{
+    font-size: 1.1vw;           /*      размер шрифта во времени     */
+    margin-left: 0.8vw !important;
 }
-.contact_item .details {
-    width: 85%;
+
+
+
+
+
+
+.icon_block svg {
+    width: 3vw!important;
+    height: 3vw!important;
+}
+
+.icon_block .details {
+    width: 85%!important;
     margin-left: 0.8vw!important;
+
 }
+
 
 
 .messengers a{
@@ -718,7 +793,6 @@ table tr:hover {
 }
 
 
-   
 
 
 
@@ -743,4 +817,9 @@ table tr:hover {
     font-size: 2vw;
     margin-bottom: 1vw;
     margin-top: 3vw;
+}
+
+
+.content p {
+    margin-bottom: 1vw!important;
 }
