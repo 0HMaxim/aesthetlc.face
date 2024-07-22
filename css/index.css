@@ -140,6 +140,11 @@ li, ul{
 }
 
 
+
+/*                  Heder Classes            */
+
+
+
 .fixed{
     top: 0;
     left: 0;
@@ -184,6 +189,109 @@ header .header_under_row {
     padding-bottom: 0.75vw;
     
 }
+
+
+.header_top_row .logo_block p {
+    font-size: 1.25vw;
+    letter-spacing: 0.313vw;
+    transition: 0.5s all ease;
+}
+
+
+
+.header p, .header a, .header span, .header b , .header div , .header svg{
+    color: #fff !important;
+    text-decoration: none;
+}
+
+
+.header_fixed{
+    width: 100%;
+    position: fixed !important;
+    z-index: 10099;
+    margin: 0px;
+    padding: 0px;
+    background: rgba(255, 255, 255, 0.8);
+
+
+}
+
+
+.header_fixed.header .header_top_row {
+    padding: 0.5vw 0;
+    
+}
+
+.header_top_row > * {
+    margin: 0;
+    padding: 0;
+}
+
+
+  
+
+#logo {                                                        
+    border-right: 1px solid #fff!important;    
+    margin-right: 0.75vw;
+    padding-right: 1.063vw;
+    transition: 0.5s all ease;
+
+}
+
+
+.header_fixed #logo {  
+    border-color: #000!important;    
+                                                           /*        черный цвет бордера когда страница опускается       */
+    transition: 0.5s all ease;
+
+}
+
+
+
+.header_fixed p, .header_fixed a, .header_fixed span, .header_fixed b, .header_fixed div, .header_fixed svg{                /*        черный цвет ввсего когда страница опускается        */
+    color:#000000 !important;
+}
+
+
+
+
+
+.header svg path {
+    fill: white!important;
+}
+
+.header_fixed.header svg path{
+    fill: black!important;
+}
+
+
+
+
+
+
+
+
+
+
+.icon_block svg {
+    width: 3.5vw!important;
+    height: 3.5vw!important;
+}
+
+.icon_block .details {
+    width: 85%!important;
+    margin-left: 0.8vw!important;
+
+}
+
+.details {
+    margin: auto;
+    width: max-content;
+}
+
+
+
+
 
 
 
@@ -255,79 +363,8 @@ a{
 
 
 
-.header_top_row .logo_block p {
-    font-size: 1.25vw;
-    letter-spacing: 0.313vw;
-    transition: 0.5s all ease;
-}
 
 
-
-.header p, .header a, .header span, .header b , .header div , .header svg{
-    color: #fff !important;
-    text-decoration: none;
-}
-
-
-.header_fixed{
-    width: 100%;
-    position: fixed !important;
-    z-index: 10099;
-    margin: 0px;
-    padding: 0px;
-    background: rgba(255, 255, 255, 0.8);
-
-
-}
-
-
-.header_fixed.header .header_top_row {
-    padding: 0.5vw 0;
-    
-}
-
-.header_top_row > * {
-    margin: 0;
-    padding: 0;
-}
-
-
-
-  
-
-#logo {                                                        
-    border-right: 1px solid #fff!important;    
-    margin-right: 0.75vw;
-    padding-right: 1.063vw;
-    transition: 0.5s all ease;
-
-}
-
-
-.header_fixed #logo {  
-    border-color: #000!important;    
-                                                           /*        черный цвет бордера когда страница опускается       */
-    transition: 0.5s all ease;
-
-}
-
-
-
-.header_fixed p, .header_fixed a, .header_fixed span, .header_fixed b, .header_fixed div, .header_fixed svg{                /*        черный цвет ввсего когда страница опускается        */
-    color:#000000 !important;
-}
-
-
-
-
-
-.header svg path {
-    fill: white!important;
-}
-
-.header_fixed.header svg path{
-    fill: black!important;
-}
 
 
 
@@ -462,6 +499,9 @@ a{
 
 
 
+.fw800 {
+    font-weight: 800;
+}
 
 .fw700 {
     font-weight: 700;
@@ -631,6 +671,7 @@ table tr:hover {
 .heading_block {
     font-size: 2.5vw;
     margin-bottom: 2.5vw;
+    padding-top: 2.5vw;
 
 }
 
@@ -775,16 +816,6 @@ table tr:hover {
 
 
 
-.icon_block svg {
-    width: 3vw!important;
-    height: 3vw!important;
-}
-
-.icon_block .details {
-    width: 85%!important;
-    margin-left: 0.8vw!important;
-
-}
 
 
 
@@ -822,4 +853,9 @@ table tr:hover {
 
 .content p {
     margin-bottom: 1vw!important;
+}
+
+
+.title_row{
+    padding: 1.875vw 0;
 }
