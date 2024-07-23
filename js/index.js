@@ -320,7 +320,7 @@ function header_refresh(header_menuArr, newLang, oldLang) {
 
     <li><a href="${countPoin}services/mezoterapiya.html">МЕЗОТЕРАПІЯ</a></li>
         
-    <li><a>БІОРЕВІТАЛІЗАЦІЯ / БІОРЕПАРАЦІЯ</a></li>
+    <li><a href="${countPoin}services/biorevitalizaciya-bioreparaciya.html">БІОРЕВІТАЛІЗАЦІЯ / БІОРЕПАРАЦІЯ</a></li>
         
     <li><a>БОТУЛІНОТЕРАПІЯ</a></li>
         

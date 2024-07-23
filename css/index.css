@@ -851,6 +851,12 @@ table tr:hover {
 }
 
 
+.content p, .content a, .content ul li {
+    font-size: 1.1vw;
+    line-height: 1.5vw;
+}
+
+
 .content p {
     margin-bottom: 1vw!important;
 }
@@ -858,4 +864,9 @@ table tr:hover {
 
 .title_row{
     padding: 1.875vw 0;
+}
+
+
+.m-top4{
+  margin-top: 4vw;
 }
