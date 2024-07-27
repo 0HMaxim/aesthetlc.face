@@ -111,11 +111,9 @@ function header_refresh(header_menuArr, newLang, oldLang) {
                                                 </svg>
 
 
-
-                                                        
                                                 <div class="details d-flex row ">
-                                                    <a class="text-nowrap" href="https://maps.app.goo.gl/XYVPmSi8wqjrG6dr7" ><p>Poggendörper Weg 3-9, 24149 Kiel</p></a>
-                                                    <a href="tel:+491605122398" class="fw700">+49 (160) 512 2398</a>
+                                                    <a class="text-nowrap " href="https://maps.app.goo.gl/XYVPmSi8wqjrG6dr7" target="_blank" ><p>Poggendörper Weg 3-9, 24149 Kiel</p> </a>
+                                                    <a href="tel:+491605122398" class="fw700 ">+49 (160) 512 2398</a>
                                                 </div>
 
 
