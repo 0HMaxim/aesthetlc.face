@@ -158,9 +158,11 @@ li, ul{
     top: 0;
     left: 0;
     width: 100%;
+    height: 100%;
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);  
     -webkit-backdrop-filter: blur(10px);
     backdrop-filter: blur(10px);
+
 }
 
 
@@ -169,6 +171,7 @@ li, ul{
     position: absolute;
     top: 0;
     left: 0;
+    height: 20vw;
     width: 100%;
     background: none;
     z-index: 999;
@@ -183,12 +186,15 @@ li, ul{
 .header .header_top_row {
     padding: 1.125vw 0 1vw;
     transition: 0.3s all ease;
+    height: 70%;
 }
 
 
 header .header_under_row {
     margin-top: 1vw;
     transition: 0.3s all ease;
+    height: 100%;
+
 }
 
 
@@ -241,6 +247,7 @@ header .header_under_row {
 
     margin: 0 auto;
     width: 85vw;
+    height: 100%;
   
 }
 
@@ -481,8 +488,6 @@ a{
 
 
 
-/*         класс чтобы повесить картику сзади объекта                 */
-
 
 
 
@@ -520,12 +525,13 @@ a{
 
 }
 
+/*         класс чтобы повесить картику сзади объекта                 */
+
 
 .scale_bg {
     position: relative;
     overflow: hidden;
 }
-
 
 
 
@@ -1066,7 +1072,7 @@ h1, h2, h3, h4 ,  h5, h6
 
 
 .my_btn {
-    background-color: #000;
+    background-color: #000;                     /*                   настроить кнопку                                     */
     color: #fff!important;
     height: 3vw;
     display: flex;

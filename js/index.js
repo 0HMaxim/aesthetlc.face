@@ -111,9 +111,11 @@ function header_refresh(header_menuArr, newLang, oldLang) {
                                                 </svg>
 
 
+
+                                                        
                                                 <div class="details d-flex row ">
-                                                    <a class="text-nowrap " href="https://maps.app.goo.gl/XYVPmSi8wqjrG6dr7" target="_blank" ><p>Poggendörper Weg 3-9, 24149 Kiel</p> </a>
-                                                    <a href="tel:+491605122398" class="fw700 ">+49 (160) 512 2398</a>
+                                                    <a class="text-nowrap" href="https://maps.app.goo.gl/XYVPmSi8wqjrG6dr7" ><p>Poggendörper Weg 3-9, 24149 Kiel</p></a>
+                                                    <a href="tel:+491605122398" class="fw700">+49 (160) 512 2398</a>
                                                 </div>
 
 
@@ -273,11 +275,9 @@ function header_refresh(header_menuArr, newLang, oldLang) {
 
 
 
+                    <div class="header_under_row d-flex align-items-center justify-content-between m-0">
 
-
-                    <div class="header_under_row d-flex justify-content-between m-0">
-
-                        <div class="navbar d-flex">
+                        <div class="navbar d-flex w-100">
 
                             <ul class="d-flex"> 
                                 <li><a href="${countPoin}about.html">${header_menuArr[0]}</a></li>
@@ -305,10 +305,8 @@ function header_refresh(header_menuArr, newLang, oldLang) {
 
                             </ul>
 
-                        </div>
 
 
-                        <div id="lang_block" class="m-0 p-0">
                             <p class="fw500 m-0 p-0">${newLang}</p>
                                 <ul class="langs m-0 p-0 hide">
                                     <li class="m-0 p-0" id="lang_change">${oldLang}</li>
