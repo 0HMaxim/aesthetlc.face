@@ -310,7 +310,7 @@ function header_refresh(header_menuArr, newLang, oldLang) {
                                 <li><a href="${countPoin}team/index.html" >${header_menuArr[3]}</a></li>
                                 <li><a href="${countPoin}price.html" >${header_menuArr[4]}</a></li>
                                 <li><a href="" >${header_menuArr[5]}</a></li>
-                                <li><a href="" >${header_menuArr[6]}</a></li>
+                                <li><a href="${countPoin}faq.html" >${header_menuArr[6]}</a></li>
                                 <li><a href="" >${header_menuArr[7]}</a></li>
                                 <li><a href="" >${header_menuArr[8]}</a></li>
                                 <li><a href="${countPoin}contact.html" >${header_menuArr[9]}</a></li>
@@ -438,7 +438,25 @@ function header_refresh(header_menuArr, newLang, oldLang) {
     </li>
 
 
-    <li class="has_child"><a href="${countPoin}services/intimna-kosmetologiya.html">ІНТИМНА КОСМЕТОЛОГІЯ</a></li>
+    <li class="has_child">
+    
+            <a href="${countPoin}services/intimna-kosmetologiya.html">ІНТИМНА КОСМЕТОЛОГІЯ</a>
+
+
+            <ul class="submenu secondary hide">
+                <li><a href="https://besedaclinic.com.ua/ua/intimna-kosmetologiya/intimnii-piling">ІНТИМНИЙ ПІЛІНГ</a></li>
+                <li><a href="https://besedaclinic.com.ua/ua/intimna-kosmetologiya/intimna-biorevitalizaciyabioreparaciya">ІНТИМНА БІОРЕВІТАЛІЗАЦІЯ/БІОРЕПАРАЦІЯ</a></li>
+                <li><a href="https://besedaclinic.com.ua/ua/intimna-kosmetologiya/mezoterapiya-intimnix-zon">МЕЗОТЕРАПІЯ ІНТИМНИХ ЗОН</a></li>
+                <li><a href="https://besedaclinic.com.ua/ua/intimna-kosmetologiya/intimna-konturna-plastika">ІНТИМНА КОНТУРНА ПЛАСТИКА</a></li>
+                <li><a href="https://besedaclinic.com.ua/ua/intimna-kosmetologiya/aparatne-likuvannya">АПАРАТНЕ ЛІКУВАННЯ</a></li>
+                <li><a href="https://besedaclinic.com.ua/ua/intimna-kosmetologiya/likuvannya-gipergidrozu-intimnix-zon">ЛІКУВАННЯ ГІПЕРГІДРОЗУ ІНТИМНИХ ЗОН</a></li>
+
+            </ul>
+            
+            
+    </li>
+
+
 
     <li><a href="${countPoin}services/mezoterapiya.html">МЕЗОТЕРАПІЯ</a></li>
         
@@ -523,11 +541,15 @@ window.addEventListener('scroll', () => {
 
 
 
-let buttonShowTable = document.getElementsByClassName("cross");
+let crossButton = document.getElementsByClassName("cross");
+let faq_item = document.getElementsByClassName("faq_item");
+
+
+function openClose(buttonsOpenClose) {
 
 
     // Преобразуем HTMLCollection в массив для удобства
-    Array.from(buttonShowTable).forEach(function(button) {
+    Array.from(buttonsOpenClose).forEach(function(button) {
         button.addEventListener('click', function() {
             // Находим родительский элемент с классом "price_item"
             let priceItem = this.closest('.price_item');
@@ -537,5 +559,11 @@ let buttonShowTable = document.getElementsByClassName("cross");
             }
         });
     });
+}
+
+openClose(crossButton)
+
+openClose(faq_item)
+
     
     

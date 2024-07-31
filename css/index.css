@@ -6,10 +6,12 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
     font: inherit;
     vertical-align: baseline;
     outline: none;
-    font-family: "Montserrat", sans-serif;
     box-sizing: border-box;
     color: #000;
     text-decoration: none;
+
+    font-family: Verdana, Geneva, Tahoma, sans-serif !important;
+
 }
 
 
@@ -194,12 +196,21 @@ li, ul{
     text-decoration: none;
 }
 
-.header_under_row #lang_block  {
+#lang_block:hover .langs   {
+
+
+    opacity: 1; 
+    visibility: visible;
+    transition: 0.3s all ease;
+
     position: relative;
     z-index: 1;
     margin: 0;
     padding: 0;
 }
+
+
+
 
 
 
@@ -548,11 +559,12 @@ ul , li, a {
     background-position: center center;
     background-size: cover;
 
+
 }
 
 
 .scale_bg {
-    position: relative;
+    position: relative!important;
     overflow: hidden;
 }
 
@@ -700,6 +712,7 @@ ul , li, a {
     width: 2vw;
     height: 2vw;
     position: relative;
+    margin: 0;
 }
 
 
@@ -796,7 +809,7 @@ table tr:hover {
 
 .heading_block {
     font-size: 2.5vw;
-    margin-bottom: 2.5vw;
+    padding-bottom: 2.5vw;
     padding-top: 2.5vw;
     
     z-index: 2;
@@ -847,7 +860,6 @@ table tr:hover {
 
 
 /*            Анимация нижней полосы в leistungen               */
-
 
 .a_linie {
     position: relative; 
@@ -1003,6 +1015,7 @@ h1, h2, h3, h4 ,  h5, h6
     font-size: 2vw;
     margin-bottom: 1vw;
     margin-top: 3vw;
+    color: #000;
 }
 
 
@@ -1016,10 +1029,6 @@ h1, h2, h3, h4 ,  h5, h6
 
 
 
-
-.title_row{
-    padding: 1.875vw 0;
-}
 
 
 .m-top4{
@@ -1049,20 +1058,17 @@ h1, h2, h3, h4 ,  h5, h6
 
 
 
+.w-90{
 
-
-
-
-
-
-
-
-.inner title{
-    font-size: 2.2vw;
-    line-height: 120%;
-    text-shadow: 1px 1px 1px #fff;
-    font-weight: 400;
+    width: 90%!important;
 }
+
+
+
+
+
+
+
 
 
 
@@ -1074,7 +1080,7 @@ h1, h2, h3, h4 ,  h5, h6
 }
 
 .angebot_item {
-    margin-bottom: 4vw;
+    margin-bottom: 4vw!important;
 }
 
 .angebot_item{
@@ -1084,14 +1090,16 @@ h1, h2, h3, h4 ,  h5, h6
 }
 
 
-.title_text{
 
-
-
+.inner title{
+    font-size: 2.2vw;                                                  /*                Размер текста в КАрточке акции                     */
+    line-height: 120%;                              
+    text-shadow: 1px 1px 1px #fff;
+    font-weight: 400;
 }
 
-.subtitle{
-    font-size: 1.1vw;
+.subtitle{  
+    font-size: 1.1vw;                                                            /*                Размер размер описания акции                     */
 
 
     margin: 1.6vw 0 2.8vw;
@@ -1123,6 +1131,7 @@ h1, h2, h3, h4 ,  h5, h6
 
     max-height:  max-content;
 
+    padding: 0 1vw;
 
     border-radius: 0.3vw ;
 
@@ -1153,12 +1162,6 @@ h1, h2, h3, h4 ,  h5, h6
     transform: rotate(30deg);
     animation: 5s moveLine linear infinite;
 }
-
-
-header .top_row .my_btn {
-    padding: 0 1vw;
-}
-
 
 
 
@@ -1217,81 +1220,14 @@ header .top_row .my_btn {
 
 }
 
-.submenu li {
-    margin-right: 0px!important;
-}
 
 
-.has_child :first-child:before {
-    content: "";
-    position: absolute;
-    right: 0.688vw;
-    top: 50%;
-    width: 0.313vw;
-    height: 0.5vw;
-    transform: translateY(-50%);                                /*            СТРЕЛКА ДЛЯ ОБЬЕКТА                                   */
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: center right;
-    background-image: url(https://besedaclinic.com.ua/img/menu_arr.svg);
-    transition: 0.3s all ease;
-
-}
-
-
-
-.has_child :first-child{
-
-
-    padding: 0.563vw 1.75vw 0.563vw 0;
-
-    display: block;
-    position: relative;
-    line-height: 100%;
-}
-
-
-
-.has_child :first-child:hover:before{               /*            ЧТОБЫ СТРЕЛКА БЫЛА СПРАВА ОТ ОБЬЕКТА                                   */
-        right: 0vw;
-
-}
-
-
-
-
-
-
-
-
-.submenu li{
- 
-    margin-right: 0;
-    padding-bottom: 0;
-    padding-right: 0.68vw;
-    position: relative;
-}
-
-.submenu a{
- 
-    padding: 0.563vw 1.75vw 0.563vw 0;
-    border-bottom: 1px solid #C9C9C9;
-    display: block;
-    position: relative;
-    line-height: 100%;
-
-}
 
 
 
 .submenu li, 
 .submenu a{
     color: #000000 !important;
-}
-
-
-.submenu li{
-    border-bottom: 1px  solid #000!important;
 }
 
 
@@ -1319,14 +1255,71 @@ header .top_row .my_btn {
 }
 
 
-
-
 .has_child:hover .secondary.hide {
 
     opacity: 1!important; 
     visibility: visible !important;
 }
 
+
+
+.has_child {
+
+    position: relative;
+}
+
+
+
+
+
+.has_child > a::before  {
+    content: "";
+    position: absolute;
+    right: 1vw;                                           /*            ЧТОБЫ СТРЕЛКА БЫЛА СПРАВА ОТ ОБЬЕКТА                                   */
+    top: 50%;
+    width: 0.313vw;
+    height: 0.5vw;
+    transform: translateY(-50%);                                /*            СТРЕЛКА ДЛЯ ОБЬЕКТА                                   */
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center right;
+    background-image: url(https://besedaclinic.com.ua/img/menu_arr.svg);
+    transition: 0.3s all ease;
+
+}
+
+
+.submenu a{
+ 
+    padding: 0.563vw 1.75vw 0.563vw 0;
+    border-bottom: 1px solid #C9C9C9;
+    display: block;
+    position: relative;
+    line-height: 100%;
+
+}
+
+
+.submenu li{
+ 
+    margin-right: 0!important;
+    padding-bottom: 0;
+    padding-right: 0.68vw!important;
+    position: relative;
+}
+
+
+.has_child > a {
+
+    padding: 0.563vw 1.75vw 0.563vw 0;
+}
+
+
+
+.has_child > a:hover::before{                   /*            АНИМАЦИЯ ДЛЯ СТРЕЛКИ                       */
+        right: 0.3vw; 
+
+}
 
 
 
@@ -1340,17 +1333,31 @@ header .top_row .my_btn {
     background-color: #fff;
     border: 1px solid #C7C7C7;
     box-shadow: 0 4px 13px 0 rgba(0, 0, 0, 0.25);
-    padding: 0.938vw 1.38vw 1.25vw 1.063vw!important;
+    padding: 0.938vw 0 1.25vw 1.063vw!important;
     z-index: 22;
 }
 
 
 .submenu.secondary {
-    top: -0.563vw;
+    top: -0.563vw;                                      /*            РАСПОЛОЖЕНИЕ ПОД МЕНЮ                                 */
     left: 100%;
-    padding: 0.5vw 0 1vw 1.063vw;
-    
+
+    padding: 0.5vw 0 1vw 1.063vw!important;
 }
+
+
+.has_child:hover .secondary.hide {
+    opacity: 1 !important; 
+    visibility: visible !important;
+}
+
+/* .submenu.secondary :before {
+    content: none!important;
+    background-image: none!important;
+    width: 0vw!important;
+    height: 0vw!important;
+} */
+
 
 
 
@@ -1369,3 +1376,127 @@ header .top_row .my_btn {
     visibility: visible !important;
     transition: 2 0.3s  ease;
 } */
+
+
+.text_full_screen{
+    position: relative;
+    right: 15vw!important;
+
+
+
+
+    
+    font-size: 1vw;
+    letter-spacing: 0.370vw;
+
+    margin-bottom: 2vw;
+    margin-top: 2vw;
+
+    color: #666;
+
+    transition: 0.5s all ease;
+    text-align: center;
+
+
+
+}
+
+
+
+.faq_items{
+    margin-top: 1vw;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 4vw;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.price_item .faq_item_text {
+    height: 0;
+    position: relative!important;
+    opacity: 0;
+    top: 50px;
+
+
+
+
+
+
+    padding: 1.5vw 2vw 0;
+
+    transition: 0.5s all ease;
+
+
+}
+
+.faq_item_text * , .faq_item_text ul li  {
+    font-size: 1.1vw!important;
+    line-height: 1.5vw!important;
+    font-weight: 300!important;
+    
+}
+
+
+.faq_item_text ul li  {
+   
+    margin-bottom: 0vw;
+}
+
+
+.price_item.open .faq_item_text {
+  
+    height: -moz-max-content;
+    height: max-content;
+    position: relative;
+    width: 100%;
+    opacity: 1;
+    top: 0;
+    z-index: 1;
+}
+
+
+.price_item{
+    padding: 1.875vw 0;
+
+}
+
+.faq_item .title_row{
+    position: relative;
+
+    padding: 1.875vw 0;                 /*                  заголовок FAQ                     */
+
+    padding-bottom: 0;
+    border-bottom: none;
+
+}
+
+
+.faq_item .title_row * , .faq_item .faq_item_text * {
+
+}
+
+
+
+.title_row .name{
+
+    font-size: 1.6vw;
+    cursor: pointer;
+    max-width: 80%;
+
+    margin-bottom: 0px;
+}
+
+.faq_items .title_row .number {
+    font-size: 1.5vw;
+}
+
