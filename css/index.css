@@ -16,55 +16,6 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
 
 
 
-#leistungen_header_menu{
- 
-
-    top: 100%;
-    position: absolute;
-    left: -1.063vw;
-    width: -moz-max-content;
-    width: max-content;
-    background-color: #fff;
-    border: 1px solid #C7C7C7;
-    box-shadow: 0 4px 13px 0 rgba(0, 0, 0, 0.25);
-    padding: 0.938vw 0 1.25vw 1.063vw;
-
-    transition: opacity 0.3s ease, visibility 0.3s ease;
-
-
-}
-
-.hide {
-    opacity: 0; 
-    visibility: hidden;
-    z-index: -1;
-    transition: 0.3s all ease;
-}
-
-.show {
-    opacity: 1;
-    visibility: visible;
-    z-index: 22;
-}
-
-
-
-#leistungen_header_menu li, #leistungen_header_menu a{
-    color: #000000 !important;
-}
-
-
-#leistungen_header_menu li{
-    padding: 5px!important;
-    border-bottom: 1px  solid #000!important;
-}
-
-
-#leistungen_header_menu li:hover{
-    background-color: grey;
-
-    transition: 0.3s all ease;
-}
 
 
 
@@ -74,32 +25,39 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
 
 
 
-.header_under_row .lang_block ul.langs  {
-    padding-bottom: 0.75vw;
-    margin-right: 3vw;
-    position: absolute;
-    text-decoration: none;
-}
 
-.header_under_row #lang_block  {
-    position: relative;
-    z-index: 1;
+
+
+
+
+
+
+
+
+
+
+
+
+.top_page_image {
+    height: 20.313vw;
+    justify-content: center;
     margin: 0;
-    padding: 0;
+}
+
+
+  
+.inner {
+    padding: 5vw 0 0;
+}
+
+.inner_bottom {
+    padding: 0  0 3vw 0 ;
 }
 
 
 
-
-.header_under_row .navbar ul li::before{
-
-content: none;
-
-}
-
-
-.header_under_row .navbar ul li:hover  {
-    text-decoration: underline!important;
+.top_page_image .text-white{
+    font-size: 2.5vw;
 }
 
 
@@ -114,14 +72,14 @@ li, ul{
 }
 
 
-.about_top_page{
+/* .about_top_page{
     height: 43.75vw;
     justify-content: center;
     position: relative;
     margin-left: 0;
-}
+} */
 
-.about_video{
+.header_image{
     position: absolute;
     top: 0;
     left: 0;
@@ -131,6 +89,10 @@ li, ul{
     object-fit: cover;
     z-index: -100;
 }
+
+
+
+
 
 
 
@@ -162,7 +124,6 @@ li, ul{
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);  
     -webkit-backdrop-filter: blur(10px);
     backdrop-filter: blur(10px);
-
 }
 
 
@@ -171,10 +132,49 @@ li, ul{
     position: absolute;
     top: 0;
     left: 0;
-    height: 20vw;
-    width: 100%;
+    width: 100%;        
+    height: 13vw;
     background: none;
     z-index: 999;
+    transition: 0.3s all ease;
+}
+
+
+
+
+.header_fixed{
+    width: 100%;
+    position: fixed !important;
+    height: 13vw!important;
+    z-index: 10099;
+    margin: 0px;
+    padding: 0px;
+    background: rgba(255, 255, 255, 0.8);
+
+    transition: 0.3s all ease;
+
+}
+
+
+
+
+
+
+
+
+
+.top_page_video.has_top_image{
+    
+
+    height: 25.313vw;
+}
+
+
+
+.top_page_video.has_top_video{
+    
+
+    height: 25.313vw;
 }
 
 
@@ -183,18 +183,55 @@ li, ul{
 
 
 
+
+
+
+.header_under_row .lang_block ul.langs  {
+    padding-bottom: 0.75vw;
+    margin-right: 3vw;
+    
+    position: absolute;
+    text-decoration: none;
+}
+
+.header_under_row #lang_block  {
+    position: relative;
+    z-index: 1;
+    margin: 0;
+    padding: 0;
+}
+
+
+
+
+.header_under_row .navbar ul li::before{
+
+content: none;
+
+}
+
+
+.header_under_row .navbar ul li:hover  {
+    text-decoration: underline!important;
+}
+
+
+
+
+
+
+
+
+
 .header .header_top_row {
     padding: 1.125vw 0 1vw;
     transition: 0.3s all ease;
-    height: 70%;
 }
 
 
 header .header_under_row {
     margin-top: 1vw;
     transition: 0.3s all ease;
-    height: 100%;
-
 }
 
 
@@ -206,11 +243,37 @@ header .header_under_row {
 }
 
 
-.header_top_row .logo_block p {
-    font-size: 1.25vw;
-    letter-spacing: 0.313vw;
+.logo_name  {
+    padding-top: 2vw;
+    font-size: 1vw;
+    letter-spacing: 0.370vw;
+
+    margin-bottom: 1vw;
+
+
     transition: 0.5s all ease;
+    text-align: center;
 }
+
+
+
+
+
+.logo_name :first-child {
+
+    margin-bottom: 0.5vw;
+    transition: 0.5s all ease;
+    text-align: center;
+}
+
+
+
+
+
+
+
+
+
 
 
 
@@ -220,17 +283,6 @@ header .header_under_row {
 
 }
 
-
-.header_fixed{
-    width: 100%;
-    position: fixed !important;
-    z-index: 10099;
-    margin: 0px;
-    padding: 0px;
-    background: rgba(255, 255, 255, 0.8);
-
-
-}
 
 
 .header_fixed.header .header_top_row {
@@ -245,9 +297,10 @@ header .header_under_row {
 
 .my_container{
 
-    margin: 0 auto;
+    margin: 0 auto!important;
     width: 85vw;
     height: 100%;
+
   
 }
 
@@ -260,6 +313,9 @@ header .header_under_row {
     margin-right: 0.75vw;
     padding-right: 1.063vw;
     transition: 0.5s all ease;
+
+    height: auto;
+    width: 10vw;
 
 }
 
@@ -328,7 +384,7 @@ header .header_under_row {
 
 .icon_block .details {
     width: 85%!important;
-    margin-left: 0.8vw!important;
+    margin-left: 1.4vw !important;
 }
 
 .details {
@@ -389,29 +445,14 @@ ul , li, a {
     position: relative;
     list-style: none;
     font-weight: 400;
+    text-decoration: none;
 
     font-size: 1.1vw;
     line-height: 1.5vw;
+    color: #000!important;
 }
 
 
-a {
-    text-decoration: none;
-    font-size: 1vw;
-    font-weight: 400;
-    transition: 0.3s all ease;
-    color: #000;
-}
-
-
-a{
-        text-decoration: none;
-        font-size: 1vw;
-        font-weight: 400;
-        transition: 0.3s all ease;
-        color: #000!important;
-   
-}
 
 
 
@@ -435,25 +476,7 @@ a{
 
 
 
-.top_page{
-    
-    height: max-content;
-    min-height: 20.313vw;
-}
 
-
-
-.top_page_image {
-    height: 20.313vw;
-    justify-content: center;
-    margin: 0;
-}
-
-
-
-.top_page_image .text-white{
-    font-size: 2.5vw;
-}
 
 
 
@@ -487,6 +510,8 @@ a{
 
 
 
+
+/*         класс чтобы повесить картику сзади объекта                 */
 
 
 
@@ -525,13 +550,12 @@ a{
 
 }
 
-/*         класс чтобы повесить картику сзади объекта                 */
-
 
 .scale_bg {
     position: relative;
     overflow: hidden;
 }
+
 
 
 
@@ -796,7 +820,6 @@ table tr:hover {
 
 
 
-/*            Анимация нижней полосы в leistungen               */
 
 .service_items {
     display: grid;
@@ -823,6 +846,7 @@ table tr:hover {
 
 
 
+/*            Анимация нижней полосы в leistungen               */
 
 
 .a_linie {
@@ -886,14 +910,41 @@ table tr:hover {
 
 
 
-.details p{
+.details :first-child{
 
-    font-size: 1vw;                       /*      размер адреса в хеадере     */
+    font-size: 1.1vw!important;                     /*      размер адреса в хеадере     */
     margin-bottom: 0.2vw;
 
+    width: max-content;
 
     transition: 0.3s all ease;
 }
+
+
+
+
+.details :last-child{
+
+    font-size: 1.2vw!important;           /*      размер шрифта номер телефона     */
+    font-weight: 700;
+    width: max-content;
+}
+
+
+.messengers a{
+    margin-right: 1.5vw;
+}
+
+.messengers :last-child{
+    margin-right: 0;
+
+}
+
+
+
+
+
+
 
 
 .contact_item .details p {
@@ -901,16 +952,13 @@ table tr:hover {
 }
 
 
-.details a{
-
-    font-size: 1.1vw;           /*      размер шрифта номер телефона     */
-}
 
 
 
-.hours{
-    font-size: 1.1vw;           /*      размер шрифта во времени     */
-    margin-left: 0.8vw !important;
+
+.hours :first-child{
+
+    font-size: 1.1vw!important;               /*      размер шрифта во времени     */
 }
 
 
@@ -1065,20 +1113,22 @@ h1, h2, h3, h4 ,  h5, h6
   }
 
 
-  
-.inner {
-    padding: 5vw 0 0;
-}
+
 
 
 .my_btn {
-    background-color: #000;                     /*                   настроить кнопку                                     */
+    background-color: #000;
     color: #fff!important;
-    height: 3vw;
+    min-height: 3vw;
+
+    max-height:  max-content;
+
+
+    border-radius: 0.3vw ;
+
     display: flex;
     align-items: center;
     border: 1px solid #000;
-    padding: 0 1.9vw;
     width: -moz-max-content;
     width: max-content;
     font-weight: 500;
@@ -1113,11 +1163,209 @@ header .top_row .my_btn {
 
 
 .my_btn svg {
-    margin-right: 0.75vw;
+
+    width: 3vw;
+    height: 3vw;
 }
 
 
-.btn_text {
+
+
+.my_btn .details {
+  
+    margin: 0 1 0 0vw !important;
+
+}
+
+
+
+
+
+.my_btn .details :first-child{
+  
+
+
+    font-size: 1.1vw!important;
+
+    font-weight: 700;
+    width: 100%;
+    align-items: center;
+
+}
+
+
+.my_btn .details :last-child{
+
+
+
+    font-size: 1.2vw!important;
+    font-weight: 700;
+
+    margin: 0;
+    width: 100%;
+    align-items: center;
+
+}
+
+
+
+.my_btn .icon_block{
+
+    padding: 1vw 2vw!important;
+    width: 100%;
+    height: 100%;
+
+}
+
+.submenu li {
+    margin-right: 0px!important;
+}
+
+
+.has_child :first-child:before {
+    content: "";
     position: absolute;
-    margin-left: 2.5vw;
+    right: 0.688vw;
+    top: 50%;
+    width: 0.313vw;
+    height: 0.5vw;
+    transform: translateY(-50%);                                /*            СТРЕЛКА ДЛЯ ОБЬЕКТА                                   */
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center right;
+    background-image: url(https://besedaclinic.com.ua/img/menu_arr.svg);
+    transition: 0.3s all ease;
+
 }
+
+
+
+.has_child :first-child{
+
+
+    padding: 0.563vw 1.75vw 0.563vw 0;
+
+    display: block;
+    position: relative;
+    line-height: 100%;
+}
+
+
+
+.has_child :first-child:hover:before{               /*            ЧТОБЫ СТРЕЛКА БЫЛА СПРАВА ОТ ОБЬЕКТА                                   */
+        right: 0vw;
+
+}
+
+
+
+
+
+
+
+
+.submenu li{
+ 
+    margin-right: 0;
+    padding-bottom: 0;
+    padding-right: 0.68vw;
+    position: relative;
+}
+
+.submenu a{
+ 
+    padding: 0.563vw 1.75vw 0.563vw 0;
+    border-bottom: 1px solid #C9C9C9;
+    display: block;
+    position: relative;
+    line-height: 100%;
+
+}
+
+
+
+.submenu li, 
+.submenu a{
+    color: #000000 !important;
+}
+
+
+.submenu li{
+    border-bottom: 1px  solid #000!important;
+}
+
+
+
+.hide {
+    opacity: 0; 
+    visibility: hidden;
+    z-index: -1;
+}
+
+
+
+.first:hover .submenu {
+    opacity: 1; 
+    visibility: visible;
+    transition: 0.3s all ease;
+}
+
+
+.secondary{
+
+    opacity: 0!important; 
+    visibility: hidden!important;
+    
+}
+
+
+
+
+.has_child:hover .secondary.hide {
+
+    opacity: 1!important; 
+    visibility: visible !important;
+}
+
+
+
+
+
+.submenu {
+    position: absolute;
+    top: 100%;
+    left: -1.063vw;
+    width: -moz-max-content;
+    width: max-content;
+    background-color: #fff;
+    border: 1px solid #C7C7C7;
+    box-shadow: 0 4px 13px 0 rgba(0, 0, 0, 0.25);
+    padding: 0.938vw 1.38vw 1.25vw 1.063vw!important;
+    z-index: 22;
+}
+
+
+.submenu.secondary {
+    top: -0.563vw;
+    left: 100%;
+    padding: 0.5vw 0 1vw 1.063vw;
+    
+}
+
+
+
+/* .has_child .submenu{
+    opacity: 0; 
+    visibility: hidden !important;
+}
+
+
+
+
+
+
+.has_child:hover .submenu.hide{
+    opacity: 1; 
+    visibility: visible !important;
+    transition: 2 0.3s  ease;
+} */
