@@ -1,7 +1,5 @@
 let header = document.getElementsByClassName("header");
 
-console.log(header[0])
-
 
 
 
@@ -57,8 +55,6 @@ function header_refresh(header_menuArr, newLang, oldLang) {
         countPoin += "/";
     }
   
-
-    console.log(countPoin);
 
 
     header[0].innerHTML=`
@@ -541,6 +537,407 @@ window.addEventListener('scroll', () => {
 
 
 
+
+
+    
+    
+
+
+
+
+
+let faq_items = document.getElementsByClassName("faq_items");
+
+
+
+let faqArray = [
+
+    
+    {   title : "Чим відрізняється пластика губ від збільшення?" ,
+        text :  [   "На відміну від звичайного збільшення контурна пластика дозволяє ще й змінити форму губ. У більшості випадків така корекція необхідна для дівчат з тонкими губами. За допомогою цієї процедури можна змінити кут підняття або опускання, а також створити ідеальний контур губ без застосування скальпеля."    
+
+                    ]
+    },
+    
+    
+    {   title : "Скільки тримається 1 мл у губах?" ,
+        text :  [   "Результат збільшення губ помітний вже в  перші хвилини після процедури. Остаточний ефект закріплюється через 7-10 днів після введення філера і тримається від 6 до 12 місяців. При незадовільному результаті (недостатній обсяг губ) процедура може бути повторена раніше (через 1, 3 чи 6 місяців)."    
+                
+                    ]
+    },
+
+    {   title : "Скільки мл потрібно колоти в губи вперше?" ,
+        text :  [ 
+                "Мінімальний обсяг – 1 мл." , 
+                "Максимальний об'єм – не більше двох шприців за одну процедуру." ,
+                "Мінімальний обсяг – 1 мл." , 
+            ]
+    },
+
+
+    {   title : "Чи потрібно збривати волосся після лазерної епіляції?" ,
+        text :  [   "Щоб прискорити процес випадіння волосся, ви можете його голити простою бритвою."    
+        
+                    ]
+    },
+
+    {   title : "Які існують протипоказання для азелаїнового пілінгу?" ,
+        text :  [   
+            "Незважаючи на те, що азелаїновий пілінг вважається делікатним методом очищення шкіри, у нього є деякі протипоказання:"  ,
+
+
+                {
+                    checklist : [ 
+
+                          "герпес та інфекційні запальні захворювання в активній фазі;", 
+                          "рани, ушкодження, опіки;" ,
+                          "алергія на інгредієнти у складі пілінгу." ,
+                        ]
+                    }
+
+            ]
+
+        
+    },
+
+
+    {   title : "Як спати після збільшення губ?" ,
+        text :  [   "В перші дні після процедури забороняється спати на животі обличчям в подушку."    
+                
+                    ]
+    },
+
+
+    {   title : "Через скільки проходить набряк після збільшення губ?" ,
+        text :  [    
+            "Набряк і синці (в разі їх наявності) після процедури можуть триматися до 7 днів. Це норма."  ,
+            "Для кращого відновлення лікар додатково може призначити ліки або процедури"  ,
+            "У BESEDA AESTHETIC CLINIC  після процедури збільшення губ пацієнту видають спеціальний набір медикаментів, які сприяють швидкому відновленню."  ,
+
+
+        ]
+    },
+
+
+    {   title : "Скільки потрібно процедур біоревіталізації ?" ,
+        text :  [    
+            "Середній курс біоревіталізації становить 3-5 процедур. Для отримання омолоджувального ефекту необхідно пройти весь курс."  ,
+
+        ]
+    },
+
+
+    {   title : "Чому сині губи після збільшення?" ,
+        text :  [    
+            "<strong>Губи густо пронизані капілярами і більш великими судинами, які пошкоджуються при проведенні уколів.</strong> При цьому організм реагує ще й на потрапляння всередину чужорідного тіла - густого філера. Разом це провокує появу невеликих набряків і синців, які є нормою."  ,
+
+        ]
+    },
+
+
+    {   title : "Що виводить ботокс з організму?" ,
+        text :  [   "Препарат виходить з організму природним шляхом. Він діє тільки в зоні його введення протягом 4 годин після уколу. Потім <strong>фільтрується нирками і виводиться з організму.</strong>"    
+                
+                    ]
+    },
+
+
+    {   title : "Чому не бере ботокс?" ,
+        text :  [    
+            
+
+            {
+                checklist : [ 
+            `Порушення пацієнтом правил підготовки до ін'єкцій та відновного періоду.`,
+            "Використання неякісних, несертифікованих препаратів;"  ,
+            "Великі дози ботулотоксину;"  ,
+            "Введення препарату не в ті м'язи (існує чітка схема, в які м'язи, на яку глибину потрібно вводити ботокс, щоб отримати певний ефект);"  ,
+            "Порушення пацієнтом правил підготовки до ін'єкцій та відновного періоду"  ,
+                ]
+            }
+
+        ]
+    },
+
+
+    {   title : "Скільки днів не можна цілуватись після збільшення губ?" ,
+        text :  [    
+            "Можна, але не одразу.  - почекати з цим варто близько 4-7 днів."  ,
+
+        ]
+    },
+
+
+    {   title : "Чому сині губи після збільшення?" ,
+        text :  [    
+            "<strong>Губи густо пронизані капілярами і більш великими судинами, які пошкоджуються при проведенні уколів.</strong> При цьому організм реагує ще й на потрапляння всередину чужорідного тіла - густого філера. Разом це провокує появу невеликих набряків і синців, які є нормою."  ,
+
+        ]
+    },
+
+
+    {   title : "Коли можна повторно колоти ботокс?" ,
+        text :  [   "Дія препарату починається через 7-14 днів і ефективність зберігається протягом 6-8 місяців. <strong>По закінченню цього часу можна буде повторити ін'єкції.</strong> Регулярне введення препарату дає стійкий ефект і перешкоджає утворенню нових зморшків."    
+                
+                    ]
+    },
+
+
+    {   title : "Як ботокс впливає на мозок?" ,
+        text :  [    
+            "Дія ін'єкцій ботулотоксину направлено на блокування нервових імпульсів і розслаблення рухливих зон м'язів обличчя. <strong>Ін'єкції ботокса блокують певні хімічні сигнали від нервів, тому мозок просто не отримує сигнал про скорочення і м'яз знаходиться в розслабленому стані.</strong>"  ,
+
+        ]
+    },
+
+
+    {   title : "Коли краще йти на чистку обличчя?" ,
+        text :  [    
+            "Рекомендується проводити професійну чистку обличчя при перших проявах проблем зі шкірою, які найчастіше з'являються у підлітковому віці. Контролювати проведення процедури має досвідчений косметолог, який визначить тип шкіри та підбере найбільш ефективний і безпечний метод чищення або лікування"  ,
+
+        ]
+    },
+
+
+    {   title : "Коли можна вмиватися після чистки обличчя?" ,
+        text :  [    
+            "<strong>Не слід вмиватись після чищення протягом 12 годин</strong> та протягом першої доби після процедури наносити косметику."  ,
+            "<strong>ОБОВЯЗКОВО</strong> користуватися зволожувальними та сонцезахисними кремами."  ,
+  
+        ]
+    },
+
+
+    {   title : "Як спати після збільшення губ?" ,
+        text :  [   
+            "Незважаючи на те, що азелаїновий пілінг вважається делікатним методом очищення шкіри, у нього є деякі протипоказання:"  ,
+
+
+                {
+                    checklist : [ 
+
+                          "герпес та інфекційні запальні захворювання в активній фазі;", 
+                          "рани, ушкодження, опіки;" ,
+                          "алергія на інгредієнти у складі пілінгу." ,
+                        ]
+                    }
+
+            ]
+    },
+
+
+    {   title : "Через скільки проходить набряк після збільшення губ?" ,
+        text :  [    
+            "Набряк і синці (в разі їх наявності) після процедури можуть триматися до 7 днів. Це норма."  ,
+            "Для кращого відновлення лікар додатково може призначити ліки або процедури"  ,
+            "У BESEDA AESTHETIC CLINIC  після процедури збільшення губ пацієнту видають спеціальний набір медикаментів, які сприяють швидкому відновленню."  ,
+
+
+        ]
+    },
+
+
+    {   title : "Скільки потрібно процедур біоревіталізації ?" ,
+        text :  [    
+            "Середній курс біоревіталізації становить 3-5 процедур. Для отримання омолоджувального ефекту необхідно пройти весь курс."  ,
+
+        ]
+    },
+
+
+    {   title : "Чому сині губи після збільшення?" ,
+        text :  [    
+            "<strong>Губи густо пронизані капілярами і більш великими судинами, які пошкоджуються при проведенні уколів.</strong> При цьому організм реагує ще й на потрапляння всередину чужорідного тіла - густого філера. Разом це провокує появу невеликих набряків і синців, які є нормою."  ,
+
+        ]
+    },
+
+    {   title : "Що робити щоб не росли вуса?" ,
+        text :  [    
+            "Найбільш ефективним способом видалення небажаного волосся, у тому числі і над верхньою губою, є лазерна епіляція. Сьогодні цей спосіб дуже популярний і затребуваний, як у жінок, так і у чоловіків."  ,
+
+        ]
+    },
+
+
+   
+
+
+
+
+    
+
+]
+
+
+
+
+function updateFaqDOM(faqArray) {
+
+let faqContent1 = ` <div class="col" > `            /*                        отрисовка элементов FAQ                          */
+
+
+                for(let i = 0; i< faqArray.length; i++ ){
+
+                    if(i%2==0){
+
+                        faqContent1 += `
+
+                        <div class="price_item faq_item open">
+
+
+                            <div class="title_row d-flex justify-content-between">
+                                <h3 class="name fw700">${faqArray[i].title}</h3>
+                                <p class="number">#${i+1}</p>
+                            </div>
+                            
+
+
+                            <div class="faq_item_text content">`
+
+
+                                for(let j = 0; j< faqArray[i].text.length; j++ ){
+
+                           
+                                    let currentItem = faqArray[i].text[j];
+        
+                                    // Проверка, не является ли текущий элемент объектом с ключом 'checklist'
+
+
+                                    if (typeof currentItem !== 'object' || currentItem === null || !('checklist' in currentItem)) {
+
+
+                                        faqContent1 += ` <p>${currentItem}</p>`
+
+                                    }
+
+                                        else{
+
+                                            faqContent1 += ` <ul class="check_list">`
+
+
+
+                                            for(let k = 0; k< currentItem.checklist.length; k++ ){
+
+
+                                                    faqContent1 += ` <li><div>${currentItem.checklist[k]}</div></li>`
+                                            }
+
+
+                                            faqContent1 += ` </ul>` 
+
+                                        }
+
+                                }
+
+                                faqContent1 += `  
+
+
+                            </div>
+                            
+                        </div> `
+
+                    }
+
+                }
+
+
+
+    faqContent1 += ` </div> `
+
+
+    let faqContent2 = ` <div class="col" > `
+
+
+    for(let i = 0; i< faqArray.length; i++ ){
+
+        if(i%2!=0){
+
+        faqContent2 += `
+
+            <div class="price_item faq_item open">
+
+
+                <div class="title_row d-flex justify-content-between">
+                    <h3 class="name fw700">${faqArray[i].title}</h3>
+                    <p class="number">#${i+1}</p>
+                </div>
+                
+
+
+                <div class="faq_item_text content">`
+
+
+                    for(let j = 0; j< faqArray[i].text.length; j++ ){
+
+               
+                        let currentItem = faqArray[i].text[j];
+
+                        // Проверка, не является ли текущий элемент объектом с ключом 'checklist'
+
+
+                        if (typeof currentItem !== 'object' || currentItem === null || !('checklist' in currentItem)) {
+
+
+
+                            faqContent2 += ` <p>${currentItem}</p>`
+
+                        }
+
+                            else{
+
+
+
+                            
+                                faqContent2 += ` <ul class="check_list">`
+
+
+
+                                for(let k = 0; k< currentItem.checklist.length; k++ ){
+
+
+
+                                    faqContent2 += ` <li><div>${currentItem.checklist[k]}</div></li>`
+                                }
+
+
+                                faqContent2 += ` </ul>` 
+
+                            }
+
+                    }
+
+                    faqContent2 += `  
+
+
+                </div>
+                
+            </div> `
+                }
+
+
+    }
+
+
+
+    faqContent2 += ` </div> `
+
+
+
+    faq_items[0].innerHTML = faqContent1 + faqContent2
+
+}
+
+
+
+
+
+
+
+
+
+
+
 let crossButton = document.getElementsByClassName("cross");
 let faq_item = document.getElementsByClassName("faq_item");
 
@@ -565,5 +962,158 @@ openClose(crossButton)
 
 openClose(faq_item)
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+let currentPage = 1; // Текущая страница
+let faqitemsPerPage = 8; // Количество элементов на странице
+
+function updatePaginationDOM() {
+        let pagination = document.getElementById("paggination");
+        let totalPages = Math.ceil(faqArray.length / faqitemsPerPage);
+        let code = `
+            <div>
+                <nav aria-label="Page navigation example">
+                    <ul class="pagination justify-content-center">
+                        <li class="page-item ${currentPage === 1 ? 'disabled' : ''}">
+                            <a class="page-link" href="#top" aria-label="Previous" data-action="prev">
+                                <span aria-hidden="true">&laquo;</span>
+                            </a>
+                        </li>
+        `;
+
+        for (let i = 1; i <= totalPages; i++) {
+            code += `
+                <li class="page-item ${i === currentPage ? 'active' : ''}">
+                    <a class="page-link" href="#top" data-page="${i}">${i}</a>
+                </li>
+            `;
+        }
+
+        code += `
+                        <li class="page-item ${currentPage === totalPages ? 'disabled' : ''}">
+                            <a class="page-link" href="#top" aria-label="Next" data-action="next">
+                                <span aria-hidden="true">&raquo;</span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        `;
     
-    
+
+
+
+    pagination.innerHTML = code;
+
+
+
+    // Добавляем новый обработчик событий
+    pagination.addEventListener('click', paginationClickHandler);
+
+}
+
+
+function paginationClickHandler(event) {
+    event.preventDefault();
+    let target = event.target;
+
+    // Если клик произошел по <span> внутри ссылки, выбираем родительский элемент
+    if (target.tagName === 'SPAN') {
+        target = target.parentElement;
+    }
+
+    // Проверка, что клик произошел по ссылке
+    if (target.tagName === 'A' && target.hasAttribute('data-action')) {
+        handlePaginationClick(target.getAttribute('data-action'));
+    } else if (target.tagName === 'A' && target.hasAttribute('data-page')) {
+        handlePaginationClick(target.getAttribute('data-page'));
+    }
+
+
+     document.getElementById('top').scrollIntoView({ behavior: 'smooth' });
+}
+
+
+
+
+
+
+function handlePaginationClick(actionOrPage) {
+
+
+    let totalPages = Math.ceil(faqArray.length / faqitemsPerPage);
+
+
+
+    if (actionOrPage === 'prev') {
+        if (currentPage > 1) {
+            currentPage--;
+        }
+    } else if (actionOrPage === 'next') {
+        if (currentPage < totalPages) {
+            currentPage++;
+        }
+    } else {
+
+        currentPage = parseInt(actionOrPage, 10);
+
+
+    }
+    console.log(currentPage)
+
+    // Обновляем пагинацию и содержимое
+    updatePaginationDOM();
+    updateFaqContent();
+    openClose(faq_item)
+
+}
+
+
+function updateFaqContent() {
+    let faqContent = document.getElementById("faqContent");
+    let startIndex = (currentPage - 1) * faqitemsPerPage;
+    let endIndex = Math.min(startIndex + faqitemsPerPage, faqArray.length);
+    let currentArrFAQ = faqArray.slice(startIndex, endIndex);
+
+
+   
+
+    // Обновляем содержимое
+    updateFaqDOM(currentArrFAQ);
+}
+
+
+
+
+
+
+
+
+
+// Пример вызова функции с количеством страниц
+
+
+console.log(faqArray.length)
+
+
+
+updatePaginationDOM();
+updateFaqContent();
+
+
+
+
+
+openClose(faq_item)
