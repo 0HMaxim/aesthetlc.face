@@ -307,7 +307,7 @@ function header_refresh(header_menuArr, newLang, oldLang) {
                                 <li><a href="${countPoin}price.html" >${header_menuArr[4]}</a></li>
                                 <li><a href="" >${header_menuArr[5]}</a></li>
                                 <li><a href="${countPoin}faq.html" >${header_menuArr[6]}</a></li>
-                                <li><a href="" >${header_menuArr[7]}</a></li>
+                                <li><a href="${countPoin}gallery.html" >${header_menuArr[7]}</a></li>
                                 <li><a href="" >${header_menuArr[8]}</a></li>
                                 <li><a href="${countPoin}contact.html" >${header_menuArr[9]}</a></li>
 

@@ -271,7 +271,6 @@ header .header_under_row {
     margin-bottom: 1vw;
 
 
-    transition: 0.5s all ease;
     text-align: center;
 }
 
@@ -279,12 +278,33 @@ header .header_under_row {
 
 
 
-.logo_name :first-child {
+/* .logo_name :first-child {
 
     margin-bottom: 0.5vw;
-    transition: 0.5s all ease;
     text-align: center;
+
+    transition: 0.5s all ease;
+
 }
+
+.logo_name :last-child {
+
+    margin-bottom: 0.5vw;
+    text-align: center;
+
+    transition: 0.5s all ease;
+
+} */
+
+.logo_name * {
+
+    margin-bottom: 0.5vw;
+    text-align: center;
+
+    /* transition: 0.5s all ease; */
+
+}
+
 
 
 
@@ -298,7 +318,7 @@ header .header_under_row {
 
 
 .header p, .header a, .header span, .header b , .header div , .header li , .header svg{
-    color: #fff !important;
+    color: #fff ;
     text-decoration: none;
 
 }
@@ -350,42 +370,21 @@ header .header_under_row {
 
 
 .header_fixed p, .header_fixed a, .header_fixed span, .header_fixed b, .header_fixed div, .header_fixed svg{                /*        черный цвет ввсего когда страница опускается        */
-    color:#000000 !important;
+    color:#000000 ;
 }
-
-.header_fixed p, .header_fixed a, .header_fixed span, .header_fixed b, .header_fixed div, .header_fixed svg{                /*        черный цвет ввсего когда страница опускается        */
-    color:#000000 !important;
-}
-
-.header_fixed .my_btn * {
-    color:#fff !important;
-}
-
-
-
-.header_fixed .my_btn, .header_fixed .my_btn svg path{
-    color:#fff !important;
-    fill: white!important;
-}
-
 
 
 
 
 
 .header svg path {
-    fill: white!important;
+    fill: white;
 }
 
 .header_fixed.header svg path{              /*        цвет кнопки   в    хеадере         */     
-    fill: black!important;
+    fill: black;
 }
 
-
-
-.header_fixed .my_btn svg path{             /*        цвет заливки элемента (значка) в кнопке          */     
-    fill: white!important;
-}
 
 
 .icon_block{
@@ -457,6 +456,9 @@ ul.check_list li *
 
     font-size: 1.1vw;
     line-height: 1.5vw;
+
+    color: #000;
+
 }
 
 
@@ -465,11 +467,11 @@ ul , li, a {
     position: relative;
     list-style: none;
     font-weight: 400;
-    text-decoration: none;
+    text-decoration: none!important; 
 
-    font-size: 1.1vw;
+    font-size: 1vw;
     line-height: 1.5vw;
-    color: #000!important;
+    color: #000;
 }
 
 
@@ -552,16 +554,21 @@ ul , li, a {
 
 
 .image{
+
     position: absolute;
+   
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+    object-fit: cover;
+    z-index: -100;
 
 
 
     top: 50%;
     left: 50%;
-    display: block;
-    height: 100%;
-    width: 100%;
     transform: translate(-50%, -50%);
+
     transition: 0.3s all ease;
 
     background-repeat: no-repeat;
@@ -916,8 +923,6 @@ table tr:hover {
 } 
 
 
-
-
 .contact_item{
     width: 48%;
     margin-bottom: 2.5vw!important;
@@ -928,27 +933,33 @@ table tr:hover {
     margin: 0px!important;
 }
 
+.contact_item .details * {
+    color: #000000;
+}
+
+
 
 
 .details :first-child{
 
-    font-size: 1.1vw!important;                     /*      размер адреса в хеадере     */
+    font-size: 0.9vw!important;                     /*      размер адреса в хеадере     */
     margin-bottom: 0.2vw;
 
     width: max-content;
 
-    transition: 0.3s all ease;
 }
-
-
 
 
 .details :last-child{
 
-    font-size: 1.2vw!important;           /*      размер шрифта номер телефона     */
+    font-size: 1.0vw!important;           /*      размер шрифта номер телефона     */
     font-weight: 700;
     width: max-content;
 }
+
+
+
+
 
 
 .messengers a{
@@ -968,17 +979,24 @@ table tr:hover {
 
 
 .contact_item .details p {
-    font-size: 0.9vw;
+    font-size: 0.9vw!important; 
 }
 
-
+.contact_item .details a {
+    font-size: 1.1vw!important;
+}
 
 
 
 
 .hours :first-child{
 
-    font-size: 1.1vw!important;               /*      размер шрифта во времени     */
+    font-size: 0.9vw!important;               /*      размер шрифта во времени     */
+}
+
+.hours :last-child{
+
+    font-size: 0.9vw!important;               /*      размер шрифта во времени     */
 }
 
 
@@ -1088,13 +1106,14 @@ h1, h2, h3, h4 ,  h5, h6
 }
 
 .angebot_item {
-    margin-bottom: 4vw;
+    margin-bottom: 4vw!important;
 }
 
 .angebot_item{
     position: relative;
     width : 100%;
     height: 100%; 
+
 }
 
 
@@ -1134,7 +1153,6 @@ h1, h2, h3, h4 ,  h5, h6
 
 .my_btn {
     background-color: #000;
-    color: #fff!important;
     min-height: 3vw;
 
     max-height:  max-content;
@@ -1154,6 +1172,7 @@ h1, h2, h3, h4 ,  h5, h6
     transition: 0.3s all ease;
     cursor: pointer;
     text-decoration: none;
+
 }
 
 
@@ -1175,41 +1194,36 @@ h1, h2, h3, h4 ,  h5, h6
 
 .my_btn svg {
 
-    width: 3vw;
+    width: 3vw;                                  /*            размер иконки в кнопке     */
     height: 3vw;
 }
 
 
+.my_btn svg path {
+    fill: white!important;
+}
 
 
 .my_btn .details {
   
-    margin: 0 1 0 0vw !important;
+    margin: 0 1 0 0vw !important;            /*            растояние между текстом и иконкой     */
 
 }
-
-
-
 
 
 .my_btn .details :first-child{
-  
 
-
-    font-size: 1.1vw!important;
-
+    font-size: 1.0vw!important;         /*             первая строчка в кнопке          */
     font-weight: 700;
     width: 100%;
     align-items: center;
-
 }
 
-
-.my_btn .details :last-child{
-
+.my_btn .details :last-child{           /*             вторая строчка в кнопке          */
 
 
-    font-size: 1.2vw!important;
+
+    font-size: 1.0vw!important;
     font-weight: 700;
 
     margin: 0;
@@ -1219,10 +1233,9 @@ h1, h2, h3, h4 ,  h5, h6
 }
 
 
+.my_btn .icon_block{                            /*             вторая строчка в кнопке          */
 
-.my_btn .icon_block{
-
-    padding: 1vw 2vw!important;
+    padding: 1vw 2vw!important;         
     width: 100%;
     height: 100%;
 
@@ -1230,8 +1243,59 @@ h1, h2, h3, h4 ,  h5, h6
 
 
 
+.my_btn * {
+
+    color: #fff!important;
+
+}
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+.my_btn:hover {
+    color: #000!important;
+    background-color: #fff
+
+}
+
+
+
+
+.my_btn:hover .details *{
+    color: #000!important;
+}
+
+
+.my_btn:hover svg path {
+    fill: #000!important;
+}
+
+
+
+
+
+.my_btn:hover:before{
+    background-color: #000!important;
+
+}
+
+
+
+
+
+
+
+  /*             стили для header Leistungen              */
 
 .submenu li, 
 .submenu a{
@@ -1512,3 +1576,59 @@ h1, h2, h3, h4 ,  h5, h6
     font-size: 1.5vw;
 }
 
+
+
+
+.gallery_items {
+    margin-top: 3.438vw;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-column-gap: 1.875vw;
+    grid-row-gap: 3.438vw;
+}
+
+
+.gallery_items .gallery_item {
+    border: 1px solid #D7D7D7;
+    position: relative;
+}
+
+
+.gallery_items .gallery_item {
+    height: 23.125vw;
+    position: relative;
+    transition: 0.3s all ease;
+    overflow: hidden;
+
+
+
+    width: 100%;
+}
+
+
+
+.gallery_item .image_block {
+    width: 100%;
+    height: 100%;
+}
+
+.total {
+    position: absolute;
+    top: 1vw;
+    right: 1vw;
+    background-color: #000;
+    color: #fff;
+    padding: 0.5vw 1vw;
+}
+
+.total * {
+    color: #fff;
+}
+
+
+
+
+.gallery_items .gallery_item .desc {
+    border-top: 1px solid #D7D7D7;
+    padding: 1.25vw 1.5vw 0.5vw;
+}
