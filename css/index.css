@@ -151,6 +151,10 @@ li, ul{
 }
 
 
+body{
+
+}
+
 
 
 .header_fixed{
@@ -167,18 +171,11 @@ li, ul{
 
 
 
-
-
-
-
-
-
 .top_page_video.has_top_image{
     
+    height: 13vw;
 
-    height: 25.313vw;
 }
-
 
 
 .top_page_video.has_top_video{
@@ -186,6 +183,7 @@ li, ul{
 
     height: 25.313vw;
 }
+
 
 
 /* Header top row animation*/
@@ -339,6 +337,7 @@ header .header_under_row {
     margin: 0 auto!important;
     width: 85vw;
     height: 100%;
+
 
   
 }
@@ -920,8 +919,6 @@ table tr:hover {
 
 
 
-
-
 .messengers a{
     margin-right: 1.5vw;
 }
@@ -1026,6 +1023,20 @@ h1, h2, h3, h4 ,  h5, h6
 
 
 
+
+
+
+
+
+.w-90{
+
+    width: 90%!important;
+}
+
+
+
+
+
 .angebot_item .image_block{
 
     position: relative;
@@ -1043,20 +1054,6 @@ h1, h2, h3, h4 ,  h5, h6
 
 
 
-.w-90{
-
-    width: 90%!important;
-}
-
-
-
-
-
-
-
-
-
-
 .angebot_item .inner{
     position: relative;
     z-index: 2;
@@ -1065,16 +1062,11 @@ h1, h2, h3, h4 ,  h5, h6
 }
 
 .angebot_item {
-    margin-bottom: 4vw!important;
-}
-
-.angebot_item{
     position: relative;
-    width : 100%;
+    margin-bottom: 4vw!important;
+    min-width: 100%;
     height: 100%; 
-
 }
-
 
 
 .inner title{
@@ -1366,6 +1358,9 @@ h1, h2, h3, h4 ,  h5, h6
     box-shadow: 0 4px 13px 0 rgba(0, 0, 0, 0.25);
     padding: 0.938vw 0 1.25vw 1.063vw!important;
     z-index: 22;
+
+    transition: 0.5s all ease;
+
 }
 
 
@@ -1382,54 +1377,32 @@ h1, h2, h3, h4 ,  h5, h6
     visibility: visible !important;
 }
 
-/* .submenu.secondary :before {
-    content: none!important;
-    background-image: none!important;
-    width: 0vw!important;
-    height: 0vw!important;
-} */
-
-
-
-
-/* .has_child .submenu{
-    opacity: 0; 
-    visibility: hidden !important;
-}
-
-
-
-
-
-
-.has_child:hover .submenu.hide{
-    opacity: 1; 
-    visibility: visible !important;
-    transition: 2 0.3s  ease;
-} */
-
 
 .text_full_screen{
     position: relative;
-    right: 15vw!important;
-
-
-
-
-    
-    font-size: 1vw;
+    font-size: 0.8vw;
     letter-spacing: 0.370vw;
+    
+    
+    left: -22vw;
+    
+    
+    margin-bottom: 2vw;
+    margin-top: 2vw;
 
-    margin-bottom: 3vw;
-    margin-top: 3vw;
-
+    width: 97vw;
+    
     color: #666;
 
     transition: 0.5s all ease;
     text-align: center;
 
+}
 
 
+.space {
+    margin: 3vw; /* Отступы вокруг элемента */
+    /* Можно использовать padding, если хочешь пространство внутри элемента */
 }
 
 
@@ -1684,3 +1657,126 @@ h1, h2, h3, h4 ,  h5, h6
 }
 
 
+
+
+.slider {
+    position: relative;
+
+    /* height: 100vh; */
+
+    
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .slides {
+
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    width: 400%; /* Должно быть равно 100% * количество элементов */
+  }
+
+
+  .slides .angebot_item {
+
+    padding: 1vw;
+    padding-left: 1vw;
+    padding-right: 1vw;
+
+  }
+  
+
+  .prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 100;
+  }
+  
+  .prev {
+    left: 10px;
+  }
+  
+  .next {
+    right: 10px;
+  }
+
+
+
+
+.adv_section {
+    margin: 3.75vw 0 3.75vw 0;
+}
+
+
+.adv_section .my_container .item {
+    width: 23.5%;
+    min-height: 11.25vw;
+    padding: 2vw 3vw 3vw;
+    border-radius: 1vw;
+    flex-direction: column;
+    justify-content: flex-start;
+    box-shadow: 0 0 36px 0 rgba(0, 0, 0, 0.3);
+}
+
+
+
+.adv_section .my_container .item:before {
+    border-radius: 0.5vw;
+    border: 1px solid #000;
+    width: 96%;
+    height: 94%;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-color: transparent;
+
+    position: absolute;
+}
+
+
+.adv_section .my_container .item .title.big {
+    font-size: 2vw;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+
+.adv_section .my_container .item .title.big span {
+    margin-left: 1.5vw;
+    font-size: 4vw;
+    line-height: 60%;
+}
+
+
+
+
+
+.adv_section .my_container .item .title {
+    font-size: 1.25vw;
+    width: 90%;
+    margin-bottom: 1.25vw;
+}
+
+
+.adv_section .my_container .item .secondary {
+    font-size: 0.9vw;
+    color: #000;
+
+
+    opacity: 1 !important;
+    visibility: visible !important;
+}
+
+
+.item p{
+    text-align: center;
+}
