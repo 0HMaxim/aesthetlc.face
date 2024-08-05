@@ -539,14 +539,7 @@ window.addEventListener('scroll', () => {
 
 
 
-    
-    
 
-
-
-
-
-let faq_items = document.getElementsByClassName("faq_items");
 
 
 
@@ -762,171 +755,8 @@ let faqArray = [
 
    
 
-
-
-
-    
-
 ]
 
-
-
-
-function updateFaqDOM(faqArray) {
-
-let faqContent1 = ` <div class="col" > `            /*                        отрисовка элементов FAQ                          */
-
-
-                for(let i = 0; i< faqArray.length; i++ ){
-
-                    if(i%2==0){
-
-                        faqContent1 += `
-
-                        <div class="price_item faq_item open">
-
-
-                            <div class="title_row d-flex justify-content-between">
-                                <h3 class="name fw700">${faqArray[i].title}</h3>
-                                <p class="number">#${i+1}</p>
-                            </div>
-                            
-
-
-                            <div class="faq_item_text content">`
-
-
-                                for(let j = 0; j< faqArray[i].text.length; j++ ){
-
-                           
-                                    let currentItem = faqArray[i].text[j];
-        
-                                    // Проверка, не является ли текущий элемент объектом с ключом 'checklist'
-
-
-                                    if (typeof currentItem !== 'object' || currentItem === null || !('checklist' in currentItem)) {
-
-
-                                        faqContent1 += ` <p>${currentItem}</p>`
-
-                                    }
-
-                                        else{
-
-                                            faqContent1 += ` <ul class="check_list">`
-
-
-
-                                            for(let k = 0; k< currentItem.checklist.length; k++ ){
-
-
-                                                    faqContent1 += ` <li><div>${currentItem.checklist[k]}</div></li>`
-                                            }
-
-
-                                            faqContent1 += ` </ul>` 
-
-                                        }
-
-                                }
-
-                                faqContent1 += `  
-
-
-                            </div>
-                            
-                        </div> `
-
-                    }
-
-                }
-
-
-
-    faqContent1 += ` </div> `
-
-
-    let faqContent2 = ` <div class="col" > `
-
-
-    for(let i = 0; i< faqArray.length; i++ ){
-
-        if(i%2!=0){
-
-        faqContent2 += `
-
-            <div class="price_item faq_item open">
-
-
-                <div class="title_row d-flex justify-content-between">
-                    <h3 class="name fw700">${faqArray[i].title}</h3>
-                    <p class="number">#${i+1}</p>
-                </div>
-                
-
-
-                <div class="faq_item_text content">`
-
-
-                    for(let j = 0; j< faqArray[i].text.length; j++ ){
-
-               
-                        let currentItem = faqArray[i].text[j];
-
-                        // Проверка, не является ли текущий элемент объектом с ключом 'checklist'
-
-
-                        if (typeof currentItem !== 'object' || currentItem === null || !('checklist' in currentItem)) {
-
-
-
-                            faqContent2 += ` <p>${currentItem}</p>`
-
-                        }
-
-                            else{
-
-
-
-                            
-                                faqContent2 += ` <ul class="check_list">`
-
-
-
-                                for(let k = 0; k< currentItem.checklist.length; k++ ){
-
-
-
-                                    faqContent2 += ` <li><div>${currentItem.checklist[k]}</div></li>`
-                                }
-
-
-                                faqContent2 += ` </ul>` 
-
-                            }
-
-                    }
-
-                    faqContent2 += `  
-
-
-                </div>
-                
-            </div> `
-                }
-
-
-    }
-
-
-
-    faqContent2 += ` </div> `
-
-
-
-    faq_items[0].innerHTML = faqContent1 + faqContent2
-
-}
 
 
 
@@ -969,129 +799,180 @@ openClose(faq_item)
 
 
 
-
-
-
-
-
-
-
-let currentPage = 1; // Текущая страница
-let faqitemsPerPage = 8; // Количество элементов на странице
-
-function updatePaginationDOM() {
-        let pagination = document.getElementById("paggination");
-        let totalPages = Math.ceil(faqArray.length / faqitemsPerPage);
-        let code = `
-            <div>
-                <nav aria-label="Page navigation example">
-                    <ul class="pagination justify-content-center">
-                        <li class="page-item ${currentPage === 1 ? 'disabled' : ''}">
-                            <a class="page-link" href="#top" aria-label="Previous" data-action="prev">
-                                <span aria-hidden="true">&laquo;</span>
-                            </a>
-                        </li>
-        `;
-
-        for (let i = 1; i <= totalPages; i++) {
-            code += `
-                <li class="page-item ${i === currentPage ? 'active' : ''}">
-                    <a class="page-link" href="#top" data-page="${i}">${i}</a>
-                </li>
-            `;
-        }
-
-        code += `
-                        <li class="page-item ${currentPage === totalPages ? 'disabled' : ''}">
-                            <a class="page-link" href="#top" aria-label="Next" data-action="next">
-                                <span aria-hidden="true">&raquo;</span>
-                            </a>
-                        </li>
-                    </ul>
-                </nav>
-            </div>
-        `;
-    
-
-
-
-    pagination.innerHTML = code;
-
-
-
-    // Добавляем новый обработчик событий
-    pagination.addEventListener('click', paginationClickHandler);
-
+function updateDomContent(arr, renderFunction) {
+    let content = ''; // Создаем пустую строку для накопления контента
+    arr.forEach((item, index) => {
+        content += renderFunction(item, index); // Вызываем переданную функцию отрисовки
+    });
+    return content; // Возвращаем сгенерированный HTML-код
 }
 
+let currentPage = 1; // Текущая страница
+let itemsPerPage = 8; // Количество элементов на странице
+let dataArray = []; // Глобальная переменная для хранения текущего массива данных
+let columns = 1; // Количество колонок, по умолчанию 1
+
+function updatePaginationDOM(arr, itemsPerPage) {
+    let pagination = document.getElementById("pagination");
+    let totalPages = Math.ceil(arr.length / itemsPerPage);
+    let code = `
+        <div>
+            <nav aria-label="Page navigation example">
+                <ul class="pagination justify-content-center">
+                    <li class="page-item ${currentPage === 1 ? 'disabled' : ''}">
+                        <a class="page-link" href="#top" aria-label="Previous" data-action="prev">
+                            <span aria-hidden="true">&laquo;</span>
+                        </a>
+                    </li>
+    `;
+
+    for (let i = 1; i <= totalPages; i++) {
+        code += `
+            <li class="page-item ${i === currentPage ? 'active' : ''}">
+                <a class="page-link" href="#top" data-page="${i}">${i}</a>
+            </li>
+        `;
+    }
+
+    code += `
+                    <li class="page-item ${currentPage === totalPages ? 'disabled' : ''}">
+                        <a class="page-link" href="#top" aria-label="Next" data-action="next">
+                            <span aria-hidden="true">&raquo;</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    `;
+
+    pagination.innerHTML = code;
+    pagination.removeEventListener('click', paginationClickHandler);
+    pagination.addEventListener('click', paginationClickHandler);
+}
 
 function paginationClickHandler(event) {
     event.preventDefault();
     let target = event.target;
 
-    // Если клик произошел по <span> внутри ссылки, выбираем родительский элемент
     if (target.tagName === 'SPAN') {
         target = target.parentElement;
     }
 
-    // Проверка, что клик произошел по ссылке
-    if (target.tagName === 'A' && target.hasAttribute('data-action')) {
-        handlePaginationClick(target.getAttribute('data-action'));
-    } else if (target.tagName === 'A' && target.hasAttribute('data-page')) {
-        handlePaginationClick(target.getAttribute('data-page'));
+    // Определите функцию рендеринга в зависимости от типа данных
+    let renderFunction;
+    if (dataArray === faqArray) {
+        renderFunction = renderFaqItem;
+    } else {
+        // Добавьте другие условия для различных функций рендеринга
+        renderFunction = renderGaleryItems; // Пример функции рендеринга для других данных
     }
 
+    if (target.tagName === 'A') {
+        if (target.hasAttribute('data-action')) {
+            handlePaginationClick(target.getAttribute('data-action'), dataArray, itemsPerPage, renderFunction, columns);
+        } else if (target.hasAttribute('data-page')) {
+            handlePaginationClick(parseInt(target.getAttribute('data-page'), 10), dataArray, itemsPerPage, renderFunction, columns);
+        }
+    }
 
-     document.getElementById('top').scrollIntoView({ behavior: 'smooth' });
+    document.getElementById('top').scrollIntoView({ behavior: 'smooth' });
 }
 
 
+function handlePaginationClick(actionOrPage, arr, itemsPerPage, renderFunction, columns) {
+    let totalPages = Math.ceil(arr.length / itemsPerPage);
 
-
-
-
-function handlePaginationClick(actionOrPage) {
-
-
-    let totalPages = Math.ceil(faqArray.length / faqitemsPerPage);
-
-
-
-    if (actionOrPage === 'prev') {
-        if (currentPage > 1) {
+    if (typeof actionOrPage === 'string') {
+        if (actionOrPage === 'prev' && currentPage > 1) {
             currentPage--;
-        }
-    } else if (actionOrPage === 'next') {
-        if (currentPage < totalPages) {
+        } else if (actionOrPage === 'next' && currentPage < totalPages) {
             currentPage++;
         }
-    } else {
-
-        currentPage = parseInt(actionOrPage, 10);
-
-
+    } else if (typeof actionOrPage === 'number') {
+        currentPage = actionOrPage;
     }
-    console.log(currentPage)
 
-    // Обновляем пагинацию и содержимое
-    updatePaginationDOM();
-    updateFaqContent();
-    openClose(faq_item)
-
+    updatePaginationDOM(arr, itemsPerPage);
+    updatePaginationContent(arr, itemsPerPage, renderFunction, columns);
 }
 
 
-function updateFaqContent() {
-    let faqContent = document.getElementById("faqContent");
-    let startIndex = (currentPage - 1) * faqitemsPerPage;
-    let endIndex = Math.min(startIndex + faqitemsPerPage, faqArray.length);
-    let currentArrFAQ = faqArray.slice(startIndex, endIndex);
+function updatePaginationContent(arr, itemsPerPage, renderFunction, columns = 1) {
+    let startIndex = (currentPage - 1) * itemsPerPage;
+    let endIndex = Math.min(startIndex + itemsPerPage, arr.length);
+    let currentArr = arr.slice(startIndex, endIndex);
+
+    let content = "";
+
+    if (columns === 2) {
+        content = `<div class="row">`;
+        let leftColumn = `<div class="col">`;
+        let rightColumn = `<div class="col">`;
+
+        currentArr.forEach((item, index) => {
+            if (index % 2 === 0) {
+                leftColumn += renderFunction(item, index);
+            } else {
+                rightColumn += renderFunction(item, index);
+            }
+        });
+
+        leftColumn += `</div>`;
+        rightColumn += `</div>`;
+        content += leftColumn + rightColumn+ `</div>`;
+    } else {
+        currentArr.forEach((item, index) => {
+            content += renderFunction(item, index);
+        });
+    }
+
+    document.getElementById("contentContainer").innerHTML = content;
+
+    if(renderFunction===renderFaqItem)
+        openClose(faq_item)
+}
+
+// Пример использования
+dataArray = faqArray; // Записываем данные в глобальную переменную
+columns = 2; // Устанавливаем количество колонок для FAQ
+
+function renderFaqItem(item, index) {
+    let content = `
+        <div class="price_item faq_item open">
+            <div class="title_row d-flex justify-content-between">
+                <h3 class="name fw700">${item.title}</h3>
+                <p class="number">#${index + 1}</p>
+            </div>
+            <div class="faq_item_text content">
+    `;
+
+    item.text.forEach(textItem => {
+        if (typeof textItem !== 'object' || textItem === null || !('checklist' in textItem)) {
+            content += `<p>${textItem}</p>`;
+        } else {
+            content += `<ul class="check_list">`;
+            textItem.checklist.forEach(checklistItem => {
+                content += `<li><div>${checklistItem}</div></li>`;
+            });
+            content += `</ul>`;
+        }
+    });
+
+    content += `</div></div>`;
+    return content;
+}
+
+// Инициализация
 
 
-   
+let currentFile = window.location.pathname.split('/').pop();
 
-    // Обновляем содержимое
-    updateFaqDOM(currentArrFAQ);
+
+
+if(currentFile=='faq.html'){
+
+    updatePaginationDOM(faqArray, itemsPerPage);
+    updatePaginationContent(faqArray, itemsPerPage, renderFaqItem, columns);
 }
 
 
@@ -1101,19 +982,145 @@ function updateFaqContent() {
 
 
 
+let galleyArray = [
 
-// Пример вызова функции с количеством страниц
+    
+    {   
+        title : "ВИДАЛЕННЯ НОВОУТВОРЕНЬ" ,
+
+        img :    "https://www.besedaclinic.com.ua/storage/gallery/1713948349.webp",
+        
+        doctor :    "Бесєда Тетяна Павлівна",
+
+              
+        imgUrl : [ "https://www.besedaclinic.com.ua/storage/gallery/1713949240.webp", 
+                   "https://www.besedaclinic.com.ua/storage/gallery/1713949277.webp" ,
+                  ],
+
+        imgCaption: "ВИДАЛЕННЯ ПАПІЛОМ",
+            
+    },
+
+    {   
+        title : "ВИДАЛЕННЯ НОВОУТВОРЕНЬ" ,
+
+        img :    "https://www.besedaclinic.com.ua/storage/gallery/1713948442.webp",
+        
+        doctor :    "Бесєда Тетяна Павлівна",
+
+              
+        imgUrl : [ "https://www.besedaclinic.com.ua/storage/gallery/1713948442.webp", 
+                  ],
+
+        imgCaption: "ВИДАЛЕННЯ РОДИМОК",
+            
+    },
+
+    {   
+        title : "КОНТУРНА ПЛАСТИКА" ,
+
+        img :    "https://www.besedaclinic.com.ua/storage/gallery/1713949379.webp",
+        
+        doctor :    "Бесєда Тетяна Павлівна",
+
+              
+        imgUrl : [ "https://www.besedaclinic.com.ua/storage/gallery/1713949379.webp", 
+                  ],
+
+        imgCaption: "ВИДАЛЕННЯ АТЕРОМ",
+            
+    },
+
+    {   
+        title : "КОНТУРНА ПЛАСТИКА" ,
+
+        img :    "https://www.besedaclinic.com.ua/storage/gallery/1706631352.webp",
+        
+        doctor :    "Бесєда Тетяна Павлівна",
+
+              
+        imgUrl : [ "https://www.besedaclinic.com.ua/storage/gallery/1713949379.webp", 
+                   "https://www.besedaclinic.com.ua/storage/gallery/1713948164.webp" ,
+                   "https://www.besedaclinic.com.ua/storage/gallery/1713948173.webp" ,
+                   "https://www.besedaclinic.com.ua/storage/gallery/1713948183.webp" ,
+                   "https://www.besedaclinic.com.ua/storage/gallery/1713949063.webp" ,
+                   "https://www.besedaclinic.com.ua/storage/gallery/1713949078.webp" ,
+                   "https://www.besedaclinic.com.ua/storage/gallery/1713949109.webp" ,
+                  ],
+
+        imgCaption: "ВИДАЛЕННЯ АТЕРОМ",
+            
+    },
+    
+    
+]
 
 
-console.log(faqArray.length)
+function renderGalleryItem(item, index) {
+    // Начало создания блока галереи
+    let content = `
+        <div class="gallery_item">
+            <div class="image_block scale_bg">
+    `;
+
+    // Добавление первого изображения
+    if (item.img) {
+        content += `
+            <a data-fancybox="gallery${index}" href="${item.img}" data-caption="${item.imgCaption}">
+                <img class="image" src="${item.img}" alt="${item.imgCaption}">
+            </a>
+        `;
+    }
+
+    // Добавление остальных изображений, если они есть
+    if (item.imgUrl && item.imgUrl.length > 0) {
+
+        content += `<p class="total"><b>${item.imgUrl.length}</b> фото</p>`
+
+        content += `</div>`;
+
+        item.imgUrl.forEach((imgUrl, imgIndex) => {
+            content += `
+                <img src="${imgUrl}" data-caption="${item.imgCaption}" alt="${item.imgCaption}" data-fancybox="gallery${index}">
+            `;
+        });
+    }
+
+
+    // Добавление описания
+    content += `
+            <div class="desc">
+                <p class="doctor fw600">
+                    Лікар: <a href="team/index.html" class="fw600" target="_blank">
+                        ${item.doctor}
+                        <img class="hide" src="https://www.besedaclinic.com.ua/storage/gallery/1704834920.webp" alt="">     
+                    </a>
+                </p>
+                <p class="done">Проведено:</p>
+                <div class="content">
+                    <ul class="check_list">
+                        <li>
+                            <a href="https://besedaclinic.com.ua/ua/vidalennya-novoutvoren" target="_blank">
+                                ${item.title}
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    `;
+
+    return content;
+}
 
 
 
-updatePaginationDOM();
-updateFaqContent();
+if(currentFile=='gallery.html'){
+    columns=1
+    updatePaginationDOM(galleyArray, itemsPerPage);
+    updatePaginationContent(galleyArray, 6, renderGalleryItem, columns);
+}
+            
+                                
+                                
 
-
-
-
-
-openClose(faq_item)
