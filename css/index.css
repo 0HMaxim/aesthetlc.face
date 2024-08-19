@@ -173,14 +173,14 @@ body{
 
 .top_page_video.has_top_image{
     
-    height: 20vw;
-
+    height:13.5vw;
 }
 
 
 .top_page_video.has_top_video{
     
-    height: 20vw;
+    
+    height:13.5vw;
     
 }
 
@@ -1024,25 +1024,25 @@ h1, h2, h3, h4 ,  h5, h6
 
 
 .m-top2{
-    margin-top: 2vw;
+    margin-top: 2vw!important;
   }
 
 
 .m-top3{
-    margin-top: 3vw;
+    margin-top: 3vw!important;
 }
 
 .m-top4{
-  margin-top: 4vw;
+  margin-top: 4vw!important;
 }
 
 .m-top5{
-    margin-top: 4vw;
+    margin-top: 4vw!important;
   }
 
 
   .m-top6{
-    margin-top: 6vw;
+    margin-top: 6vw!important;
   }
 
 
@@ -1732,25 +1732,22 @@ h1, h2, h3, h4 ,  h5, h6
   }
   
 
-  .prev, .next {
+  .controls {
     position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
+    bottom: 10px;
+    left: 10px;
+}
+
+.prev, .next {
     background-color: rgba(0, 0, 0, 0.5);
     color: white;
     border: none;
     padding: 10px;
     cursor: pointer;
     z-index: 100;
-  }
-  
-  .prev {
-    left: 10px;
-  }
-  
-  .next {
-    right: 10px;
-  }
+    margin-right: 5px;
+    border-radius: 50%;
+}
 
 
 
@@ -2028,4 +2025,23 @@ h1, h2, h3, h4 ,  h5, h6
 
 .post_content.my_btn:hover svg{
     left: -0.9vw ;
+}
+
+
+
+
+
+
+
+/* Начальное состояние элемента, который будет анимирован */
+.hidden-element {
+    opacity: 0;
+    transform: translateY(100px); /* Элемент смещён вниз */
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+/* Класс, который будет применяться, когда элемент видим */
+.show-element {
+    opacity: 1;
+    transform: translateY(0); /* Элемент перемещается в исходное положение */
 }

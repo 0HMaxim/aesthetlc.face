@@ -286,16 +286,16 @@ function header_refresh(header_menuArr, newLang, oldLang) {
 
 
 
-                    <div class="header_under_row d-flex align-items-center justify-content-between m-0">
+                    <div class="header_under_row d-flex align-items-center justify-content-between m-0 ">
 
-                        <div class="navbar d-flex">
+                        <div class="navbar d-flex ">
 
-                            <ul class="d-flex"> 
-                                <li><a href="${countPoin}about.html">${header_menuArr[0]}</a></li>
-                                <li><a href="${countPoin}angebot/index.html">${header_menuArr[1]}</a></li>
+                            <ul class="d-flex "> 
+                                <li><a class="fw600" href="${countPoin}about.html">${header_menuArr[0]}</a></li>
+                                <li><a class="fw600" href="${countPoin}angebot/index.html">${header_menuArr[1]}</a></li>
                                 
                                 <li id="leistungen " class="first">
-                                    <a  href="${countPoin}services/index.html">${header_menuArr[2]}</a>
+                                    <a class="fw600"  href="${countPoin}services/index.html">${header_menuArr[2]}</a>
                                     <ul id="leistungen_header_menu" class="submenu hide">
                                     
                                         
@@ -303,13 +303,13 @@ function header_refresh(header_menuArr, newLang, oldLang) {
                                 </li>
 
 
-                                <li><a href="${countPoin}team/index.html" >${header_menuArr[3]}</a></li>
-                                <li><a href="${countPoin}price.html" >${header_menuArr[4]}</a></li>
-                                <li><a href="" >${header_menuArr[5]}</a></li>
-                                <li><a href="${countPoin}faq.html" >${header_menuArr[6]}</a></li>
-                                <li><a href="${countPoin}gallery.html" >${header_menuArr[7]}</a></li>
-                                <li><a href="${countPoin}blog/index.html" >${header_menuArr[8]}</a></li>
-                                <li><a href="${countPoin}contact.html" >${header_menuArr[9]}</a></li>
+                                <li><a class="fw600" href="${countPoin}team/index.html" >${header_menuArr[3]}</a></li>
+                                <li><a class="fw600" href="${countPoin}price.html" >${header_menuArr[4]}</a></li>
+                                <li><a class="fw600" href="" >${header_menuArr[5]}</a></li>
+                                <li><a class="fw600" href="${countPoin}faq.html" >${header_menuArr[6]}</a></li>
+                                <li><a class="fw600" href="${countPoin}gallery.html" >${header_menuArr[7]}</a></li>
+                                <li><a class="fw600" href="${countPoin}blog/index.html" >${header_menuArr[8]}</a></li>
+                                <li><a class="fw600" href="${countPoin}contact.html" >${header_menuArr[9]}</a></li>
 
 
                                 
@@ -1124,34 +1124,96 @@ if(currentFile=='gallery.html'){
     updatePaginationContent(galleyArray, 6, renderGalleryItem, columns);
 }
             
+
+
+
+
+/*                   анимация для слайдера          */
+
                                 
-                                
-document.addEventListener('DOMContentLoaded', (event) => {
+document.addEventListener('DOMContentLoaded', () => {
     let currentSlide = 0;
-    const slides = document.querySelectorAll('.angebot_item');
-    const totalSlides = slides.length;
-  
+
+    // Массивы с данными для каждого слайда
+    const slidesData = [
+        {
+            title: "Акційна пропозиція лікування куперозу 2400 замість 3000",
+            subtitle: "Раді повідомити, що зараз діє акція на лазерне лікування судин на обладнанні М22 зі знижкою 20%. Не пропусти можливість скористатися цією вигідною пропозицією!",
+            imgSrc: "https://www.besedaclinic.com.ua/storage/gallery/1709230495.webp"
+        },
+        {
+            title: "Лечение купероза на аппарате M22",
+            subtitle: "Скидка 20% на лазерное лечение сосудов, успей записаться!",
+            imgSrc: "https://besedaclinic.com.ua/userfiles/files/Blog/2024/photo_2024-02-22%2018_23_35.jpeg"
+        },
+        {
+            title: "Третье специальное предложение",
+            subtitle: "Акция действует на все виды лазерного лечения, записывайтесь сейчас!",
+            imgSrc: "https://besedaclinic.com.ua/userfiles/files/IMG_8954.JPG"
+        }
+    ];
+
+    const titleElement = document.querySelector('.title');
+    const subtitleElement = document.querySelector('.subtitle');
+    const imageElement = document.querySelector('.image');
+
     function showSlide(index) {
-      if (index >= totalSlides) {
-        currentSlide = 0;
-      } else if (index < 0) {
-        currentSlide = totalSlides - 1;
-      } else {
-        currentSlide = index;
-      }
-  
-      const offset = -currentSlide * 100;
-      document.querySelector('.slides').style.transform = `translateX(${offset}%)`;
+        if (index >= slidesData.length) {
+            currentSlide = 0;
+        } else if (index < 0) {
+            currentSlide = slidesData.length - 1;
+        } else {
+            currentSlide = index;
+        }
+
+        // Меняем контент с анимацией
+        titleElement.style.opacity = 0;
+        subtitleElement.style.opacity = 0;
+        imageElement.style.opacity = 0;
+
+        setTimeout(() => {
+            titleElement.textContent = slidesData[currentSlide].title;
+            subtitleElement.textContent = slidesData[currentSlide].subtitle;
+            imageElement.src = slidesData[currentSlide].imgSrc;
+
+            titleElement.style.opacity = 1;
+            subtitleElement.style.opacity = 1;
+            imageElement.style.opacity = 1;
+        }, 500);
     }
-  
+
     function nextSlide() {
-      showSlide(currentSlide + 1);
+        showSlide(currentSlide + 1);
     }
-  
+
     function prevSlide() {
-      showSlide(currentSlide - 1);
+        showSlide(currentSlide - 1);
     }
-  
+
     document.querySelector('.next').addEventListener('click', nextSlide);
     document.querySelector('.prev').addEventListener('click', prevSlide);
-  });
+});
+
+
+
+
+
+
+
+/*                                  Анимация текста когда он виден на экране        ЗАГОЛОВКИ                */
+
+
+document.addEventListener('DOMContentLoaded', () => {
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('show-element');
+                observer.unobserve(entry.target); // Останавливаем наблюдение, чтобы анимация происходила только один раз
+            }
+        });
+    }, { threshold: 0.1 }); // Срабатывает, когда 10% элемента становятся видимыми
+
+    // Наблюдение за всеми элементами с классом .hidden-element
+    const hiddenElements = document.querySelectorAll('.hidden-element');
+    hiddenElements.forEach(element => observer.observe(element));
+});
