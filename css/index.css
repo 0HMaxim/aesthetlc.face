@@ -527,6 +527,7 @@ ul , li, a {
 
 .team_item {
     position: relative;
+    width: 18vw;
 }
 
 
@@ -763,6 +764,18 @@ ul , li, a {
     font-size: 1.25vw!important;
 }
 
+
+.price_item table tbody tr td  h3 {
+    font-weight: 600!important;
+    font-size: 1.25vw!important;
+}
+
+
+
+
+
+
+
 .price_item table td:last-child {
     width: 20%;
     border-right: none;
@@ -890,7 +903,7 @@ table tr:hover {
 
 .contact_item{
     width: 48%;
-    margin-bottom: 2.5vw!important;
+    margin-bottom: 2vw!important;
 }
 
 
@@ -1141,7 +1154,7 @@ h1, h2, h3, h4 ,  h5, h6
 
 .my_btn {
     background-color: #000;
-    min-height: 3vw;
+    min-height: 3.25vw;
 
     max-height:  max-content;
 
@@ -1451,6 +1464,12 @@ h1, h2, h3, h4 ,  h5, h6
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-column-gap: 4vw;
+}
+
+
+.faq_item{
+
+    margin-right: 5vw;
 }
 
 
@@ -2044,4 +2063,52 @@ h1, h2, h3, h4 ,  h5, h6
 .show-element {
     opacity: 1;
     transform: translateY(0); /* Элемент перемещается в исходное положение */
+}
+
+
+p.number{
+    font-size: 1.5vw;
+}
+
+.service_low{
+    padding-top: 3.438vw;
+    border-top: 6px solid #000;
+    justify-content: center;
+}
+
+
+.service_low .left {
+    padding-left: 5.625vw;
+    width: 50%;
+    border-right: 1px solid #C4C4C4;
+}
+
+.service_low .right {
+    width: 50%;
+    padding-left: 6.938vw;
+}
+
+
+footer {
+    background-color: #000;
+    margin-top: 6.25vw;
+    padding: 3.438vw 0 1.125vw;
+}
+
+footer * {
+    color: white;
+}
+
+.contacts_col .contact_item .details * {
+    color: white;
+
+}
+
+footer  svg path {
+    fill: white!important;
+}
+
+footer  svg{
+    width: 2vw;
+    height: 2vw;
 }

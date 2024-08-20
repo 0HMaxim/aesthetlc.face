@@ -1208,12 +1208,12 @@ document.addEventListener('DOMContentLoaded', () => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 entry.target.classList.add('show-element');
-                observer.unobserve(entry.target); // Останавливаем наблюдение, чтобы анимация происходила только один раз
+            } else {
+                entry.target.classList.remove('show-element'); // Убираем класс, чтобы анимация могла повториться
             }
         });
     }, { threshold: 0.1 }); // Срабатывает, когда 10% элемента становятся видимыми
 
-    // Наблюдение за всеми элементами с классом .hidden-element
     const hiddenElements = document.querySelectorAll('.hidden-element');
     hiddenElements.forEach(element => observer.observe(element));
 });
