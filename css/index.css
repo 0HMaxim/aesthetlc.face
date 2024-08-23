@@ -180,7 +180,7 @@ body{
 .top_page_video.has_top_video{
     
     
-    height:13.5vw;
+    height:18.5vw;
     
 }
 
@@ -227,6 +227,10 @@ body{
 
 
 .header_under_row .navbar ul li:hover  {
+    text-decoration: underline!important;
+}
+
+footer a:hover{
     text-decoration: underline!important;
 }
 
@@ -2095,14 +2099,20 @@ footer {
     padding: 3.438vw 0 1.125vw;
 }
 
-footer * {
-    color: white;
+footer *  {
+    color: rgba(255, 255, 255, 0.7)!important;
 }
 
-.contacts_col .contact_item .details * {
-    color: white;
-
+footer .details a {
+    color: rgba(255, 255, 255, 0.9)!important;
 }
+
+footer .details .hours b {
+    color: rgba(255, 255, 255, 0.9)!important;
+}
+
+
+
 
 footer  svg path {
     fill: white!important;
@@ -2111,4 +2121,36 @@ footer  svg path {
 footer  svg{
     width: 2vw;
     height: 2vw;
+}
+
+.col_title{
+    font-size: 1.2vw;
+    margin-bottom: 1vw;
+    color: white!important;
+}
+
+.logo_link{
+    position: relative;
+}
+
+
+footer .logo_col img {
+    width: 11.25vw;
+}
+
+
+footer .logo_col .logo_link p {         
+    position: absolute;
+    bottom: 2.4vw;
+    right: -2.6vw;
+    margin-left: 0.5vw;
+    padding-left: 1vw;
+    font-size: 0.74vw;
+    letter-spacing: 0.15vw;
+    transition: 0.5s all ease;
+}
+
+
+.menu_col{
+    max-width: 20vw;
 }
