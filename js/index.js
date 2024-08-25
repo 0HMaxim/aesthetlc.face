@@ -1439,3 +1439,216 @@ let related_page_html = `
 `
 
 related_page_links.innerHTML = related_page_html;
+
+
+
+
+// let team_items = document.getElementsByClassName("team_items")
+
+
+// let addDoctorBtn = document.getElementById("addDoctor")
+
+
+// addDoctorBtn.addEventListener('click', refresh_team_items)
+
+// function refresh_team_items(){
+
+
+//     let textHtml =  `
+    
+
+
+
+//         <div class="team_item ">
+
+//                     <p class="name d_flex fw500">Бесєда Тетяна Павлівна</p>
+
+//                         <a href="about-doktor.html" 
+//                             class="image_block scale_bg">
+//                                 <span class="image" style="background-image: url(https://www.besedaclinic.com.ua/storage/gallery/1704832182.webp)"></span>
+//                         </a>
+
+//                         <p class="position ">Головний лікар , Дерматовенеролог,Трихолог</p>
+
+//                         <ul class="check_list ">
+//                             <li><a>Дерматолог </a></li>
+//                             <li><div class="">Косметолог</div></li>
+//                             <li><div class="">Трихолог </div></li>
+//                         </ul>
+
+//                     <div class="btn m-top2 a_linie">Записатися до Тетяни</div>
+//         </div>
+
+
+//     `
+
+
+
+
+//     team_items[0].innerHTML  += textHtml;
+
+//     console.log("refresh_team_items")
+
+// }
+
+
+let teamItems = document.getElementsByClassName("team_items")[0];
+let addDoctorBtn = document.getElementById("addDoctor");
+let modal = document.getElementById("addDoctorModal");
+let closeBtn = document.getElementsByClassName("close")[0];
+let doctorForm = document.getElementById("doctorForm");
+
+// Открытие модального окна при клике на кнопку "Add Doctor"
+addDoctorBtn.onclick = function() {
+    modal.style.display = "block";
+}
+
+// Закрытие модального окна при клике на крестик
+closeBtn.onclick = function() {
+    modal.style.display = "none";
+}
+
+// Закрытие модального окна при клике вне его
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+
+// Добавление нового доктора
+doctorForm.onsubmit = function(event) {
+    event.preventDefault(); // Предотвращаем перезагрузку страницы
+
+    // Получаем значения из формы
+    let firstname = document.getElementById("firstname").value;
+    let lastname = document.getElementById("lastname").value;
+    let secondname = document.getElementById("secondname").value;
+
+    let imageUrl = document.getElementById("imageUrl").value;
+    let imageFile = document.getElementById("imageFile").files[0];
+
+    let position = document.getElementsByClassName("position");
+    let positionText = "";
+    
+    for (let i = 0; i < position.length; i++) {
+        positionText += position[i].value + ", ";
+    }
+    
+    // Убираем лишнюю запятую и пробел в конце строки
+    positionText = positionText.slice(0, -2);
+
+    let specializations = document.getElementsByClassName("specializations");
+
+
+    console.log(specializations[0].value);
+
+    let specializationsArr = [];
+    
+    for (let i = 0; i < specializations.length; i++) {
+        specializationsArr.push(specializations[i].value);
+    }
+
+
+
+    let certificatesInput = document.getElementsByClassName("certificates");
+    let certificatesContainer = document.getElementById("certificatesContainer");
+
+    console.log(certificatesInput);
+
+
+
+    certificatesContainer.innerHTML = ``
+
+    for (let i = 0; i < certificatesInput.length; i++) {
+
+        let files = certificatesInput[i].files;
+
+        if (files.length > 0) {
+
+
+            for (let i = 0; i < files.length; i++) {
+                let reader = new FileReader();
+                reader.onload = function(e) {
+                    certificatesContainer.innerHTML += `
+                        <div class="certificate_item">
+                            <a href="about-doktor.html" class="image_block scale_bg">
+                                <span class="image" style="background-image: url(${e.target.result})"></span>
+                            </a>
+                        </div>
+                    `;
+                }
+                reader.readAsDataURL(files[i]);
+            }
+
+        }
+        
+
+    }
+
+
+
+
+
+    
+
+
+
+    // Если был загружен файл, используем его вместо URL
+    if (imageFile) {
+        let reader = new FileReader();
+        reader.onload = function(e) {
+            addDoctorToList(firstname, lastname, secondname, positionText, e.target.result, specializationsArr);
+    }
+        reader.readAsDataURL(imageFile);
+    } else {
+        addDoctorToList(firstname, lastname, secondname, positionText, imageUrl, specializationsArr);
+    }
+
+    // Закрываем модальное окно и очищаем форму
+    modal.style.display = "none";
+    doctorForm.reset();
+}
+
+// Функция для добавления доктора в список
+function addDoctorToList(firstname, lastname, secondname, position, imageUrl, specializations) {
+    let newDoctorHtml = `
+        <div class="team_item">
+            <p class="name d_flex fw500">${lastname} ${firstname} ${secondname}</p>
+            <a href="about-doktor.html" class="image_block scale_bg">
+                <span class="image" style="background-image: url(${imageUrl})"></span>
+            </a>
+            <p class="position">${position}</p>
+            <ul class="check_list">
+                ${specializations.map(specializations => `<li><div class="">${specializations.trim()}</div></li>`).join('')}
+            </ul>
+            <div class="btn m-top2 a_linie">Записатися до ${firstname}</div>
+        </div>
+    `;
+    teamItems.innerHTML += newDoctorHtml;
+}
+
+
+
+
+
+$(document).ready(function() {
+    // Добавление нового блока
+    $('.modal-content').on('click', '.add_b', function(e) {
+        e.preventDefault();
+
+        let $parent = $(this).closest('label'); // Находим ближайший родительский элемент <label>
+        let $clone = $parent.clone(); // Клонируем этот элемент
+        $clone.find('input').val(''); // Очищаем значение input в клонированном элементе
+        $parent.after($clone); // Вставляем клонированный элемент после исходного
+        $clone.find('input').focus(); // Фокусируемся на новом поле
+    });
+
+    // Удаление блока
+    $('.modal-content').on('click', '.del_b', function(e) {
+        e.preventDefault();
+        let $parent = $(this).closest('label'); // Находим ближайший родительский элемент <label>
+        if ($parent.siblings('label').length) { // Проверяем, что есть другие элементы <label>
+            $parent.remove(); // Удаляем текущий элемент
+        }
+    });
+});

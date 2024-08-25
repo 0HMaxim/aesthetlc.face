@@ -71,112 +71,170 @@
         
   
         <div class="team_items justify-content-between ">
-
-
-       
-            <div class="team_item">
-
+            <div class="team_item ">
                 <p class="name d_flex fw500">Бесєда Тетяна Павлівна</p>
-
-                    <a href="about-doktor.html" 
-                        class="image_block scale_bg">
-                            <span class="image" style="background-image: url(https://www.besedaclinic.com.ua/storage/gallery/1704832182.webp)"></span>
-                    </a>
-
-                    <p class="">Головний лікар , Дерматовенеролог,Трихолог</p>
-
-                    <ul class="check_list">
-                        <li><a>Дерматолог </a></li>
-                        <li><div class="">Косметолог</div></li>
-                        <li><div class="">Трихолог </div></li>
-                    </ul>
-
-                <div class="btn btn-warning m-top2 a_linie">Записатися до Тетяни</div>
+                <a href="about-doktor.html" class="image_block scale_bg">
+                    <span class="image" style="background-image: url(https://www.besedaclinic.com.ua/storage/gallery/1704832182.webp)"></span>
+                </a>
+                <p class="position ">Головний лікар , Дерматовенеролог,Трихолог</p>
+                <ul class="check_list ">
+                    <li><a>Дерматолог </a></li>
+                    <li><div class="">Косметолог</div></li>
+                    <li><div class="">Трихолог </div></li>
+                </ul>
+                <div class="btn m-top2 a_linie">Записатися до Тетяни</div>
             </div>
-
-
-   
-
-
-            <div class="team_item">
-
-                <p class="name d_flex fw500">Бесєда Тетяна Павлівна</p>
-
-                    <a href="about-doktor.html" 
-                        class="image_block scale_bg">
-                            <span class="image" style="background-image: url(https://www.besedaclinic.com.ua/storage/gallery/1704832182.webp)"></span>
-                    </a>
-
-                    <p class="">Головний лікар , Дерматовенеролог,Трихолог</p>
-
-                    <ul class="check_list">
-                        <li><a>Дерматолог </a></li>
-                        <li><div class="">Косметолог</div></li>
-                        <li><div class="">Трихолог </div></li>
-                    </ul>
-
-                <div class="btn  m-top2 a_linie">Записатися до Тетяни</div>
-            </div>
-
-
-            <div class="team_item">
-
-                <p class="name d_flex fw500">Бесєда Тетяна Павлівна</p>
-
-                    <a href="about-doktor.html" 
-                        class="image_block scale_bg">
-                            <span class="image" style="background-image: url(https://www.besedaclinic.com.ua/storage/gallery/1704832182.webp)"></span>
-                    </a>
-
-                    <p class="">Головний лікар , Дерматовенеролог,Трихолог</p>
-
-                    <ul class="check_list">
-                        <li><a>Дерматолог </a></li>
-                        <li><div class="">Косметолог</div></li>
-                        <li><div class="">Трихолог </div></li>
-                    </ul>
-
-                <div class="btn  m-top2 a_linie">Записатися до Тетяни</div>
-            </div>
-
-               
-            
-
-            
-            
-
-
-
-
-
-            
-            <div class="team_item">
-
-                <p class="name d_flex fw500">Бесєда Тетяна Павлівна</p>
-
-                    <a href="about-doktor.html" 
-                        class="image_block scale_bg">
-                            <span class="image" style="background-image: url(https://www.besedaclinic.com.ua/storage/gallery/1704832182.webp)"></span>
-                    </a>
-
-                    <p class="">Головний лікар , Дерматовенеролог,Трихолог</p>
-
-                    <ul class="check_list">
-                        <li><a>Дерматолог </a></li>
-                        <li><div class="">Косметолог</div></li>
-                        <li><div class="">Трихолог </div></li>
-                    </ul>
-
-                <div class="btn ">Записатися до Тетяни</div>
-            </div>
-
-
-            
         </div>
+        
+        <!-- Кнопка для открытия модального окна -->
+        <div class="btn m-top2 a_linie" id="addDoctor">Add Doctor</div>
+        
+        <!-- Модальное окно для добавления доктора -->
+                <div id="addDoctorModal" class="modal">
+                <form id="doctorForm">
+
+                
+                <div class="modal-content align-items-center justify-content-center">
+                    <span class="close btn btn-danger">Close</span>
+
+
+                    <div class="row ">
+                        <div class="">Personal Data</div>
+
+                        <label class="input_block">
+                            <input mbsc-input data-label="First name" id="firstname" type="text" placeholder="First Name" />
+                        </label>
+
+                        <label class="input_block">
+                            <input mbsc-input data-label="Last name" id="lastname" type="text" placeholder="Last Name" />
+                        </label>
+
+                        <label class="input_block">
+                            <input mbsc-input data-label="Second name" id="secondname" type="text" placeholder="Secondname" />
+                        </label>
+                          
+
+
+                            <div class="mbsc-form-group-title m-top1"> 
+                                <div >Посада</div>
+
+                                <div id="positions-container ">
+                                    <label class="d-flex input_block">
+                                        <input mbsc-input data-label="Position" class="services" type="text" placeholder="Position" />
+                                        <div class="add_b my_btn"> +</div>
+                                        <div class="del_b my_btn"> -</div>
+                                    </label>
+                                </div>
+
+                            </div>
+
+
+                            <div class="mbsc-form-group-title m-top1"> 
+                                <div >Спеціалізація</div>
+
+                                <div id="positions-container">
+                                    <label class="d-flex input_block">
+                                        <input mbsc-input data-label="Specializations" class="specializations" type="text" placeholder="Спеціалізація" />
+                                        <div class="add_b my_btn"> +</div>
+                                        <div class="del_b my_btn"> -</div>
+                                    </label>
+                                </div>
+
+                            </div>
+
+
+
+
+
+                            <div class="mbsc-form-group-title m-top1"> 
+                                <div >Фото вставьте ссылку на изображение или загрузите фото</div>
+
+                                <div id="positions-container">
+                                    <label class="d-flex input_block">
+                                            <input mbsc-input data-label="URL изображения:" id="imageUrl" type="text" placeholder="URL изображения:" />
+                                    </label>
+                                </div>
+
+                            </div>
+
+                            <div class="mbsc-form-group-title m-top1"> 
+
+                                <div id="positions-container">
+                                    <label class="d-flex input_block">
+                                             <input type="file" id="imageFile" name="imageFile"><br>
+                                    </label>
+                                </div>
+
+                            </div>
+
+
+                            <div class="mbsc-form-group-title m-top1"> 
+                                <div >Освіта</div>
+
+                                <div id="positions-container">
+                                    <label class="d-flex input_block">
+                                        <input mbsc-input data-label="Освіта" class="osvita" type="text" placeholder="Освіта" />
+                                        <div class="add_b my_btn"> +</div>
+                                        <div class="del_b my_btn"> -</div>
+                                    </label>
+                                </div>
+
+                            </div>
+
+
+                            <div class="mbsc-form-group-title m-top1"> 
+                                <div >Дипломи та сертифікати</div>
+
+                                <div id="positions-container">
+                                    <label class="d-flex input_block">
+                                        <input type="file" class="certificates" name="imageFile" multiple><br>
+                                        <div class="add_b my_btn"> +</div>
+                                        <div class="del_b my_btn"> -</div>
+                                    </label>
+                                </div>
+
+                            </div>
+
+
+
+                            <button type="submit" class="m-top2 my_btn">Сохранить</button>
+
+                    </div>
+
+
+                    </div>
+
+                </form>
+            </div>
 
 
     </div>
 
+
+    <div id="certificatesContainer" class="m-top2 d-flex my_container"> 
+
+        <div class="certificate_item ">
+            <a href="about-doktor.html" class="image_block scale_bg">
+                <span class="image" style="background-image: url(https://www.besedaclinic.com.ua/storage/gallery/1709290624.webp)"></span>
+            </a>
+           
+        </div>
+
+        <div class="certificate_item ">
+            <a href="about-doktor.html" class="image_block scale_bg">
+                <span class="image" style="background-image: url(https://www.besedaclinic.com.ua/storage/gallery/1709290624.webp)"></span>
+            </a>
+           
+        </div>
+
+        <div class="certificate_item ">
+            <a href="about-doktor.html" class="image_block scale_bg">
+                <span class="image" style="background-image: url(https://www.besedaclinic.com.ua/storage/gallery/1709290624.webp)"></span>
+            </a>
+           
+        </div>
+
+    </div>
 
 
     <div id="related_page_links">
@@ -198,6 +256,7 @@
     <script src="../js/index.js" defer></script>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
 </body>
 </html>
