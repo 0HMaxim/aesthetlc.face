@@ -46,7 +46,6 @@ function header_refresh(header_menuArr, newLang, oldLang) {
     
 
     if(folder.length>0){
-        console.log(folder.length*2);
 
         for (let i = 0; i < folder.length; i++) {
             countPoin += "..";
@@ -1440,57 +1439,7 @@ let related_page_html = `
 
 related_page_links.innerHTML = related_page_html;
 
-
-
-
-// let team_items = document.getElementsByClassName("team_items")
-
-
-// let addDoctorBtn = document.getElementById("addDoctor")
-
-
-// addDoctorBtn.addEventListener('click', refresh_team_items)
-
-// function refresh_team_items(){
-
-
-//     let textHtml =  `
-    
-
-
-
-//         <div class="team_item ">
-
-//                     <p class="name d_flex fw500">Бесєда Тетяна Павлівна</p>
-
-//                         <a href="about-doktor.html" 
-//                             class="image_block scale_bg">
-//                                 <span class="image" style="background-image: url(https://www.besedaclinic.com.ua/storage/gallery/1704832182.webp)"></span>
-//                         </a>
-
-//                         <p class="position ">Головний лікар , Дерматовенеролог,Трихолог</p>
-
-//                         <ul class="check_list ">
-//                             <li><a>Дерматолог </a></li>
-//                             <li><div class="">Косметолог</div></li>
-//                             <li><div class="">Трихолог </div></li>
-//                         </ul>
-
-//                     <div class="btn m-top2 a_linie">Записатися до Тетяни</div>
-//         </div>
-
-
-//     `
-
-
-
-
-//     team_items[0].innerHTML  += textHtml;
-
-//     console.log("refresh_team_items")
-
-// }
-
+let currentPath = window.location.pathname;
 
 let teamItems = document.getElementsByClassName("team_items")[0];
 let addDoctorBtn = document.getElementById("addDoctor");
@@ -1499,11 +1448,13 @@ let closeBtn = document.getElementsByClassName("close")[0];
 let doctorForm = document.getElementById("doctorForm");
 
 // Открытие модального окна при клике на кнопку "Add Doctor"
+if(addDoctorBtn)
 addDoctorBtn.onclick = function() {
     modal.style.display = "block";
 }
 
 // Закрытие модального окна при клике на крестик
+if(closeBtn)
 closeBtn.onclick = function() {
     modal.style.display = "none";
 }
@@ -1515,7 +1466,10 @@ window.onclick = function(event) {
     }
 }
 
+
+
 // Добавление нового доктора
+if(doctorForm)
 doctorForm.onsubmit = function(event) {
     event.preventDefault(); // Предотвращаем перезагрузку страницы
 
@@ -1524,97 +1478,88 @@ doctorForm.onsubmit = function(event) {
     let lastname = document.getElementById("lastname").value;
     let secondname = document.getElementById("secondname").value;
 
-    let imageUrl = document.getElementById("imageUrl").value;
+    let  = document.getElementById("imageUrl").value;
     let imageFile = document.getElementById("imageFile").files[0];
 
-    let position = document.getElementsByClassName("position");
+    let position = document.getElementsByClassName("positionInput");
+
+
     let positionText = "";
-    
     for (let i = 0; i < position.length; i++) {
+    
         positionText += position[i].value + ", ";
     }
-    
-    // Убираем лишнюю запятую и пробел в конце строки
-    positionText = positionText.slice(0, -2);
+
+    positionText = positionText.slice(0, -2); // Убираем лишнюю запятую и пробел
 
     let specializations = document.getElementsByClassName("specializations");
-
-
-    console.log(specializations[0].value);
-
     let specializationsArr = [];
-    
     for (let i = 0; i < specializations.length; i++) {
         specializationsArr.push(specializations[i].value);
     }
 
-
-
     let certificatesInput = document.getElementsByClassName("certificates");
-    let certificatesContainer = document.getElementById("certificatesContainer");
+    let certificatesArr = [];
 
-    console.log(certificatesInput);
-
-
-
-    certificatesContainer.innerHTML = ``
-
+    // Обрабатываем загрузку сертификатов
     for (let i = 0; i < certificatesInput.length; i++) {
-
         let files = certificatesInput[i].files;
-
         if (files.length > 0) {
-
-
-            for (let i = 0; i < files.length; i++) {
+            for (let j = 0; j < files.length; j++) {
                 let reader = new FileReader();
                 reader.onload = function(e) {
-                    certificatesContainer.innerHTML += `
-                        <div class="certificate_item">
-                            <a href="about-doktor.html" class="image_block scale_bg">
-                                <span class="image" style="background-image: url(${e.target.result})"></span>
-                            </a>
-                        </div>
-                    `;
-                }
-                reader.readAsDataURL(files[i]);
+                    certificatesArr.push(e.target.result);
+                };
+                reader.readAsDataURL(files[j]);
             }
-
         }
-        
-
     }
 
 
-
-
-
-    
-
+    let education = document.getElementsByClassName("education");
+    let educationArr = [];
+    for (let i = 0; i < education.length; i++) {
+        educationArr.push(education[i].value);
+    }
 
 
     // Если был загружен файл, используем его вместо URL
     if (imageFile) {
         let reader = new FileReader();
         reader.onload = function(e) {
-            addDoctorToList(firstname, lastname, secondname, positionText, e.target.result, specializationsArr);
-    }
+            team.push({
+                firstname: firstname,
+                lastname: lastname,
+                secondname: secondname,
+                position: positionText,
+                specializations: specializationsArr,
+                image: e.target.result, // Сохраняем изображение в Base64
+                education: educationArr,
+                certificates: certificatesArr, // Добавляем сертификаты
+                id: team.length-1 
+            });
+            saveJsonToFile(team, "team.json"); // Сохраняем JSON в файл
+            addDoctorToList(firstname, lastname, secondname, positionText, e.target.result, specializationsArr, id);
+        };
         reader.readAsDataURL(imageFile);
-    } else {
-        addDoctorToList(firstname, lastname, secondname, positionText, imageUrl, specializationsArr);
-    }
+    } 
 
     // Закрываем модальное окно и очищаем форму
     modal.style.display = "none";
     doctorForm.reset();
-}
+};
+
+
+
+
+
 
 // Функция для добавления доктора в список
-function addDoctorToList(firstname, lastname, secondname, position, imageUrl, specializations) {
+function addDoctorToList(firstname, lastname, secondname, position, imageUrl, specializations, id) {
     let newDoctorHtml = `
         <div class="team_item">
             <p class="name d_flex fw500">${lastname} ${firstname} ${secondname}</p>
-            <a href="about-doktor.html" class="image_block scale_bg">
+            <a href="about-doktor.html?id=${id}" class="image_block scale_bg">
                 <span class="image" style="background-image: url(${imageUrl})"></span>
             </a>
             <p class="position">${position}</p>
@@ -1628,6 +1573,49 @@ function addDoctorToList(firstname, lastname, secondname, position, imageUrl, sp
 }
 
 
+async function getDateFromJson(file){
+
+    
+    try {
+        const response = await fetch(file);
+        if (!response.ok) {
+            throw new Error('Network response was not ok ' + response.statusText);
+        }
+        const data = await response.json();
+        return data;
+    } catch (error) {
+        console.error("Ошибка при загрузке JSON файла:", error);
+        return null;
+    }
+}
+
+let team =[]
+
+async function initialize() {
+    team = await getDateFromJson("/team/team.json");
+    console.log(team);
+
+    if (team) {
+        team.map(doctor => {
+            addDoctorToList(
+                doctor.firstname,
+                doctor.lastname,
+                doctor.secondname,
+                doctor.position,
+                doctor.image,
+                doctor.specializations,
+                doctor.id
+            );
+        });
+    } else {
+        console.error("Не удалось загрузить данные команды.");
+    }
+}
+
+initialize();
+
+    
+       
 
 
 
@@ -1652,3 +1640,92 @@ $(document).ready(function() {
         }
     });
 });
+
+
+
+
+
+    // Функция для сохранения JSON в файл
+    function saveJsonToFile(jsonObject, filename) {
+        let jsonStr = JSON.stringify(jsonObject, null, 2); // Преобразуем объект в строку JSON с отступами
+        let blob = new Blob([jsonStr], {type: "application/json"}); // Создаем Blob объект
+        let url = URL.createObjectURL(blob); // Создаем временный URL для скачивания файла
+        let a = document.createElement("a"); // Создаем элемент <a>
+        a.href = url;
+        a.download = filename; // Устанавливаем имя файла для сохранения
+        document.body.appendChild(a);
+        a.click(); // Автоматически кликаем по ссылке для скачивания
+        document.body.removeChild(a); // Удаляем ссылку после скачивания
+    }
+
+
+
+
+
+
+
+// Если doctorId успешно извлечен
+
+async function createPageAboutDoctor() {
+    team = await getDateFromJson("/team/team.json");
+
+
+
+
+    const urlParams = new URLSearchParams(window.location.search);
+    const doctorId = urlParams.get('id');
+    const doctor = team.find(doc => doc.id == doctorId);
+    let fullName = `${doctor.lastname} ${doctor.firstname} ${doctor.secondname} `
+
+    let nameHeader = document.getElementsByClassName("nameHeader");
+    let image = document.getElementById("image");
+    let position = document.getElementById("position");
+    let education = document.getElementById("education");
+    let specializations = document.getElementById("specializations");
+    
+    let certificatesContainer = document.getElementById("certificatesContainer");
+
+    
+    certificatesContainer.innerHTML=`
+
+        ${doctor.certificates.map(certificates => `
+            
+            <div class="certificate_item ">
+                <a href="about-doktor.html" class="image_block scale_bg">
+                    <span class="image" style="background-image: url(${certificates})"></span>
+                </a>
+            </div>`).join('')}
+        `
+
+    education.innerHTML=`
+    
+
+        ${doctor.education.map(education => `
+            
+            
+            <li><div>${education}</div></li>`)
+            .join('')}
+
+        `
+
+    specializations.innerHTML=`
+    
+
+    ${doctor.specializations.map(specializations => `
+        
+        
+        <li><div>${specializations}</div></li>`)
+        .join('')}
+
+    `
+
+
+    position.innerHTML = doctor.position
+    image.src = doctor.image
+    Array.from(nameHeader).forEach(x => x.innerHTML = fullName);
+
+
+    
+}
+
+createPageAboutDoctor();

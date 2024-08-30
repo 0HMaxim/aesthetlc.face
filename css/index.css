@@ -1163,6 +1163,9 @@ h1, h2, h3, h4 ,  h5, h6
 
     color:white;
 
+
+    font-size: 1.1vw;
+
     display: flex;
     align-items: center;
     border: 1px solid #000;
@@ -2201,6 +2204,18 @@ input[type="text"] {
     border: 1px solid #B7B7B7;
     box-shadow: 0 0 14px 0 rgba(0, 0, 0, 0.25);
   }
+
+
+  .doctor_page .left {
+    width: 32.188vw;
+    position: sticky;
+    top: 8vw;
+}
+
+
+.doctor_page .right {
+    width: 50vw;
+}
 
 
 
