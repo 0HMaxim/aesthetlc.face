@@ -109,7 +109,7 @@ function header_refresh(header_menuArr, newLang, oldLang) {
                     
 
                                     
-                            <div class="d-flex align-items-center ">
+                            <div class="align-items-center contact_item">
                 
                                 <div class="icon_block d-flex align-items-center">
                                     
@@ -121,7 +121,7 @@ function header_refresh(header_menuArr, newLang, oldLang) {
 
 
                                                 <div class="details col ">
-                                                    <a class=" row" href="https://maps.app.goo.gl/XYVPmSi8wqjrG6dr7" target="_blank" ">
+                                                    <a class="header_address row" href="https://maps.app.goo.gl/XYVPmSi8wqjrG6dr7" target="_blank" ">
 
                                                         Poggendörper Weg 3-9, 24149 Kiel
                                                     </a>
@@ -143,9 +143,9 @@ function header_refresh(header_menuArr, newLang, oldLang) {
 
 
 
-                            <div class="d-flex align-items-center ">
+                            <div class=" align-items-center schedule_block">
                     
-                                    <div class="icon_block d-flex align-items-center">
+                                    <div class="icon_block schedule_block align-items-center">
                                         
 
 
@@ -174,9 +174,9 @@ function header_refresh(header_menuArr, newLang, oldLang) {
 
 
 
-                          <div class="d-flex align-items-center ">
+                          <div class="align-items-center messengers">
                 
-                                <div class="icon_block d-flex align-items-center messengers ">
+                                <div class="icon_block  align-items-center messengers ">
                                     
 
 
@@ -223,9 +223,9 @@ function header_refresh(header_menuArr, newLang, oldLang) {
 
 
 
-                                <div class="d-flex align-items-center my_btn ">
+                                <div class="show_book_window align-items-center my_btn ">
                     
-                                    <div class="icon_block d-flex align-items-center  ">
+                                    <div class="icon_block show_book_window align-items-center  ">
                                     
 
                                                 <svg width="24" height="21" viewBox="0 0 24 21" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -266,14 +266,23 @@ function header_refresh(header_menuArr, newLang, oldLang) {
                                                 </div>
 
 
+                                                
+
+
                                     </div>
 
 
                                 </div>
 
+                                <p id="burger_menu_btn" class="burger_menu_btn ">
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                </p>
+
 
                         
-                </div>
+                    </div>
 
 
 
@@ -285,16 +294,16 @@ function header_refresh(header_menuArr, newLang, oldLang) {
 
 
 
-                    <div class="header_under_row d-flex align-items-center justify-content-between m-0 ">
+                    <div class="header_under_row  align-items-center justify-content-between m-0 menu_row">
 
-                        <div class="navbar d-flex ">
+                        <div class="navbar ">
 
-                            <ul class="d-flex "> 
-                                <li><a class="fw600" href="${countPoin}about.html">${header_menuArr[0]}</a></li>
-                                <li><a class="fw600" href="${countPoin}angebot/index.html">${header_menuArr[1]}</a></li>
+                            <ul class=""> 
+                                <li><a class="" href="${countPoin}about.html">${header_menuArr[0]}</a></li>
+                                <li><a class="" href="${countPoin}angebot/index.html">${header_menuArr[1]}</a></li>
                                 
                                 <li id="leistungen " class="first">
-                                    <a class="fw600"  href="${countPoin}services/index.html">${header_menuArr[2]}</a>
+                                    <a class=""  href="${countPoin}services/index.html">${header_menuArr[2]}</a>
                                     <ul id="leistungen_header_menu" class="submenu hide">
                                     
                                         
@@ -302,13 +311,13 @@ function header_refresh(header_menuArr, newLang, oldLang) {
                                 </li>
 
 
-                                <li><a class="fw600" href="${countPoin}team/index.html" >${header_menuArr[3]}</a></li>
-                                <li><a class="fw600" href="${countPoin}price.html" >${header_menuArr[4]}</a></li>
-                                <li><a class="fw600" href="" >${header_menuArr[5]}</a></li>
-                                <li><a class="fw600" href="${countPoin}faq.html" >${header_menuArr[6]}</a></li>
-                                <li><a class="fw600" href="${countPoin}gallery.html" >${header_menuArr[7]}</a></li>
-                                <li><a class="fw600" href="${countPoin}blog/index.html" >${header_menuArr[8]}</a></li>
-                                <li><a class="fw600" href="${countPoin}contact.html" >${header_menuArr[9]}</a></li>
+                                <li><a class="" href="${countPoin}team/index.html" >${header_menuArr[3]}</a></li>
+                                <li><a class="" href="${countPoin}price.html" >${header_menuArr[4]}</a></li>
+                                <li><a class="" href="" >${header_menuArr[5]}</a></li>
+                                <li><a class="" href="${countPoin}faq.html" >${header_menuArr[6]}</a></li>
+                                <li><a class="" href="${countPoin}gallery.html" >${header_menuArr[7]}</a></li>
+                                <li><a class="" href="${countPoin}blog/index.html" >${header_menuArr[8]}</a></li>
+                                <li><a class="" href="${countPoin}contact.html" >${header_menuArr[9]}</a></li>
 
 
                                 
@@ -761,7 +770,16 @@ let faqArray = [
 
 
 
+let burger_menu_btn = document.getElementById("burger_menu_btn");
 
+burger_menu_btn.addEventListener('click', function() {
+    // Находим родительский элемент с классом "price_item"
+    let header = this.closest('.header');
+    if (header) {
+        // Добавляем класс "open" к родительскому элементу
+        header.classList.toggle('open');
+    }
+});
 
 
 
@@ -1189,8 +1207,8 @@ document.addEventListener('DOMContentLoaded', () => {
         showSlide(currentSlide - 1);
     }
 
-    document.querySelector('.next').addEventListener('click', nextSlide);
-    document.querySelector('.prev').addEventListener('click', prevSlide);
+    document.querySelector('.next')?.addEventListener('click', nextSlide);
+    document.querySelector('.prev')?.addEventListener('click', prevSlide);
 });
 
 
@@ -1224,7 +1242,7 @@ let footerhtml = `
 
 
 <footer>
-            <div class="my_container d-flex  justify-content-between">
+            <div class="my_container footer  justify-content-between">
                 
                 <div class="logo_col">
 

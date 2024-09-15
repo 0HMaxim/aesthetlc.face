@@ -1,15 +1,15 @@
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
-    margin-bottom: 0;
-    margin: 0;
-    padding: 0;
-    border: 0;
-    vertical-align: baseline;
-    outline: none;
-    box-sizing: border-box;
-    color: #000;
-    text-decoration: none;
+  margin-bottom: 0;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  vertical-align: baseline;
+  outline: none;
+  box-sizing: border-box;
+  color: #000;
+  text-decoration: none;
 
-    font-family: "Montserrat", sans-serif;;
+  font-family: "Montserrat", sans-serif;;
 
 }
 
@@ -40,25 +40,25 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
 
 
 .top_page_image {
-    height: 20.313vw;
-    justify-content: center;
-    margin: 0;
+  height: 20.313vw;
+  justify-content: center;
+  margin: 0;
 }
 
 
-  
+
 .inner {
-    padding: 3vw 0 0 0;
+  padding: 3vw 0 0 0;
 }
 
 .inner_bottom {
-    padding: 0  0 3vw 0 ;
+  padding: 0  0 3vw 0 ;
 }
 
 
 .inner.inner_bottom{
 
-    padding: 3vw  0 3vw 0 ;
+  padding: 3vw  0 3vw 0 ;
 
 }
 
@@ -67,7 +67,7 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
 
 
 .top_page_image .text-white{
-    font-size: 2.5vw;
+  font-size: 2.5vw;
 }
 
 
@@ -77,27 +77,27 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
 
 
 li, ul{ 
-    list-style: none !important;
-    padding: 0px  !important;
+  list-style: none !important;
+  padding: 0px  !important;
 }
 
 
 /* .about_top_page{
-    height: 43.75vw;
-    justify-content: center;
-    position: relative;
-    margin-left: 0;
+  height: 43.75vw;
+  justify-content: center;
+  position: relative;
+  margin-left: 0;
 } */
 
 .header_image{
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    -o-object-fit: cover;
-    object-fit: cover;
-    z-index: -100;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+  z-index: -100;
 }
 
 
@@ -108,16 +108,16 @@ li, ul{
 
 
 .before {
-    position: relative;
-    background-color: rgba(0, 0, 0, 0.47);           /*                 ЗАТЕМНЯЕТ ОБЬЕКТ     */
-    box-sizing:unset;
+  position: relative;
+  background-color: rgba(0, 0, 0, 0.47);           /*                 ЗАТЕМНЯЕТ ОБЬЕКТ     */
+  box-sizing:unset;
 }
 
 
 #breadcrumbs > *{
-    position: relative;
-    margin-top: 20px; /* Space to push breadcrumbs below the about top page */
-    z-index: 1; /* Ensure breadcrumbs are above other elements but not the overlay or video */
+  position: relative;
+  margin-top: 20px; /* Space to push breadcrumbs below the about top page */
+  z-index: 1; /* Ensure breadcrumbs are above other elements but not the overlay or video */
 }
 
 
@@ -127,27 +127,27 @@ li, ul{
 
 
 .blur{
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);  
-    -webkit-backdrop-filter: blur(10px);
-    backdrop-filter: blur(10px);
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);  
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(100px);
 }
 
 
 
 .header{
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;        
-    min-height: 10vw;
-    height: auto;
-    background: none;
-    z-index: 999;
-    transition: 0.3s all ease;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;        
+  min-height: 10vw;
+  height: auto;
+  background: none;
+  z-index: 999;
+  transition: 0.3s all ease;
 }
 
 
@@ -158,30 +158,30 @@ body{
 
 
 .header_fixed{
-    width: 100%;
-    position: fixed !important;
-    height: auto;
-    margin: 0px;
-    padding: 0px;
-    background: rgba(255, 255, 255, 0.8);
+  width: 100%;
+  position: fixed !important;
+  height: auto;
+  margin: 0px;
+  padding: 0px;
+  background: rgba(255, 255, 255, 0.8);
 
-    transition: 0.3s all ease;
+  transition: 0.3s all ease;
 
 }
 
 
 
 .top_page_video.has_top_image{
-    
-    height:13.5vw;
+  
+  height:13.5vw;
 }
 
 
 .top_page_video.has_top_video{
-    
-    
-    height:18.5vw;
-    
+  
+  
+  height:18.5vw;
+  
 }
 
 
@@ -195,24 +195,24 @@ body{
 
 
 .header_under_row .lang_block ul.langs  {
-    padding-bottom: 0.75vw;
-    margin-right: 3vw;
-    
-    position: absolute;
-    text-decoration: none;
+  padding-bottom: 0.75vw;
+  margin-right: 3vw;
+  
+  position: absolute;
+  text-decoration: none;
 }
 
 #lang_block:hover .langs   {
 
 
-    opacity: 1; 
-    visibility: visible;
-    transition: 0.3s all ease;
+  opacity: 1; 
+  visibility: visible;
+  transition: 0.3s all ease;
 
-    position: relative;
-    z-index: 1;
-    margin: 0;
-    padding: 0;
+  position: relative;
+  z-index: 1;
+  margin: 0;
+  padding: 0;
 }
 
 
@@ -222,79 +222,79 @@ body{
 
 
 .header_under_row .navbar ul li::before{
-    content: none;
+  content: none;
 }
 
 
 .header_under_row .navbar ul li:hover  {
-    text-decoration: underline!important;
+  text-decoration: underline!important;
 }
 
 footer a:hover{
-    text-decoration: underline!important;
+  text-decoration: underline!important;
 }
 
 
 
 /* .header_top_row:before {
-    top: calc(100% - 1px);
-    width: 94vw;
-    left: 50%;
-    height: 1px;
-    transform: translateX(-50%);
-    background-color: white;
+  top: calc(100% - 1px);
+  width: 94vw;
+  left: 50%;
+  height: 1px;
+  transform: translateX(-50%);
+  background-color: white;
 
-    content: "";
-    position: absolute;
+  content: "";
+  position: absolute;
 
 }
 
 .header_fixed .header_top_row:before{
-    background-color: black;
+  background-color: black;
 } */
 
 
 
 .header .header_top_row {
-    padding: 1.125vw 0 1vw;
-    transition: 0.3s all ease;
-    position: relative;
+  padding: 1.125vw 0 1vw;
+  transition: 0.3s all ease;
+  position: relative;
 }
 
 
 header .header_under_row {
-    margin-top: 1vw;
-    transition: 0.3s all ease;
+  margin-top: 1vw;
+  transition: 0.3s all ease;
 }
 
 
 .header_under_row .navbar ul li {
-    margin-left: 0px;
-    margin-right: 3vw;
-    padding-bottom: 0.75vw;
-    
+  margin-left: 0px;
+  margin-right: 3vw;
+  padding-bottom: 0.75vw;
+  
 }
 
 
 .logo_name  {
-    padding-top: 2vw;
-    font-size: 1vw;
-    letter-spacing: 0.370vw;
+  padding-top: 2vw;
+  font-size: 1vw;
+  letter-spacing: 0.370vw;
 
-    margin-bottom: 1vw;
+  margin-bottom: 1vw;
 
 
-    text-align: center;
+  text-align: center;
 }
 
 
 
 .logo_name * {
 
-    margin-bottom: 0.5vw;
-    text-align: center;
+  margin-bottom: 0.5vw;
+  text-align: center;
 
-    /* transition: 0.5s all ease; */
+  /* transition: 0.5s all ease; */
 
 }
 
@@ -306,60 +306,60 @@ header .header_under_row {
 
 
 .header p, .header a, .header span, .header b , .header div , .header li , .header svg{
-    color: #fff ;
-    text-decoration: none;
+  color: #fff ;
+  text-decoration: none;
 
 }
 
 
 
 .header_fixed.header .header_top_row {
-    padding: 0.5vw 0;
-    
+  padding: 0.5vw 0;
+  
 }
 
 .header_top_row > * {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
 .my_container{
 
-    margin: 0 auto!important;
-    width: 85vw;
-    height: 100%;
+  margin: 0 auto!important;
+  width: 85vw;
+  height: 100%;
 
 
-  
+
 }
 
 
 
-  
+
 
 #logo {                                                        
-    border-right: 1px solid #fff!important;    
-    margin-right: 0.75vw;
-    padding-right: 1.063vw;
-    transition: 0.5s all ease;
+  border-right: 1px solid #fff!important;    
+  margin-right: 0.75vw;
+  padding-right: 1.063vw;
+  transition: 0.5s all ease;
 
-    height: auto;
-    width: 10vw;
+  height: auto;
+  width: 10vw;
 
 }
 
 
 .header_fixed #logo {  
-    border-color: #000!important;    
-                                                           /*        черный цвет бордера когда страница опускается       */
-    transition: 0.3s all ease;
+  border-color: #000!important;    
+                                                         /*        черный цвет бордера когда страница опускается       */
+  transition: 0.3s all ease;
 
 }
 
 
 
 .header_fixed p, .header_fixed a, .header_fixed span, .header_fixed b, .header_fixed div, .header_fixed svg{                /*        черный цвет ввсего когда страница опускается        */
-    color:#000000 ;
+  color:#000000 ;
 }
 
 
@@ -367,43 +367,43 @@ header .header_under_row {
 
 
 .header svg path {
-    fill: white;
+  fill: white;
 }
 
 .header_fixed.header svg path{              /*        цвет кнопки   в    хеадере         */     
-    fill: black;
+  fill: black;
 }
 
 
 
 .icon_block{
-    width: max-content;
-    
+  width: max-content;
+  
 } 
 
 
 
 .icon_block svg {                               /*        размер иконок в хеадере       */
-    width: 2vw;
-    height: 2vw;
-    transition: 0.3s all ease;
-    position: relative;
+  width: 2vw;
+  height: 2vw;
+  transition: 0.3s all ease;
+  position: relative;
 }
 
 .icon_block .details {
-    width: 85%!important;
-    margin-left: 1.4vw !important;
+  width: 85%!important;
+  margin-left: 1.4vw !important;
 }
 
 .details {
-    margin: auto;
-    width: max-content;
+  margin: auto;
+  width: max-content;
 }
 
 
 svg:hover{
-    width: 3vw;
-    height: 3vw;
+  width: 3vw;
+  height: 3vw;
 }
 
 
@@ -412,9 +412,8 @@ svg:hover{
 
 
 p{
-    font-size: 1.1vw;
-    line-height: 1.5vw;
-    font-weight: 400;
+  font-size: 1.1vw;
+  font-weight: 400;
 }
 
 
@@ -422,44 +421,44 @@ p{
 /*      галочка перед списком ul               */
 
 ul.check_list li::before {
-    content: "";
-    position: absolute;
-    width: 0.75vw;
-    height: 0.75vw;
-    top: 0.4vw;
-    background-image: url(https://besedaclinic.com.ua/img/list_mark.svg);
-    background-size: contain;
-    background-position: left center;
-    background-repeat: no-repeat;
+  content: "";
+  position: absolute;
+  width: 0.75vw;
+  height: 0.75vw;
+  top: 0.4vw;
+  background-image: url(https://besedaclinic.com.ua/img/list_mark.svg);
+  background-size: contain;
+  background-position: left center;
+  background-repeat: no-repeat;
 }
 
 
 
 ul.check_list li *
 {
-    position: relative;
-    padding-left: 1.25vw!important; 
-    list-style: none;
-    font-weight: 400;
+  position: relative;
+  padding-left: 1.25vw!important; 
+  list-style: none;
+  font-weight: 400;
 
-    font-size: 1.1vw;
-    line-height: 1.5vw;
+  font-size: 1.1vw;
+  line-height: 1.5vw;
 
-    color: #000;
+  color: #000;
 
 }
 
 
 
 ul , li, a {
-    position: relative;
-    list-style: none;
-    font-weight: 400;
-    text-decoration: none!important; 
+  position: relative;
+  list-style: none;
+  font-weight: 400;
+  text-decoration: none!important; 
 
-    font-size: 1vw;
-    line-height: 1.5vw;
-    color: #000;
+  font-size: 1vw;
+  line-height: 1.5vw;
+  color: #000;
 }
 
 
@@ -474,14 +473,14 @@ ul , li, a {
 
 .container .d-flex li{
 
-    margin-right: 1em;
+  margin-right: 1em;
 }
 
 
 #breadcrumbs ol li:before {
-    content: "-";
-    padding-left: 0.3vw;
-    font-size: 1vw;
+  content: "-";
+  padding-left: 0.3vw;
+  font-size: 1vw;
 }
 
 
@@ -492,19 +491,19 @@ ul , li, a {
 
 .team_item_2{
 
-    width:  max-content;
+  width:  max-content;
 
-    justify-content: center;
-    margin: auto;
-    
+  justify-content: center;
+  margin: auto;
+  
 }
 
 .team_item_2 .team_item{
 
-    margin-right: 3vw;
-    height: 22vw;
-    width: 20vw;
-    
+  margin-right: 3vw;
+  height: 22vw;
+  width: 20vw;
+  
 }
 
 
@@ -515,30 +514,30 @@ ul , li, a {
 
 
 .team_items {
-    margin-top: 3.75vw;
+  margin-top: 3.75vw;
 
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-column-gap: 4vw;
-    grid-row-gap: 4vw;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-column-gap: 4vw;
+  grid-row-gap: 4vw;
 
 
-    width: 86vw!important;
-    margin: auto;
+  width: 86vw!important;
+  margin: auto;
 }
 
 
 
 .team_item {
-    position: relative;
-    width: 18vw;
+  position: relative;
+  width: 18vw;
 }
 
 
 
 .position{
-    margin: 1.25vw 0 1vw;
-    font-size: 1.1vw;
+  margin: 1.25vw 0 1vw;
+  font-size: 1.1vw;
 }
 
 
@@ -549,50 +548,50 @@ ul , li, a {
 
 
 .team_item .image_block {
-    display: block;
-    height: 22vw;
-    border: 1px solid #B7B7B7;
-    box-shadow: 0 0 14px 0 rgba(0, 0, 0, 0.25);
+  display: block;
+  height: 22vw;
+  border: 1px solid #B7B7B7;
+  box-shadow: 0 0 14px 0 rgba(0, 0, 0, 0.25);
 }
 
 
 .container {
-    margin: 0 auto !important;
-    width: 86vw!important;
+  margin: 0 auto !important;
+  width: 86vw!important;
 }
 
 
 
 .team_item .name{
-    position: absolute;
-    top: 18.5vw;
-    right: -1.5vw;
-    background-color: #000;                     /*          чтобы имя вылазило поверх елемента             */
-    color: #fff;
-    height: 2vw;
-    padding: 0 1.063vw;
-    z-index: 2;
+  position: absolute;
+  top: 18.5vw;
+  right: -1.5vw;
+  background-color: #000;                     /*          чтобы имя вылазило поверх елемента             */
+  color: #fff;
+  height: 2vw;
+  padding: 0 1.063vw;
+  z-index: 2;
 }
 
 
 .date{
-    position: absolute;
-    top: 1vw;
-    right: 1vw;
-    background-color: #000;
-    width: 5.938vw;
-    height: 4.688vw;
-    flex-direction: column;
-    justify-content: center;
+  position: absolute;
+  top: 1vw;
+  right: 1vw;
+  background-color: #000;
+  width: 5.938vw;
+  height: 4.688vw;
+  flex-direction: column;
+  justify-content: center;
 
-    
+  
 
 }
 
 
 .date *{
-    
-    color: white!important;
+  
+  color: white!important;
 }
 
 
@@ -605,24 +604,24 @@ ul , li, a {
 
 
 .fw800 {
-    font-weight: 800!important;
+  font-weight: 800!important;
 }
 
 .fw700 {
-    font-weight: 700!important;
+  font-weight: 700!important;
 }
 
 .fw600 {
-    font-weight: 600!important;
+  font-weight: 600!important;
 }
 
 
 .fw500 {
-    font-weight: 500!important;
+  font-weight: 500!important;
 }
 
 .fw400 {
-    font-weight: 400!important;
+  font-weight: 400!important;
 }
 
 
@@ -631,17 +630,17 @@ ul , li, a {
 
 
 .section_heading {
-    text-align: center;
-    font-size: 2.5vw;
-    margin-bottom: 2.5vw;
+  text-align: center;
+  font-size: 2.5vw;
+  margin-bottom: 2.5vw;
 }
 
 
 
 .name-big-center{
-    font-size: 1.5vw;
-    margin: 1.5vw 0 0.5vw;
-    text-align: center;
+  font-size: 1.5vw;
+  margin: 1.5vw 0 0.5vw;
+  text-align: center;
 
 }
 
@@ -654,74 +653,74 @@ ul , li, a {
 
 .cross:after,
 .cross::before {
-    content: "";
-    width: 100%;
-    display: block;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    height: 4px;
-    background-color: #000;
-    transition: 0.3s all ease;
+  content: "";
+  width: 100%;
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 4px;
+  background-color: #000;
+  transition: 0.3s all ease;
 }
 
 
 .cross:after {
-    transform: translate(-50%, -50%) rotate(90deg);
+  transform: translate(-50%, -50%) rotate(90deg);
 }
 
 
 .price_item.open .cross:after {
-    width: 0;
+  width: 0;
 }
 
 
 
 .cross {
-    cursor: pointer;
-    width: 2vw;
-    height: 2vw;
-    position: relative;
-    margin: 0;
+  cursor: pointer;
+  width: 2vw;
+  height: 2vw;
+  position: relative;
+  margin: 0;
 }
 
 
 /*         стили таблицы        */
 
 .price_item {
-    transition: 0.3s all ease;
-    position: relative;
-    overflow: hidden;
+  transition: 0.3s all ease;
+  position: relative;
+  overflow: hidden;
 
-    border-bottom: 1px solid #C4C4C4;
+  border-bottom: 1px solid #C4C4C4;
 }
 
 
 
 .price_item.open ,.price_item.open table {
-    height: -moz-max-content;
-    height: max-content;
-    position: relative;
-    opacity: 1;
-    top: 0;
-    z-index: 1;
+  height: -moz-max-content;
+  height: max-content;
+  position: relative;
+  opacity: 1;
+  top: 0;
+  z-index: 1;
 }
 
 
 
 .price_item table {
-    margin-top: 0.5vw;
-    width: 100%;
-    height: 0;
-    position: absolute;
-    top: 50px;
-    z-index: -2;
-    opacity: 0;
-    transition: 0.5s all ease;
+  margin-top: 0.5vw;
+  width: 100%;
+  height: 0;
+  position: absolute;
+  top: 50px;
+  z-index: -2;
+  opacity: 0;
+  transition: 0.5s all ease;
 
-    border-collapse: collapse;
-    border-spacing: 0;
+  border-collapse: collapse;
+  border-spacing: 0;
 }
 
 
@@ -729,40 +728,40 @@ ul , li, a {
 
 
 .price_item table td:first-child {
-    width: 15%;
-    border-left: none;
-    font-size: 1.125vw;
+  width: 15%;
+  border-left: none;
+  font-size: 1.125vw;
 }
 
 .price_item table thead td {
-    font-weight: 700;
-    font-size: 1.25vw;
+  font-weight: 700;
+  font-size: 1.25vw;
 }
 
 .price_item table td {
-    padding: 1.3vw;
+  padding: 1.3vw;
 }
 
 .price_item table tbody td {
-    border: 1px solid #C4C4C4;
+  border: 1px solid #C4C4C4;
 }
 
 .price_item table tbody td:nth-child(2) {
-    font-size: 1.25vw;
-    font-weight: 600;
-    color: rgba(0, 0, 0, 0.8);
+  font-size: 1.25vw;
+  font-weight: 600;
+  color: rgba(0, 0, 0, 0.8);
 }
 
 
 .price_item table tbody td:last-child {
-    font-weight: 600!important;
-    font-size: 1.25vw!important;
+  font-weight: 600!important;
+  font-size: 1.25vw!important;
 }
 
 
 .price_item table tbody tr td  h3 {
-    font-weight: 600!important;
-    font-size: 1.25vw!important;
+  font-weight: 600!important;
+  font-size: 1.25vw!important;
 }
 
 
@@ -772,39 +771,39 @@ ul , li, a {
 
 
 .price_item table td:last-child {
-    width: 20%;
-    border-right: none;
+  width: 20%;
+  border-right: none;
 }
 
 
 .price_item table td {
-    padding: 1.3vw;
+  padding: 1.3vw;
 }
 
 table tr:hover {
-    background-color: whitesmoke;
+  background-color: whitesmoke;
 
-    transition: 0.3s all ease;
+  transition: 0.3s all ease;
 }
 
 
 
 
 .heading_block {
-    padding-bottom: 1vw;
-    padding-top: 1vw;
-    z-index: 2;
-    font-size: 2.5vw;
+  padding-bottom: 1vw;
+  padding-top: 1vw;
+  z-index: 2;
+  font-size: 2.5vw;
 }
 
 .heading_block b {
-    font-weight: 700;
+  font-weight: 700;
 }
 
 
 .heading_block .sm {
-    font-size: 2vw;
-    font-weight: 600;
+  font-size: 2vw;
+  font-weight: 600;
 
 }
 
@@ -813,8 +812,8 @@ table tr:hover {
 
 
 .subtitle{
-    font-size: 1.25vw;
-    color: #666;
+  font-size: 1.25vw;
+  color: #666;
 }
 
 
@@ -823,25 +822,33 @@ table tr:hover {
 
 
 .service_items {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-column-gap: 1.875vw;
-    grid-row-gap: 1.875vw;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-column-gap: 1.875vw;
+  grid-row-gap: 1.875vw;
 }
 
 
 .service_items .service {
-    display: block;
-    border: 1px solid #D7D7D7;
+  display: block;
+  border: 1px solid #D7D7D7;
 }
 
 
 .service_items .service .img_block {
-    display: block;
-    height: 14.063vw;
+  display: block;
+  height: 14.063vw;
 }
 
-
+.service_items .service p {
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  height: 3.125vw;
+  padding: 0 1vw;
+  font-size: 1.25vw;
+}
 
 
 
@@ -850,22 +857,22 @@ table tr:hover {
 /*            Анимация нижней полосы в leistungen               */
 
 .a_linie {
-    position: relative; 
+  position: relative; 
 }
 
 .a_linie:before {
-    content: "";
-    position: absolute;                             
-    top: calc(100% - 4px);                               /*            Анимация нижней полосы для всех елементов с класом     a_linie           */
-    left: 0;
-    width: 2.688vw;
-    height: 4px;
-    background-color: #000;
-    transition: 0.5s all ease;
+  content: "";
+  position: absolute;                             
+  top: calc(100% - 4px);                               /*            Анимация нижней полосы для всех елементов с класом     a_linie           */
+  left: 0;
+  width: 2.688vw;
+  height: 4px;
+  background-color: #000;
+  transition: 0.5s all ease;
 }
 
 .a_linie:hover:before {
-    width: 100%; /* На ховер делаем ширину 100% */
+  width: 100%; /* На ховер делаем ширину 100% */
 }
 
 
@@ -877,37 +884,39 @@ table tr:hover {
 /*              стили для стриныцы |    Contact             */
 
 .contact_item .contact_title{
-    position: relative;
-    font-size: 1.2vw;
-    padding-left: 2vw;
-    margin-bottom: 0.85vw!important;
+  position: relative;
+  font-size: 1.2vw;
+  padding-left: 2vw;
+  margin-bottom: 0.85vw!important;
 }
 
 
- .contact_item .contact_title:before{
-    width: 1.2vw;
-    background-color: #000;
-    height: 1px;
-    top: 50%;
-    transform: translateY(-50%);    
-    content: "";
-    position: absolute;
-    left: 0;
+.contact_item .contact_title:before{
+  width: 1.2vw;
+  background-color: #000;
+  height: 1px;
+  top: 50%;
+  transform: translateY(-50%);    
+  content: "";
+  position: absolute;
+  left: 0;
 } 
 
 
 .contact_item{
-    width: 48%;
-    margin-bottom: 2vw!important;
+  width: 48%;
+  margin-bottom: 2vw!important;
 }
+
+.header .contact_item {
+  width: auto;
+  margin-bottom: 0px!important;
+}
+
 
 
 .contact_item *{
-    margin: 0px!important;
-}
-
-.contact_item .details * {
-    color: #000000;
+  margin: 0px!important;
 }
 
 
@@ -915,30 +924,30 @@ table tr:hover {
 
 .details :first-child{
 
-    font-size: 0.9vw!important;                     /*      размер адреса в хеадере     */
-    margin-bottom: 0.2vw;
+  font-size: 0.9vw!important;                     /*      размер адреса в хеадере     */
+  margin-bottom: 0.2vw;
 
-    width: max-content;
+  width: max-content;
 
 }
 
 
 .details :last-child{
 
-    font-size: 1.0vw!important;           /*      размер шрифта номер телефона     */
-    font-weight: 700;
-    width: max-content;
+  font-size: 1.0vw!important;           /*      размер шрифта номер телефона     */
+  font-weight: 700;
+  width: max-content;
 }
 
 
 
 
 .messengers a{
-    margin-right: 1.5vw;
+  margin-right: 1.5vw;
 }
 
 .messengers :last-child{
-    margin-right: 0;
+  margin-right: 0;
 
 }
 
@@ -950,11 +959,11 @@ table tr:hover {
 
 
 .contact_item .details p {
-    font-size: 0.9vw!important; 
+  font-size: 0.9vw!important; 
 }
 
 .contact_item .details a {
-    font-size: 1.1vw!important;
+  font-size: 1.1vw!important;
 }
 
 
@@ -962,12 +971,12 @@ table tr:hover {
 
 .hours :first-child{
 
-    font-size: 0.9vw!important;               /*      размер шрифта во времени     */
+  font-size: 0.9vw!important;               /*      размер шрифта во времени     */
 }
 
 .hours :last-child{
 
-    font-size: 0.9vw!important;               /*      размер шрифта во времени     */
+  font-size: 0.9vw!important;               /*      размер шрифта во времени     */
 }
 
 
@@ -979,7 +988,7 @@ table tr:hover {
 
 
 .messengers a{
-    text-decoration: none;
+  text-decoration: none;
 }
 
 
@@ -990,17 +999,17 @@ table tr:hover {
 
 
 .nav_services {
-    position: sticky;
-    top: 8vw;
-    width: 23%;
-    height: -moz-max-content;
-    height: max-content;
+  position: sticky;
+  top: 8vw;
+  width: 23%;
+  height: -moz-max-content;
+  height: max-content;
 }
 
 
 .content {
-    width: 75%;
-    color: #666;
+  width: 75%;
+  color: #666;
 }
 
 
@@ -1010,62 +1019,62 @@ table tr:hover {
 .content h1, .content h2, .content h3, .conten h4, .content h5, .content h6 , 
 h1, h2, h3, h4 ,  h5, h6 
 {
-    font-weight: 700;
-    font-size: 2vw;
-    margin-bottom: 1vw;
-    color: #000;
+  font-weight: 700;
+  font-size: 2vw;
+  margin-bottom: 1vw;
+  color: #000;
 }
 
 
 
 .content p, .content a, .content ul li {
-    font-size: 1.1vw;
-    line-height: 1.5vw;
-    margin-bottom: 1vw;
-    color: #666;
+  font-size: 1.1vw;
+  line-height: 1.5vw;
+  margin-bottom: 1vw;
+  color: #666;
 }
 
 .content a {
-    text-decoration: underline;
+  text-decoration: underline;
 }
 
 .m-top1{
-    margin-top: 1vw!important;
+  margin-top: 1vw!important;
 }
 
 
 
 .m-top2{
-    margin-top: 2vw!important;
-  }
+  margin-top: 2vw!important;
+}
 
 
 .m-top3{
-    margin-top: 3vw!important;
+  margin-top: 3vw!important;
 }
 
 .m-top4{
-  margin-top: 4vw!important;
+margin-top: 4vw!important;
 }
 
 .m-top5{
-    margin-top: 4vw!important;
-  }
+  margin-top: 4vw!important;
+}
 
 
-  .m-top6{
-    margin-top: 6vw!important;
-  }
+.m-top6{
+  margin-top: 6vw!important;
+}
 
 
-  .m-top7{
-    margin-top: 7vw!important;
-  }
-  
-  
-  .heading_block p{
-    color :#666;
-  }
+.m-top7{
+  margin-top: 7vw!important;
+}
+
+
+.heading_block p{
+  color :#666;
+}
 
 
 
@@ -1079,7 +1088,7 @@ h1, h2, h3, h4 ,  h5, h6
 
 .w-90{
 
-    width: 90%!important;
+  width: 90%!important;
 }
 
 
@@ -1088,15 +1097,15 @@ h1, h2, h3, h4 ,  h5, h6
 
 .angebot_item .image_block{
 
-    position: relative;
+  position: relative;
 
 
 
 
-    width: 54.5vw!important;
-    height: 32.625vw!important;
-    overflow: hidden;
-    
+  width: 54.5vw!important;
+  height: 32.625vw!important;
+  overflow: hidden;
+  
 
 }
 
@@ -1104,145 +1113,145 @@ h1, h2, h3, h4 ,  h5, h6
 
 
 .angebot_item .inner{
-    position: relative;
-    z-index: 2;
-    width: 31.6vw;
-    height: 32.625vw;
+  position: relative;
+  z-index: 2;
+  width: 31.6vw;
+  height: 32.625vw;
 }
 
 .angebot_item {
-    position: relative;
-    margin-bottom: 4vw!important;
-    min-width: 100%;
-    height: 100%; 
+  position: relative;
+  margin-bottom: 4vw!important;
+  min-width: 100%;
+  height: 100%; 
 }
 
 
 .inner title{
-    font-size: 2.2vw;                                                  /*                Размер текста в КАрточке акции                     */
-    line-height: 120%;                              
-    text-shadow: 1px 1px 1px #fff;
-    font-weight: 400;
+  font-size: 2.2vw;                                                  /*                Размер текста в КАрточке акции                     */
+  line-height: 120%;                              
+  text-shadow: 1px 1px 1px #fff;
+  font-weight: 400;
 }
 
 .subtitle{  
-    font-size: 1.1vw;                                                            /*                Размер размер описания акции                     */
+  font-size: 1.1vw;                                                            /*                Размер размер описания акции                     */
 
 
-    margin: 1.6vw 0 2.8vw;
-    max-width: 70%
+  margin: 1.6vw 0 2.8vw;
+  max-width: 70%
 
 }
 
 
 @keyframes moveLine {
-    0% {
-      left: -20%;
-    }
-    10% {
-      left: 120%;
-    }
-    100% {
-      left: 120%;
-    }
+  0% {
+    left: -20%;
   }
+  10% {
+    left: 120%;
+  }
+  100% {
+    left: 120%;
+  }
+}
 
 
 
 
 
 .my_btn {
-    background-color: #000;
-    min-height: 3.25vw;
+  background-color: #000;
+  min-height: 3.25vw;
 
-    max-height:  max-content;
+  max-height:  max-content;
 
-    padding: 0 1vw;
+  padding: 0 1vw;
 
-    border-radius: 0.3vw ;
+  border-radius: 0.3vw ;
 
-    color:white;
+  color:white;
 
 
-    font-size: 1.1vw;
+  font-size: 1.1vw;
 
-    display: flex;
-    align-items: center;
-    border: 1px solid #000;
-    width: -moz-max-content;
-    width: max-content;
-    font-weight: 500;
-    overflow: hidden;
-    position: relative;
-    transition: 0.3s all ease;
-    cursor: pointer;
-    text-decoration: none;
+  display: flex;
+  align-items: center;
+  border: 1px solid #000;
+  width: -moz-max-content;
+  width: max-content;
+  font-weight: 500;
+  overflow: hidden;
+  position: relative;
+  transition: 0.3s all ease;
+  cursor: pointer;
+  text-decoration: none;
 
 }
 
 
 .my_btn:before {
-    content: "";
-    position: absolute;
-    top: -20%;
-    left: -20%;
-    width: 10px;
-    background-color: #fff;
-    height: 140%;
-    display: inline-block;
-    z-index: 1;
-    transform: rotate(30deg);
-    animation: 5s moveLine linear infinite;
+  content: "";
+  position: absolute;
+  top: -20%;
+  left: -20%;
+  width: 10px;
+  background-color: #fff;
+  height: 140%;
+  display: inline-block;
+  z-index: 1;
+  transform: rotate(30deg);
+  animation: 5s moveLine linear infinite;
 }
 
 
 
 .my_btn svg {
 
-    width: 3vw;                                  /*            размер иконки в кнопке     */
-    height: 3vw;
+  width: 3vw;                                  /*            размер иконки в кнопке     */
+  height: 3vw;
 }
 
 
 .my_btn svg path {
-    fill: white!important;
+  fill: white!important;
 }
 
 
 .my_btn .details {
-  
-    margin: 0 1 0 0vw !important;            /*            растояние между текстом и иконкой     */
+
+  margin: 0 1 0 0vw !important;            /*            растояние между текстом и иконкой     */
 
 }
 
 
 .my_btn .details :first-child{
 
-    font-size: 1.0vw!important;         /*             первая строчка в кнопке          */
-    font-weight: 700;
-    width: 100%;
-    align-items: center;
+  font-size: 1.0vw!important;         /*             первая строчка в кнопке          */
+  font-weight: 700;
+  width: 100%;
+  align-items: center;
 }
 
 .my_btn .details :last-child{           /*             вторая строчка в кнопке          */
 
 
 
-    font-size: 1.0vw!important;
-    font-weight: 700;
+  font-size: 1.0vw!important;
+  font-weight: 700;
 
-    margin: 0;
-    width: 100%;
-    align-items: center;
+  margin: 0;
+  width: 100%;
+  align-items: center;
 
 }
 
 
 .my_btn .icon_block{                            /*             вторая строчка в кнопке          */
 
-    padding: 1vw 2vw!important;         
-    width: 100%;
-    height: 100%;
+  padding: 1vw 2vw!important;         
+  width: 100%;
+  height: 100%;
 
 }
 
@@ -1250,7 +1259,7 @@ h1, h2, h3, h4 ,  h5, h6
 
 .my_btn * {
 
-    color: #fff!important;
+  color: #fff!important;
 
 }
 
@@ -1268,8 +1277,8 @@ h1, h2, h3, h4 ,  h5, h6
 
 
 .my_btn:hover {
-    color: #000!important;
-    background-color: #fff
+  color: #000!important;
+  background-color: #fff
 
 }
 
@@ -1277,12 +1286,12 @@ h1, h2, h3, h4 ,  h5, h6
 
 
 .my_btn:hover .details *{
-    color: #000!important;
+  color: #000!important;
 }
 
 
 .my_btn:hover svg path {
-    fill: #000!important;
+  fill: #000!important;
 }
 
 
@@ -1290,7 +1299,7 @@ h1, h2, h3, h4 ,  h5, h6
 
 
 .my_btn:hover:before{
-    background-color: #000!important;
+  background-color: #000!important;
 
 }
 
@@ -1300,49 +1309,49 @@ h1, h2, h3, h4 ,  h5, h6
 
 
 
-  /*             стили для header Leistungen              */
+/*             стили для header Leistungen              */
 
 .submenu li, 
 .submenu a{
-    color: #000000 !important;
+  color: #000000 !important;
 }
 
 
 
 .hide {
-    opacity: 0; 
-    visibility: hidden;
-    z-index: -1;
+  opacity: 0; 
+  visibility: hidden;
+  z-index: -1;
 }
 
 
 
 .first:hover .submenu {
-    opacity: 1; 
-    visibility: visible;
-    transition: 0.3s all ease;
+  opacity: 1; 
+  visibility: visible;
+  transition: 0.3s all ease;
 }
 
 
 .secondary{
 
-    opacity: 0!important; 
-    visibility: hidden!important;
-    
+  opacity: 0!important; 
+  visibility: hidden!important;
+  
 }
 
 
 .has_child:hover .secondary.hide {
 
-    opacity: 1!important; 
-    visibility: visible !important;
+  opacity: 1!important; 
+  visibility: visible !important;
 }
 
 
 
 .has_child {
 
-    position: relative;
+  position: relative;
 }
 
 
@@ -1350,51 +1359,51 @@ h1, h2, h3, h4 ,  h5, h6
 
 
 .has_child > a::before  {
-    content: "";
-    position: absolute;
-    right: 1vw;                                           /*            ЧТОБЫ СТРЕЛКА БЫЛА СПРАВА ОТ ОБЬЕКТА                                   */
-    top: 50%;
-    width: 0.313vw;
-    height: 0.5vw;
-    transform: translateY(-50%);                                /*            СТРЕЛКА ДЛЯ ОБЬЕКТА                                   */
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: center right;
-    background-image: url(https://besedaclinic.com.ua/img/menu_arr.svg);
-    transition: 0.3s all ease;
+  content: "";
+  position: absolute;
+  right: 1vw;                                           /*            ЧТОБЫ СТРЕЛКА БЫЛА СПРАВА ОТ ОБЬЕКТА                                   */
+  top: 50%;
+  width: 0.313vw;
+  height: 0.5vw;
+  transform: translateY(-50%);                                /*            СТРЕЛКА ДЛЯ ОБЬЕКТА                                   */
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center right;
+  background-image: url(https://besedaclinic.com.ua/img/menu_arr.svg);
+  transition: 0.3s all ease;
 
 }
 
 
 .submenu a{
- 
-    padding: 0.563vw 1.75vw 0.563vw 0;
-    border-bottom: 1px solid #C9C9C9;
-    display: block;
-    position: relative;
-    line-height: 100%;
+
+  padding: 0.563vw 1.75vw 0.563vw 0;
+  border-bottom: 1px solid #C9C9C9;
+  display: block;
+  position: relative;
+  line-height: 100%;
 
 }
 
 
 .submenu li{
- 
-    margin-right: 0!important;
-    padding-bottom: 0;
-    padding-right: 0.68vw!important;
-    position: relative;
+
+  margin-right: 0!important;
+  padding-bottom: 0;
+  padding-right: 0.68vw!important;
+  position: relative;
 }
 
 
 .has_child > a {
 
-    padding: 0.563vw 1.75vw 0.563vw 0;
+  padding: 0.563vw 1.75vw 0.563vw 0;
 }
 
 
 
 .has_child > a:hover::before{                   /*            АНИМАЦИЯ ДЛЯ СТРЕЛКИ                       */
-        right: 0.3vw; 
+      right: 0.3vw; 
 
 }
 
@@ -1402,76 +1411,76 @@ h1, h2, h3, h4 ,  h5, h6
 
 
 .submenu {
-    position: absolute;
-    top: 100%;
-    left: -1.063vw;
-    width: -moz-max-content;
-    width: max-content;
-    background-color: #fff;
-    border: 1px solid #C7C7C7;
-    box-shadow: 0 4px 13px 0 rgba(0, 0, 0, 0.25);
-    padding: 0.938vw 0 1.25vw 1.063vw!important;
-    z-index: 22;
+  position: absolute;
+  top: 100%;
+  left: -1.063vw;
+  width: -moz-max-content;
+  width: max-content;
+  background-color: #fff;
+  border: 1px solid #C7C7C7;
+  box-shadow: 0 4px 13px 0 rgba(0, 0, 0, 0.25);
+  padding: 0.938vw 0 1.25vw 1.063vw!important;
+  z-index: 22;
 
-    transition: 0.5s all ease;
+  transition: 0.5s all ease;
 
 }
 
 
 .submenu.secondary {
-    top: -0.563vw;                                      /*            РАСПОЛОЖЕНИЕ ПОД МЕНЮ                                 */
-    left: 100%;
+  top: -0.563vw;                                      /*            РАСПОЛОЖЕНИЕ ПОД МЕНЮ                                 */
+  left: 100%;
 
-    padding: 0.5vw 0 1vw 1.063vw!important;
+  padding: 0.5vw 0 1vw 1.063vw!important;
 }
 
 
 .has_child:hover .secondary.hide {
-    opacity: 1 !important; 
-    visibility: visible !important;
+  opacity: 1 !important; 
+  visibility: visible !important;
 }
 
 
 .text_full_screen{
-    position: relative;
-    font-size: 0.8vw;
-    letter-spacing: 0.370vw;
-    
-    
-    left: -22vw;
-    
-    
-    margin-bottom: 2vw;
-    margin-top: 2vw;
+  position: relative;
+  font-size: 0.8vw;
+  letter-spacing: 0.370vw;
+  
+  
+  left: -22vw;
+  
+  
+  margin-bottom: 2vw;
+  margin-top: 2vw;
 
-    width: 97vw;
-    
-    color: #666;
+  width: 97vw;
+  
+  color: #666;
 
-    transition: 0.5s all ease;
-    text-align: center;
+  transition: 0.5s all ease;
+  text-align: center;
 
 }
 
 
 .space {
-    margin: 3vw; /* Отступы вокруг элемента */
-    /* Можно использовать padding, если хочешь пространство внутри элемента */
+  margin: 3vw; /* Отступы вокруг элемента */
+  /* Можно использовать padding, если хочешь пространство внутри элемента */
 }
 
 
 
 .faq_items{
-    margin-top: 1vw;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-column-gap: 4vw;
+  margin-top: 1vw;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-column-gap: 4vw;
 }
 
 
 .faq_item{
 
-    margin-right: 5vw;
+  margin-right: 5vw;
 }
 
 
@@ -1480,8 +1489,8 @@ h1, h2, h3, h4 ,  h5, h6
 
 
 #top {
-    height: 30px; 
-    width: 100%;
+  height: 30px; 
+  width: 100%;
 }
 
 
@@ -1490,61 +1499,61 @@ h1, h2, h3, h4 ,  h5, h6
 
 
 .price_item .faq_item_text {
-    height: 0;
-    position: relative!important;
-    opacity: 0;
-    top: 50px;
+  height: 0;
+  position: relative!important;
+  opacity: 0;
+  top: 50px;
 
 
 
 
 
 
-    padding: 1.5vw 2vw 0;
+  padding: 1.5vw 2vw 0;
 
-    transition: 0.5s all ease;
+  transition: 0.5s all ease;
 
 
 }
 
 .faq_item_text * , .faq_item_text ul li  {
-    font-size: 1.1vw!important;
-    line-height: 1.5vw!important;
-    /* font-weight: 300!important; */
-    
+  font-size: 1.1vw!important;
+  line-height: 1.5vw!important;
+  /* font-weight: 300!important; */
+  
 }
 
 
 .faq_item_text ul li  {
-   
-    margin-bottom: 0vw;
+ 
+  margin-bottom: 0vw;
 }
 
 
 .price_item.open .faq_item_text {
-  
-    height: -moz-max-content;
-    height: max-content;
-    position: relative;
-    width: 100%;
-    opacity: 1;
-    top: 0;
-    z-index: 1;
+
+  height: -moz-max-content;
+  height: max-content;
+  position: relative;
+  width: 100%;
+  opacity: 1;
+  top: 0;
+  z-index: 1;
 }
 
 
 .price_item{
-    padding: 1.875vw 0;
+  padding: 1.875vw 0;
 
 }
 
 .faq_item .title_row{
-    position: relative;
+  position: relative;
 
-    padding: 1.875vw 0;                 /*                  заголовок FAQ                     */
+  padding: 1.875vw 0;                 /*                  заголовок FAQ                     */
 
-    padding-bottom: 0;
-    border-bottom: none;
+  padding-bottom: 0;
+  border-bottom: none;
 
 }
 
@@ -1554,270 +1563,270 @@ h1, h2, h3, h4 ,  h5, h6
 
 .title_row .name{
 
-    font-size: 1.6vw;
-    cursor: pointer;
-    max-width: 80%;
+  font-size: 1.6vw;
+  cursor: pointer;
+  max-width: 80%;
 
-    margin-bottom: 0px;
+  margin-bottom: 0px;
 }
 
 .faq_items .title_row .number {
-    font-size: 1.5vw;
+  font-size: 1.5vw;
 }
 
 
 
 
 .total {
-    position: absolute;
-    top: 1vw;
-    right: 1vw;
-    background-color: #000;
-    color: #fff;
-    padding: 0.5vw 1vw;
+  position: absolute;
+  top: 1vw;
+  right: 1vw;
+  background-color: #000;
+  color: #fff;
+  padding: 0.5vw 1vw;
 }
 
 .total * {
-    color: #fff;
+  color: #fff;
 }
 
 
 
 .image{
 
-    position: relative;
-   
-    height: 100%;
-    -o-object-fit: cover;
-    object-fit: cover;
-    z-index: -100;
+  position: relative;
+ 
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+  z-index: -100;
 
-    display: block;
+  display: block;
 
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 
 
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
 
-    transition: 0.3s all ease;
+  transition: 0.3s all ease;
 }
 
 
 .scale_bg {
-    position: relative;
-    overflow: hidden;
+  position: relative;
+  overflow: hidden;
 }
 
 .scale_bg:hover .image{
-    transform: translate(-50%, -50%) scale(1.1);
+  transform: translate(-50%, -50%) scale(1.1);
 }
 
 
 
 .gallery_items {
-    margin-top: 2vw;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-column-gap: 1.875vw;
-    grid-row-gap: 3.438vw;
+  margin-top: 2vw;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-column-gap: 1.875vw;
+  grid-row-gap: 3.438vw;
 }
 
 
 .gallery_items .gallery_item {
 
-    border: 1px solid #D7D7D7;
-    position: relative;
+  border: 1px solid #D7D7D7;
+  position: relative;
 
-    width: 100%;
+  width: 100%;
 
 
 }
 
 .gallery_item img {
-    position: absolute;
-    opacity: 0;
-    z-index: -1;
-    height: 0;
-    width: 0;
+  position: absolute;
+  opacity: 0;
+  z-index: -1;
+  height: 0;
+  width: 0;
 
 }
 
 .gallery_item .image_block {
 
-    height: 23.125vw;
-    display: block;
+  height: 23.125vw;
+  display: block;
 }
 
 
 .image_block a img.image{
 
-    opacity: 1; 
-    visibility: visible;
-    width: 100%;
-    height: 100%;
-    position: relative;
+  opacity: 1; 
+  visibility: visible;
+  width: 100%;
+  height: 100%;
+  position: relative;
 
-    background-size: contain!important;
+  background-size: contain!important;
 
 }
 
 
 .gallery_items .gallery_item .desc {
-    border-top: 1px solid #200a0a;
-    padding: 1.25vw 1.5vw 0.5vw;
+  border-top: 1px solid #200a0a;
+  padding: 1.25vw 1.5vw 0.5vw;
 }
 
 
 .carousel__button {
-    color:#fff!important;
+  color:#fff!important;
 }
 
 .fancybox__caption{
-    color: #fff!important;
+  color: #fff!important;
 }
 
 .doctor a{
-    color: #000;
+  color: #000;
 }
 
 
 .doctor a img {
-    position: absolute;
-    top: -1vw;
-    left: 110%;
-    min-width: 7vw;
-    height: auto;
-    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
-    transition: 0.3s all ease;
-    z-index: 100; /* Установлен для базового уровня */
+  position: absolute;
+  top: -1vw;
+  left: 110%;
+  min-width: 7vw;
+  height: auto;
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
+  transition: 0.3s all ease;
+  z-index: 100; /* Установлен для базового уровня */
 }
 
 
 
 
 .gallery_items .gallery_item .desc .doctor a {
-    font-size: 1.275vw;
-    position: relative;
+  font-size: 1.275vw;
+  position: relative;
 }
 
 .gallery_items .gallery_item .desc a {
-    text-decoration: underline!important;
+  text-decoration: underline!important;
 }
 
 .doctor a:hover img{
-    opacity: 1; 
-    visibility: visible;  transition: 0.3s all ease;
+  opacity: 1; 
+  visibility: visible;  transition: 0.3s all ease;
 }
 
 
 
 
 .hide {
-    opacity: 0; 
-    visibility: hidden;
+  opacity: 0; 
+  visibility: hidden;
 }
 
 
 
 
 .slider {
-    position: relative;
+  position: relative;
 
-    /* height: 100vh; */
+  /* height: 100vh; */
 
-    
-    overflow: hidden;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
   
-  .slides {
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
-    display: flex;
-    transition: transform 0.5s ease-in-out;
-    width: 400%; /* Должно быть равно 100% * количество элементов */
-  }
+.slides {
+
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  width: 400%; /* Должно быть равно 100% * количество элементов */
+}
 
 
-  .slides .angebot_item {
+.slides .angebot_item {
 
-    padding: 1vw;
-    padding-left: 1vw;
-    padding-right: 1vw;
+  padding: 1vw;
+  padding-left: 1vw;
+  padding-right: 1vw;
 
-  }
-  
+}
 
-  .controls {
-    position: absolute;
-    bottom: 10px;
-    left: 10px;
+
+.controls {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
 }
 
 .prev, .next {
-    background-color: rgba(0, 0, 0, 0.5);
-    color: white;
-    border: none;
-    padding: 10px;
-    cursor: pointer;
-    z-index: 100;
-    margin-right: 5px;
-    border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  z-index: 100;
+  margin-right: 5px;
+  border-radius: 50%;
 }
 
 
 
 
 .adv_section {
-    margin: 3.75vw 0 3.75vw 0;
-    display: block;
+  margin: 3.75vw 0 3.75vw 0;
+  display: block;
 }
 
 
 .adv_section .my_container .item {
-    width: 23.5%;
-    min-height: 11.25vw;
-    padding: 2vw 2vw 1vw 2vw;
-    border-radius: 1vw;
-    flex-direction: column;
-    justify-content: flex-start;
-    box-shadow: 0 0 36px 0 rgba(0, 0, 0, 0.3);
+  width: 23.5%;
+  min-height: 11.25vw;
+  padding: 2vw 2vw 1vw 2vw;
+  border-radius: 1vw;
+  flex-direction: column;
+  justify-content: flex-start;
+  box-shadow: 0 0 36px 0 rgba(0, 0, 0, 0.3);
 
-    position: relative;
+  position: relative;
 }
 
 
 .adv_section .my_container .item:before {
-    border-radius: 0.5vw;
-    border: 1px solid #000;
-    width: 96%;
-    height: 94%;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    background-color: transparent;
-    position: absolute;
-    content: "";
+  border-radius: 0.5vw;
+  border: 1px solid #000;
+  width: 96%;
+  height: 94%;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background-color: transparent;
+  position: absolute;
+  content: "";
 }
 
 
 .adv_section .my_container .item .title.big {
-    font-size: 2vw;
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
+  font-size: 2vw;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
 }
 
 
 .adv_section .my_container .item .title.big span {
-    margin-left: 1.5vw;
-    font-size: 4vw;
-    line-height: 60%;
+  margin-left: 1.5vw;
+  font-size: 4vw;
+  line-height: 60%;
 }
 
 
@@ -1825,171 +1834,171 @@ h1, h2, h3, h4 ,  h5, h6
 
 
 .adv_section .my_container .item .title {
-    font-size: 1.25vw;
-    width: 90%;
-    margin-bottom: 1.25vw;
+  font-size: 1.25vw;
+  width: 90%;
+  margin-bottom: 1.25vw;
 }
 
 
 .adv_section .my_container .item .secondary {
-    font-size: 0.9vw;
-    color: #000;
+  font-size: 0.9vw;
+  color: #000;
 
 
-    opacity: 1 !important;
-    visibility: visible !important;
+  opacity: 1 !important;
+  visibility: visible !important;
 }
 
 
 .item p{
-    text-align: center;
+  text-align: center;
 }
 
 
 
 .blog_posts {
-    margin-top: 2vw;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-column-gap: 1.875vw;
-    grid-row-gap: 3.125vw;
+  margin-top: 2vw;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-column-gap: 1.875vw;
+  grid-row-gap: 3.125vw;
 }
 
 
 .blog_posts .post_item .image_block {
-    height: 20vw;
-    display: block;
-    margin-bottom: 1.25vw;
-    box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.25);
+  height: 20vw;
+  display: block;
+  margin-bottom: 1.25vw;
+  box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.25);
 }
 
 
 .blog_posts .post_item .name:hover {
-    text-decoration: underline;
+  text-decoration: underline;
 }
 
 .blog_posts .post_item .name {
-    font-size: 1.25vw;
+  font-size: 1.25vw;
 }
 
 .blog_posts .post_item .excerpt {
-    margin: 0.625vw 0 0.8vw;
-    font-size: 0.875vw;
+  margin: 0.625vw 0 0.8vw;
+  font-size: 0.875vw;
 }
 
 .blog_posts .post_item .more {
-    text-decoration: underline!important;
+  text-decoration: underline!important;
 }
 
 .post_item a{
-    color: #000;
+  color: #000;
 }
 
 
 .more:before {
-    content: "";
-    position: absolute;
-    width: 1vw;
-    height: 0.5vw;
-    left: calc(100% + 0.5vw);       
-    top: 50%;
-    background-image: url(https://besedaclinic.com.ua/img/right_arr.svg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center center;
-    transform: translateY(-50%);
-    transition: 0.3s all ease;
+  content: "";
+  position: absolute;
+  width: 1vw;
+  height: 0.5vw;
+  left: calc(100% + 0.5vw);       
+  top: 50%;
+  background-image: url(https://besedaclinic.com.ua/img/right_arr.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  transform: translateY(-50%);
+  transition: 0.3s all ease;
 }
 
 
 .more:hover:before {
-    left: calc(100% + 2vw);       
-    transition: 0.3s all ease;
+  left: calc(100% + 2vw);       
+  transition: 0.3s all ease;
 }
 
 
 .blog_posts .post_item .image_block .date {
-    position: absolute;
-    top: 1vw;
-    left: 1vw;
-    background-color: #000;
-    width: 5.938vw;
-    height: 4.688vw;
-    flex-direction: column;
-    justify-content: center;
+  position: absolute;
+  top: 1vw;
+  left: 1vw;
+  background-color: #000;
+  width: 5.938vw;
+  height: 4.688vw;
+  flex-direction: column;
+  justify-content: center;
 }
 
 
 
 
 .related_page_links {
-    margin-top: 8.75vw;
-    height: 5.313vw;
-    margin-bottom: -6.25vw;
-    border-top: 1px solid #C4C4C4;
-    border-bottom: 1px solid #fff;
+  margin-top: 8.75vw;
+  height: 5.313vw;
+  margin-bottom: -6.25vw;
+  border-top: 1px solid #C4C4C4;
+  border-bottom: 1px solid #fff;
 }
 
 .related_page_links a:first-child {
-    border-right: 1px solid #C4C4C4;
+  border-right: 1px solid #C4C4C4;
 }
 
 
 .related_page_links a {
-    width: 50%;
-    height: 100%;
-    justify-content: center;
-    font-size: 1.375vw;
-    position: relative;
+  width: 50%;
+  height: 100%;
+  justify-content: center;
+  font-size: 1.375vw;
+  position: relative;
 }
 
 
 .related_page_links a:first-child svg {
-    left: 6.5vw;
+  left: 6.5vw;
 }
 
 
 .related_page_links a svg {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 
 .related_page_links a:last-child svg {
-    right: 6.5vw;
+  right: 6.5vw;
 }
 
 
 .related_page_links .my_btn svg{
-    width: 30px!important;
-    height: 17px!important;
+  width: 30px!important;
+  height: 17px!important;
 }
 
 
 
 .my_btn_outline {
-    background-color: white;
-    min-height: 3vw;
+  background-color: white;
+  min-height: 3vw;
 
-    max-height:  max-content;
+  max-height:  max-content;
 
-    padding: 0 1vw;
+  padding: 0 1vw;
 
-    border-radius: 0.3vw ;
+  border-radius: 0.3vw ;
 
-    color:#000;
+  color:#000;
 
-    display: flex;
-    align-items: center;
-    width: -moz-max-content;
-    width: max-content;
-    font-weight: 500;
-    overflow: hidden;
-    position: relative;
-    transition: 0.3s all ease;
-    cursor: pointer;
-    text-decoration: none;
+  display: flex;
+  align-items: center;
+  width: -moz-max-content;
+  width: max-content;
+  font-weight: 500;
+  overflow: hidden;
+  position: relative;
+  transition: 0.3s all ease;
+  cursor: pointer;
+  text-decoration: none;
 
 }
 
@@ -1997,55 +2006,55 @@ h1, h2, h3, h4 ,  h5, h6
 
 
 .my_btn_outline:hover {
-    color: white!important;
-    background-color: #000
+  color: white!important;
+  background-color: #000
 
 }
 
 .my_btn_outline:hover svg path {
-    fill: white!important;
+  fill: white!important;
 }
 
 .my_btn_outline svg path {
-    fill: black!important;
+  fill: black!important;
 }
 
 
 
 .container_tight {
-    padding-left: 5vw;
-    padding-right: 5vw;
+  padding-left: 5vw;
+  padding-right: 5vw;
 }
 
 .content .btgrid .row {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: flex-start;
-    justify-content: space-between;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: space-between;
 }
 
 
 .post_page_date {
-    font-size: 1.25vw;
-    margin-bottom: 1.75vw;
+  font-size: 1.25vw;
+  margin-bottom: 1.75vw;
 }
 
 
 
 .post_content.my_btn {
-    margin: 3vw auto 0;
+  margin: 3vw auto 0;
 }
 
 .post_content.my_btn svg{
-    width: 2.5vw;
-    padding-right: 1vw;
-    position: relative;
-    left: 0;
-    transition: left 0.5s ease;
+  width: 2.5vw;
+  padding-right: 1vw;
+  position: relative;
+  left: 0;
+  transition: left 0.5s ease;
 }
 
 .post_content.my_btn:hover svg{
-    left: -0.9vw ;
+  left: -0.9vw ;
 }
 
 
@@ -2056,166 +2065,481 @@ h1, h2, h3, h4 ,  h5, h6
 
 /* Начальное состояние элемента, который будет анимирован */
 .hidden-element {
-    opacity: 0;
-    transform: translateY(100px); /* Элемент смещён вниз */
-    transition: opacity 0.6s ease, transform 0.6s ease;
+  opacity: 0;
+  transform: translateY(100px); /* Элемент смещён вниз */
+  transition: opacity 0.6s ease, transform 0.6s ease;
 }
 
 /* Класс, который будет применяться, когда элемент видим */
 .show-element {
-    opacity: 1;
-    transform: translateY(0); /* Элемент перемещается в исходное положение */
+  opacity: 1;
+  transform: translateY(0); /* Элемент перемещается в исходное положение */
 }
 
 
 p.number{
-    font-size: 1.5vw;
+  font-size: 1.5vw;
 }
 
 .service_low{
-    padding-top: 3.438vw;
-    border-top: 6px solid #000;
-    justify-content: center;
+  padding-top: 3.438vw;
+  border-top: 6px solid #000;
+  justify-content: center;
 }
 
 
 .service_low .left {
-    padding-left: 5.625vw;
-    width: 50%;
-    border-right: 1px solid #C4C4C4;
+  padding-left: 5.625vw;
+  width: 50%;
+  border-right: 1px solid #C4C4C4;
 }
 
 .service_low .right {
-    width: 50%;
-    padding-left: 6.938vw;
+  width: 50%;
+  padding-left: 6.938vw;
 }
 
 
 footer {
-    background-color: #000;
-    margin-top: 6.25vw;
-    padding: 3.438vw 0 1.125vw;
+  background-color: #000;
+  margin-top: 6.25vw;
+  padding: 3.438vw 0 1.125vw;
 }
 
 footer *  {
-    color: rgba(255, 255, 255, 0.7)!important;
+  color: rgba(255, 255, 255, 0.7)!important;
 }
 
 footer .details a {
-    color: rgba(255, 255, 255, 0.9)!important;
+  color: rgba(255, 255, 255, 0.9)!important;
 }
 
 footer .details .hours b {
-    color: rgba(255, 255, 255, 0.9)!important;
+  color: rgba(255, 255, 255, 0.9)!important;
 }
 
 
 
 
 footer  svg path {
-    fill: white!important;
+  fill: white!important;
 }
 
 footer  svg{
-    width: 2vw;
-    height: 2vw;
+  width: 2vw;
+  height: 2vw;
 }
 
 .col_title{
-    font-size: 1.2vw;
-    margin-bottom: 1vw;
-    color: white!important;
+  font-size: 1.2vw;
+  margin-bottom: 1vw;
+  color: white!important;
 }
 
 .logo_link{
-    position: relative;
+  position: relative;
 }
 
 
 footer .logo_col img {
-    width: 11.25vw;
+  width: 11.25vw;
 }
 
 
 footer .logo_col .logo_link p {         
-    position: absolute;
-    bottom: 2.4vw;
-    right: -2.6vw;
-    margin-left: 0.5vw;
-    padding-left: 1vw;
-    font-size: 0.74vw;
-    letter-spacing: 0.15vw;
-    transition: 0.5s all ease;
+  position: absolute;
+  bottom: 2.4vw;
+  right: -2.6vw;
+  margin-left: 0.5vw;
+  padding-left: 1vw;
+  font-size: 0.74vw;
+  letter-spacing: 0.15vw;
+  transition: 0.5s all ease;
 }
 
 
 .menu_col{
-    max-width: 20vw;
+  max-width: 20vw;
 }
 
 
 
 .modal {
-    display: none;
-    position: fixed;
-    z-index: 1;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    overflow: auto;
-    background-color: rgb(0, 0, 0);
-    background-color: rgba(0, 0, 0, 0.4);
-  }
-  
-  .modal-content {
-    background-color: #fefefe;
-    margin: 15% auto;
-    padding: 20px;
-    border: 1px solid #888;
-    width: 80%;
-  }
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+}
 
 input[type="text"] {
-    width: 30vw;
-    padding: 8px;
-  }
-
-  
-  .input_block{
-    margin: 5px 0 10px;
-  }
-
-
-
-  .certificate_item{
-
-        height: 20vw;
-        position: relative;
-        margin: 0 1vw;    
-  }
-
-
-  .certificate_item .image_block{
-    display: block;
-    width: 563.8px;
-    height: 20vw;
-
-    border: 1px solid #B7B7B7;
-    box-shadow: 0 0 14px 0 rgba(0, 0, 0, 0.25);
-  }
-
-
-  .doctor_page .left {
-    width: 32.188vw;
-    position: sticky;
-    top: 8vw;
+  width: 30vw;
+  padding: 8px;
 }
+
+
+.input_block{
+  margin: 5px 0 10px;
+}
+
+
+
+.certificate_item{
+
+      height: 20vw;
+      position: relative;
+      margin: 0 1vw;    
+}
+
+
+.certificate_item .image_block{
+  display: block;
+  width: 563.8px;
+  height: 20vw;
+
+  border: 1px solid #B7B7B7;
+  box-shadow: 0 0 14px 0 rgba(0, 0, 0, 0.25);
+}
+
+
+.doctor_page .left {
+  width: 32.188vw;
+  position: sticky;
+  top: 8vw;
+}
+
 
 
 .doctor_page .right {
-    width: 50vw;
+  width: 50vw;
+}
+
+.burger_menu_btn {
+  display: none;
+  width: 7vw;
+  height: 5vw;
+  position: relative;
+}
+
+.burger_menu_btn span {
+  position: absolute;
+  left: 0;
+  height: 3px;
+  width: 100%;
+  display: block;
+  background-color: #000;
+  transition: 0.3s all ease;
+}
+
+.burger_menu_btn span:first-child {
+  top: 0;
+}
+
+.burger_menu_btn span:nth-child(2) {
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.burger_menu_btn span:last-child {
+  bottom: 0;
+}
+
+.show_book_window,
+.messengers,
+.schedule_block ,
+.menu_row,
+.menu_row .navbar ul,
+.footer{
+  display: flex;
 }
 
 
+@media only screen and (max-width: 800px) {
+  .burger_menu_btn span {
+    background-color: #fff;
+  }
+  .header.open .burger_menu_btn span {
+    background-color: #000;
+  }
+  .header.open .burger_menu_btn span:first-child {
+    transform: translateY(-50%) rotate(45deg);
+    top: 50%;
+  }
+  .header.open .burger_menu_btn span:last-child {
+    bottom: 50%;
+    transform: translateY(50%) rotate(-45deg);
+  }
+  .header.open .burger_menu_btn span:nth-child(2) {
+    left: 100%;
+    opacity: 0;
+  }
+  .burger_menu_btn {
+    display: block;
+  }
+
+  .show_book_window,
+  .messengers,
+  .schedule_block {
+    display: none;
+  }
+
+
+  .header .contact_item svg {
+      width: 100%;
+      width: 5vw;
+      height: 5vw;
+  }
+
+  .contact_item svg {
+      width: 5vw;
+      height: 5vw;
+  }
+
+
+  .contact_item .details a.header_address {
+      font-size: 1.8vw;
+      max-width: 40vw;
+  }
+
+   .contact_item .details a {
+      margin-top: 1.5vw!important;
+      font-size: 2.5vw!important;
+  }
+
+  .logo_name {
+      margin-left: 0.5vw;
+      padding-left: 1vw;
+      letter-spacing: 0.23vw;
+      font-size: 2vw !important;
+  }
+
+  .menu_row{
+      display: none;
+
+  }
+
+  .header.open .menu_row {
+      display: block;
+  }
+
+  .header.open .menu_row .navbar ul{
+      display: block;
+      flex: 1 0 0%;
+  }
+
+  .header .menu_row .navbar ul li a {
+      padding: 2.5vw 0;
+      font-size: 5vw;
+      display: block;
+      width: 80%;
+      color: #000;
+  }
+
+  .header .menu_row .navbar ul li {
+      width: 100%;
+      padding-bottom: 0 !important;
+      border-bottom: 1px solid #C9C9C9;
+  }
+
+  section.adv_section {
+      margin: 10vw 0 0;
+      overflow-x: scroll;
+      padding-left: 3.5vw;
+      padding-right: 3.5vw;
+  }
+
+  section.adv_section .my_container  {
+      width: -moz-max-content;
+      width: max-content;
+      padding: 2.5vw 3.5vw 2.5vw 0;
+  }
+
+  section.adv_section .my_container .item {
+      width: 70vw;
+      min-height: 35vw;
+      padding: 5vw;
+      box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.09);
+      justify-content: center;
+      margin-right: 5vw;
+  }
+
+  section.adv_section .my_container .item .title.big {
+      font-size: 6vw;
+  }
+
+  section.adv_section .my_container .item .title {
+      font-size: 3.75vw;
+      margin-bottom: 2vw;
+  }
+
+  p, a {
+      font-size: 4vw;
+  }
+
+  section.adv_section .my_container .item .secondary {
+      font-size: 3.25vw;
+  }
+
+  section.adv_section .my_container .item .title.big span {
+      margin-left: 5vw;
+      font-size: 18vw;
+  }
+
+  .service_items {
+      grid-template-columns: 1fr;
+      grid-row-gap: 5vw;
+  }
+
+  .service_items .service .img_block {
+      height: 50vw;
+  }
+
+  .heading_block {
+      font-size: 6vw;
+      text-align: left;
+      margin-bottom: 5vw;
+  }
+
+  .service_items .service p {
+      padding: 1vw;
+      font-size: 4vw;
+      height: -moz-max-content;
+      height: max-content;
+      min-height: 10vw;
+  }
+  .footer {
+      display: block;
+  }
+
+  .my_container .conten {
+      width: 100%;
+  }
+
+  .nav_services{
+      display: none;
+
+  }
+}
+
+
+@media only screen and (max-width: 800px) {
+  .content p, .content a, .content ul li {
+    font-size: 4vw !important;
+    line-height: 130% !important;
+  }
+  .content p {
+    text-align: justify;
+    margin-bottom: 3vw;
+  }
+  .content p span {
+    font-size: 4vw !important;
+  }
+  .content p img {
+    width: 100% !important;
+    height: auto !important;
+  }
+  .content h1:first-child, .content h2:first-child, .content h3:first-child, .content h4:first-child, .content h5:first-child, .content h6:first-child {
+    margin-top: 0;
+  }
+  .content h1, .content h2, .content h3, .content h4, .content h5, .content h6 {
+    font-size: 5.5vw;
+    margin-bottom: 4vw;
+    margin-top: 10vw;
+  }
+  .content h1 img, .content h2 img, .content h3 img, .content h4 img, .content h5 img, .content h6 img {
+    width: 100% !important;
+    height: auto !important;
+  }
+  .content ul li {
+    padding-left: 4vw;
+    margin-bottom: 1vw;
+  }
+  .content ul li:before {
+    top: 1.4vw;
+    width: 2.5vw;
+    height: 2.5vw;
+  }
+  .content .btgrid .row .col-md-6 {
+    width: 100%;
+  }
+
+  .blog_posts_block {
+    overflow-x: scroll;
+    margin-right: -3.5vw;
+    margin-left: -3.5vw;
+    padding-left: 3.5vw;
+  }
+  .blog_posts_block::-webkit-scrollbar {
+    display: none;
+  }
+
+  .blog_posts {
+    width: -moz-max-content;
+    width: max-content;
+    padding-right: 3.5vw;
+    margin-top: 5vw;
+    margin-bottom: 7.5vw;
+    grid-column-gap: 4vw;
+  }
+  .blog_posts.blog_page {
+    width: 100%;
+    grid-template-columns: 1fr;
+    grid-row-gap: 8vw;
+    padding-right: 0;
+    margin-top: 7vw;
+  }
+  .blog_posts.blog_page .post_item {
+    width: 100%;
+  }
+  .blog_posts .post_item {
+    width: 83vw;
+  }
+  .blog_posts .post_item .image_block {
+    height: 50vw;
+    margin-bottom: 3.5vw;
+    box-shadow: none;
+  }
+  .blog_posts .post_item .image_block .date {
+    top: 2vw;
+    left: 2vw;
+    height: 12vw;
+    width: 15vw;
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+  .blog_posts .post_item .image_block .date b {
+    font-size: 3vw;
+  }
+  .blog_posts .post_item .image_block .date span {
+    font-size: 2.5vw;
+  }
+  .blog_posts .post_item .name {
+    font-size: 4vw;
+  }
+  .blog_posts .post_item .excerpt {
+    margin: 1.5vw 0;
+    font-size: 3vw;
+  }
+  .blog_posts .post_item .more_btn_block {
+    margin-top: 2.5vw;
+  }
+  .blog_posts .post_item .more:before {
+    left: calc(100% + 2vw);
+    width: 4.5vw;
+    height: 2vw;
+    background-size: contain;
+  }
+}
 
