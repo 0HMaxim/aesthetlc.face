@@ -20,10 +20,17 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
 
 
 
+video{
+  z-index: -1;
+}
 
 
-
-
+@media only screen and (max-width: 800px) {
+  p.sm_fz_3, a.sm_fz_3 {
+      font-size: 3vw;
+      margin-bottom: 1vw;
+  }
+}
 
 
 
@@ -114,11 +121,7 @@ li, ul{
 }
 
 
-#breadcrumbs > *{
-  position: relative;
-  margin-top: 20px; /* Space to push breadcrumbs below the about top page */
-  z-index: 1; /* Ensure breadcrumbs are above other elements but not the overlay or video */
-}
+
 
 
 
@@ -753,15 +756,15 @@ ul , li, a {
 }
 
 
-.price_item table tbody td:last-child {
-  font-weight: 600!important;
-  font-size: 1.25vw!important;
+.price_item table tbody td:last-child {         /*        разменр цены в таблице          */
+  font-weight: 600;
+  font-size: 1.25vw;
 }
 
 
 .price_item table tbody tr td  h3 {
-  font-weight: 600!important;
-  font-size: 1.25vw!important;
+  font-weight: 600;
+  font-size: 1.25vw;
 }
 
 
@@ -1480,6 +1483,7 @@ margin-top: 4vw!important;
 
 .faq_item{
 
+  width: 100%;
   margin-right: 5vw;
 }
 
@@ -1517,9 +1521,8 @@ margin-top: 4vw!important;
 }
 
 .faq_item_text * , .faq_item_text ul li  {
-  font-size: 1.1vw!important;
-  line-height: 1.5vw!important;
-  /* font-weight: 300!important; */
+  font-size: 1.1vw;
+  line-height: 1.5vw;
   
 }
 
@@ -1573,6 +1576,7 @@ margin-top: 4vw!important;
 .faq_items .title_row .number {
   font-size: 1.5vw;
 }
+
 
 
 
@@ -2546,3 +2550,125 @@ input[type="text"] {
 #leistungen_header_menu{
   display: block;
 }
+
+
+@media only screen and (max-width: 800px) {
+  
+  .related_page_links {
+    height: 10vw;
+    margin-top: 17.5vw;
+    margin-bottom: -20vw;
+  }
+
+
+  .related_page_links a {
+      font-size: 3.5vw;
+  }
+
+  footer {
+    margin-top: 20vw;
+    padding: 12.5vw 0 5vw;
+  }
+}
+
+
+
+
+
+@media only screen and (max-width: 800px) {
+  .price_items {
+    margin-top: 5vw;
+  }
+
+  .price_item .faq_desc {
+    padding: 4vw 0;
+  }
+  .price_item .title_row {
+     padding: 3vw 0; 
+  }
+  .price_item .title_row .name {
+    font-size: 4.5vw;
+    font-weight: 600;
+  }
+  .price_item .title_row .cross {
+    width: 5vw;
+    height: 5vw;
+  }
+  .price_item .title_row .cross:after, .price_item .title_row .cross:before {
+    height: 2px;
+  }
+  .price_item table {
+    margin-top: 1.5vw;
+  }
+  .price_item table td {
+    padding: 2.5vw;
+  }
+  .price_item table thead td {
+    font-size: 3vw !important;
+    font-weight: 500;
+  }
+  .price_item table tbody td:nth-child(2) {
+    font-weight: 500;
+  }
+  .price_item table tbody td:first-child, .price_item table tbody td:nth-child(2), .price_item table tbody td:last-child {
+    font-size: 3.5vw;
+  }
+
+  .faq_items {
+    grid-template-columns: 1fr!important;
+  }
+  .faq_items  p.number {
+    font-size: 4.25vw!important;
+  }
+
+  p.number {
+    font-size: 4.5vw;
+  }
+
+  .price_item .faq_item_text {
+    padding: 0;
+  
+  }
+
+  .price_item .faq_desc {
+    padding: 4vw 0;
+  }
+
+  .price_item table tbody tr td h3{
+
+    font-weight: 600;
+    font-size: 4.25vw
+  }
+
+
+  .my_container {
+    width: 93vw;
+  }
+
+  ul.check_list li * {
+    font-size: 4vw !important;
+    line-height: 130% !important;
+    position: relative;
+    padding-left: 4.25vw!important; 
+  }
+
+  .subtitle { 
+    font-size: 3.5vw;
+  }
+
+  .col {
+    flex: none;
+  }
+  
+  
+
+}
+
+
+
+
+
+#breadcrumbs{
+  margin-top: 20px!important;
+}
+
