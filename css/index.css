@@ -927,7 +927,7 @@ table tr:hover {
 
 .details :first-child{
 
-  font-size: 0.9vw!important;                     /*      размер адреса в хеадере     */
+  font-size: 0.9vw;                     /*      размер адреса в хеадере     */
   margin-bottom: 0.2vw;
 
   width: max-content;
@@ -937,7 +937,7 @@ table tr:hover {
 
 .details :last-child{
 
-  font-size: 1.0vw!important;           /*      размер шрифта номер телефона     */
+  font-size: 1.0vw;           /*      размер шрифта номер телефона     */
   font-weight: 700;
   width: max-content;
 }
@@ -1230,7 +1230,7 @@ margin-top: 4vw!important;
 
 .my_btn .details :first-child{
 
-  font-size: 1.0vw!important;         /*             первая строчка в кнопке          */
+  font-size: 1.0vw;        /*             первая строчка в кнопке          */
   font-weight: 700;
   width: 100%;
   align-items: center;
@@ -1240,7 +1240,7 @@ margin-top: 4vw!important;
 
 
 
-  font-size: 1.0vw!important;
+  font-size: 1.0vw;
   font-weight: 700;
 
   margin: 0;
@@ -2390,7 +2390,7 @@ input[type="text"] {
   }
 
   p, a {
-      font-size: 4vw;
+      font-size: 4vw!important;
   }
 
   section.adv_section .my_container .item .secondary {
@@ -2656,10 +2656,17 @@ input[type="text"] {
     font-size: 3.5vw;
   }
 
-  .col {
-    flex: none;
+
+  .my_btn {
+    width: 100%;
+    justify-content: center;
+    height: 12.5vw;
+    
+    
+
   }
-  
+
+ 
   
 
 }
