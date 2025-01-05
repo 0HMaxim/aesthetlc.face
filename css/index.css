@@ -136,7 +136,7 @@ li, ul{
   height: 100%;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);  
   -webkit-backdrop-filter: blur(10px);
-  backdrop-filter: blur(100px);
+  backdrop-filter: blur(2px);
 }
 
 
@@ -176,14 +176,14 @@ body{
 
 .top_page_video.has_top_image{
   
-  height:13.5vw;
+  height:25vw;
 }
 
 
 .top_page_video.has_top_video{
   
   
-  height:18.5vw;
+  height:25vw;
   
 }
 
@@ -217,7 +217,6 @@ body{
   margin: 0;
   padding: 0;
 }
-
 
 
 
@@ -925,6 +924,7 @@ table tr:hover {
 
 
 
+
 .details :first-child{
 
   font-size: 0.9vw;                     /*      размер адреса в хеадере     */
@@ -1352,8 +1352,8 @@ margin-top: 4vw!important;
 
 
 
-.has_child {
 
+.has_child {
   position: relative;
 }
 
@@ -1434,8 +1434,18 @@ margin-top: 4vw!important;
   top: -0.563vw;                                      /*            РАСПОЛОЖЕНИЕ ПОД МЕНЮ                                 */
   left: 100%;
 
+  position: absolute;
+
   padding: 0.5vw 0 1vw 1.063vw!important;
 }
+
+
+
+
+ul.submenu.secondary{
+  display: block!important;
+}
+
 
 
 .has_child:hover .secondary.hide {
@@ -2278,6 +2288,8 @@ input[type="text"] {
   .header.open .burger_menu_btn span {
     background-color: #000;
   }
+  
+
   .header.open .burger_menu_btn span:first-child {
     transform: translateY(-50%) rotate(45deg);
     top: 50%;
@@ -2318,10 +2330,21 @@ input[type="text"] {
       max-width: 40vw;
   }
 
-   .contact_item .details a {
+   .contact_item .details a,  .contact_item .details p {
       margin-top: 1.5vw!important;
       font-size: 2.5vw!important;
   }
+
+  .hours :first-child{
+    font-size: 3vw!important;
+    font-weight: 500;
+  }
+
+  .hours :last-child{
+    font-size: 3vw!important;
+    font-weight: 600;
+  }
+
 
   .logo_name {
       margin-left: 0.5vw;
@@ -2334,6 +2357,10 @@ input[type="text"] {
       display: none;
 
   }
+  
+  .header.open{
+  backdrop-filter: blur(30px);
+  }
 
   .header.open .menu_row {
       display: block;
@@ -2344,7 +2371,7 @@ input[type="text"] {
       flex: 1 0 0%;
   }
 
-  .header .menu_row .navbar ul li a {
+  .header .menu_row .navbar ul li a , #lang_block *{
       padding: 2.5vw 0;
       font-size: 5vw;
       display: block;

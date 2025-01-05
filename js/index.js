@@ -1249,7 +1249,10 @@ let footerhtml = `
 
 
 
-                    <a href="${countPoin}index.html" class="logo_link">
+                    // <a href="${countPoin}index.html" class="logo_link">
+                    <a href="https://besedaclinic.com.ua/ua/injekciyi-krasi" class="logo_link">
+
+                    
                         <img class="lazy" alt="Beseda Aesthetic clinic" src="https://besedaclinic.com.ua/img/footer_logo.webp" style="">
                         <p>AESTHETIC <br> CLINIC</p>
                     </a>
